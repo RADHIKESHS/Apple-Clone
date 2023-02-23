@@ -739,12 +739,53 @@ body{
  /* Card-4 */
  #card4{
     width: 100%;
-    margin: 20px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding: 10px;
  }
  #card4>img{
     width: 100%;
     height: 500px;
  }
+
+/* ------------footer---------------- */
+
+ footer{
+    width: 100%;
+    margin: auto;
+    font-size: 15px;
+    background-color: rgba(219, 207, 207, 0.48);
+    padding: 10px;
+    
+}
+footer>#foot{
+    margin: 40px 60px 40px 60px;
+}
+
+footer>.contain{
+   width: auto;
+   height: auto;
+   border: 2px solid transparent;
+   margin: 2px 30px 30px 30px;
+   display: flex;
+   justify-content: space-around;
+   /* padding-top: 6px; */
+   
+}
+ul{
+    list-style-type: none;
+    padding: 5px;
+}
+a{
+    color: grey;
+     text-decoration:none; 
+}
+a:hover {
+        text-decoration: underline;
+      }
+      footer p{
+        margin: 40px 60px 40px 60px;
+      }
+      
