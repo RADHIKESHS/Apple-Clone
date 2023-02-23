@@ -1,0 +1,21 @@
+{
+  "name": "daily-card-46",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RADHIKESHS/daily-card-46.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RADHIKESHS/daily-card-46/issues"
+  },
+  "homepage": "https://github.com/RADHIKESHS/daily-card-46#readme"
+}
