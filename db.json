@@ -475,14 +475,14 @@
     {
       "id":28,
       "category":"Mac",
-      "image":"",
+      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMQ3?wid=532&hei=582&fmt=png-alpha&.v=1645138486301",
       "title":"Magic Mouse",
       "price":7920
     },
     {
       "id":29,
       "category":"Mac",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMQ3?wid=532&hei=582&fmt=png-alpha&.v=1645138486301",
+      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMP3?wid=532&hei=582&fmt=png-alpha&.v=1645136899926",
       "title":"Magic TracPad",
       "price":11920
     },
@@ -540,7 +540,7 @@
       "category":"sound",
       "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMT83?wid=532&hei=582&fmt=png-alpha&.v=1647541360014",
       "title":"Beats Studio Buds",
-      "price":11922
+      "price":11920
     }
 
   ]
