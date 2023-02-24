@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ header {
+    background-color: #333;
+    color: white;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ #profile{
+   display: flex;
+ }
+ #profile>h2{
+   margin-left: 30px;
+ }
+ #profile>img{
+   padding: 0px 10px;
+   height: 40px;
+   margin-top:15px;
+ }
+
+ 
+ nav {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+ }
+ 
+ nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ nav li {
+    display: inline-block;
+    margin: 0 10px;
+ }
+
+ nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+ }
+ 
+ nav a:hover {
+    background-color: white;
+    color: #555;
+ }
+ 
+ #main-content {
+    padding: 20px;
+ }
+ 
+ footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+ }
+
+ #main-content>#dashboard-main{
+   margin-top: 4%;
+   margin-bottom: 10%;
+   display: flex;
+   justify-content: space-evenly;
+ }
+ .dashboard-card{
+   border: 2px solid #333;
+   padding: 15px;
+   border-radius: 10px;
+ }
+
+ 
+ /* Product */
+ .products{
+   margin-top: 20px;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+   text-align: center;
+ }
+ .products>.card{
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   padding: 30px;
+   border-radius: 5px;
+ }
+ .products>.card:hover{
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+ .products>.card>img{
+   width: 70%;
+ }
+ .products>.card>button{
+   border-radius: 15px;
+   padding: 7px 12px;
+   border: 0px;
+   background-color: #333;
+   color: white;
+ }
+ .products>.card>button:hover{
+   background-color: black;
+ }
+
+ /* filter */
+ .filter{
+   width: 25%;
+   margin: auto;
+   text-align: center;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 30px;
+ }
+ .filter>select{
+   padding: 5px;
+   background-color: #333;
+   color: white;
+   border: 0px;
+   height: 30px;
+   border-radius: 5px;
+ }

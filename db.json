@@ -8,6 +8,14 @@
 
     }
   ],
+  "admin":[
+    {
+      "id": 1,
+      "name": "Ashish Kumar",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    }
+  ],
   "mac":[
     {
       "id":1,
