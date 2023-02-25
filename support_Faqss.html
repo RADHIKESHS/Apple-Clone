@@ -1,1255 +1,761 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Page</title>
-</head>
+    <s><link rel="stylesheet" href="./style.css"></s>
+    <style>
+        /* support page begins */
 
-<style>
-
-    *,
-    *::after,
-    *::before {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: "Inter", sans-serif;
-        font-weight: 300;
-        overflow-y: scroll;
-    }
-    
-    /* Desktop Nav */
-    
-    .nav-container {
-        background: #1D1D1F;
-        height: 44px;
-        z-index: 300;
-        /* position: fixed; */
-        left: 0;
-        top: 0;
-        right: 0;
-    }
-    
-    .nav-container nav {
-        width: 1000px;
-        margin: 0 auto;
-        padding: 0 8px;
-        height: 100%;
-    }
-    
-    nav .desktop-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-    }
-    
-    nav .desktop-nav li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 14px;
-        opacity: 0.8;
-        transition: opacity 400ms;
-    }
-    
-    nav .desktop-nav li a:hover {
-        opacity: 1;
-    }
-    
-    .link-logo {
-        background: url('images/ACElogo.png');
-        display: block;
-        background-position: center;
-        height: 44px;
-        width: 45px;
-        background-repeat: no-repeat;
-    }
-    
-    .link-search {
-        background: url('images/search2.png');
-        display: block;
-        background-position: center;
-        background-size: 18px;
-        height: 44px;
-        width: 20px;
-        background-repeat: no-repeat;
-    }
-    
-    .link-bag {
-        background: url('images/bag.png');
-        display: block;
-        background-position: center;
-        background-size: 17px;
-        height: 44px;
-        width: 20px;
-        background-repeat: no-repeat;
-    }
-    
-    .link-close {
-        background: url('images/cross.png');
-        display: block;
-        background-position: center;
-        background-size: 17px;
-        height: 44px;
-        width: 20px;
-        background-repeat: no-repeat;
-    }
-    
-    /* Search Container */
-    
-    .search-container.hide {
-        opacity: 0;
-        pointer-events: none;
-    }
-    
-    .search-container {
-        width: 60%;
-        margin: 0 auto;
-        padding: 0 42px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 200;
-    }
-    
-    .search-container .link-search {
-        position: absolute;
-        left: 12px;
-        opacity: 0.5;
-    }
-    
-    .search-container .link-close {
-        position: absolute;
-        top: 0;
-        right: 12px;
-        opacity: 0.5;
-        cursor: pointer;
-        transition: all 400ms;
-    }
-    
-    .search-container .link-close:hover {
-        opacity: 0.7;
-    }
-    
-    .search-container form {
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .search-container form input {
-        width: 100%;
-        height: 44px;
-        border: 0;
-        outline: none;
-        background: transparent;
-        color: #fff;
-        font-family: "Inter", sans-serif;
-        font-size: 17px;
-    }
-    
-    /* Overlay */
-    
-    .overlay.show {
-        position: fixed;
-        background: rgba(0, 0, 0, 0.48);
-        width: 100%;
-        height: 100vh;
-        left: 0;
-        top: 0;
-        z-index: 100;
-    }
-    
-    /* Quick Links */
-    
-    .search-container .quick-links {
-        background: #fff;
-        position: absolute;
-        left: 0;
-        right: 0;
-        padding: 16px 8px;
-        border-radius: 0 0 16px 16px;
-    }
-    
-    .search-container .quick-links h2 {
-        text-transform: uppercase;
-        font-size: 12px;
-        color: #6e6e73;
-        margin: 0 32px;
-        margin-top: 10px;
-    }
-    
-    .search-container .quick-links ul {
-        list-style: none;
-        margin-top: 12px;
-    }
-    
-    .search-container .quick-links ul li a {
-        display: inline-block;
-        width: 100%;
-        padding: 8px 50px;
-        font-size: 14px;
-        color: #1d1d1f;
-        text-decoration: none;
-        font-weight: 400;
-    }
-    
-    .search-container .quick-links ul li a:hover {
-        background: #f5f5f5;
-        color: #2997ff;
-    }
-    
-    /* Desktop Nav Animation */
-    
-    .desktop-nav li {
-        transition: all 400ms ease;
-    }
-    
-    .desktop-nav.hide li {
-        opacity: 0;
-        transform: scale(0.8);
-        pointer-events: none;
-    }
-    
-    /* Overlay Animation */
-    
-    .overlay {
-        transition: all 400ms ease;
-    }
-    
-    /* Navigation Menu Items Transition Delay */
-    
-    .desktop-nav li:nth-of-type(1),
-    .desktop-nav.hide li:nth-of-type(10) {
-        transition-delay: 0ms;
-    }
-    
-    .desktop-nav li:nth-of-type(2),
-    .desktop-nav.hide li:nth-of-type(9) {
-        transition-delay: 30ms;
-    }
-    
-    .desktop-nav li:nth-of-type(3),
-    .desktop-nav.hide li:nth-of-type(8) {
-        transition-delay: 60ms;
-    }
-    
-    .desktop-nav li:nth-of-type(4),
-    .desktop-nav.hide li:nth-of-type(7) {
-        transition-delay: 90ms;
-    }
-    
-    .desktop-nav li:nth-of-type(5),
-    .desktop-nav.hide li:nth-of-type(6) {
-        transition-delay: 120ms;
-    }
-    
-    .desktop-nav li:nth-of-type(6),
-    .desktop-nav.hide li:nth-of-type(5) {
-        transition-delay: 150ms;
-    }
-    
-    .desktop-nav li:nth-of-type(7),
-    .desktop-nav.hide li:nth-of-type(4) {
-        transition-delay: 180ms;
-    }
-    
-    .desktop-nav li:nth-of-type(8),
-    .desktop-nav.hide li:nth-of-type(3) {
-        transition-delay: 210ms;
-    }
-    
-    .desktop-nav li:nth-of-type(9),
-    .desktop-nav.hide li:nth-of-type(2) {
-        transition-delay: 240ms;
-    }
-    
-    .desktop-nav li:nth-of-type(10),
-    .desktop-nav.hide li:nth-of-type(1) {
-        transition-delay: 270ms;
-    }
-    
-    /* Search Container Animation */
-    
-    .search-container form,
-    .search-container .link-search {
-        opacity: 1;
-        transform: translateX(0);
-        transition: all 400ms ease;
-        transition-delay: 300ms;
-    }
-    
-    .search-container.hide form,
-    .search-container.hide .link-search {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    
-    .search-container .link-search {
-        opacity: 0.6;
-    }
-    
-    .search-container.hide .link-close {
-        opacity: 0;
-    }
-    
-    .search-container .link-close {
-        opacity: 0.5;
-        transition: all 400ms ease;
-        transition-delay: 400ms;
-    }
-    
-    .search-container.hide .quick-links h2 {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    
-    .search-container .quick-links h2 {
-        opacity: 1;
-        transform: translateX(0);
-        transition: all 400ms ease;
-        transition-delay: 100ms;
-    }
-    
-    .search-container.hide .quick-links ul li {
-        transform: translateX(60px);
-        opacity: 0;
-    }
-    
-    .search-container .quick-links ul li {
-        opacity: 1;
-        transform: translateX(0);
-        transition: all 400ms ease;
-    }
-    
-    .search-container .quick-links ul li:nth-of-type(1) {
-        transition-delay: 120ms;
-    } 
-    
-    .search-container .quick-links ul li:nth-of-type(2) {
-        transition-delay: 140ms;
-    } 
-    
-    .search-container .quick-links ul li:nth-of-type(3) {
-        transition-delay: 160ms;
-    } 
-    
-    .search-container .quick-links ul li:nth-of-type(4) {
-        transition-delay: 180ms;
-    } 
-    
-    .search-container .quick-links ul li:nth-of-type(5) {
-        transition-delay: 200ms;
-    } 
-    
-    
-    /* Hidden Items */
-    
-    .mobile-nav,
-    .mobile-search-container {
-        display: none;
-    } 
-    
-    /* Media Queries */
-    
-    @media (max-width: 1100px) {
-        .nav-container nav {
-            width: 100%;
-            padding: 0 32px;
+        .bigContainer {
+            margin-top: 46px;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .nav-container .desktop-nav {
-            flex-direction: column;
+
+        .aps {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 60px;
+        }
+
+        .aps h1 {
+            font-weight: 600;
+        }
+
+        .allIcons {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+            margin-top: 50px;
+            height: 120px;
+        }
+
+        .allIcons div img {
+            width: 50px;
+        }
+
+        .allIcons div p {
+            font-size: 16px;
+        }
+
+        .allIcons div a {
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+        }
+
+        .allIcons div a:hover {
+            text-decoration: underline;
+        }
+
+        .cards3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 200px;
+            margin-top: 70px;
+            gap: 24px;
+        }
+
+        .cards {
+            width: 33%;
+            height: 200px;
+            width: 310px;
+            height: 181px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            text-align: center;
+            background-color: rgba(229, 227, 230, 0.445);
+            color: #0066cc;
+        }
+
+        .cards:hover {
+            width: 3
+        }
+
+        .cards img {
+            width: 62px;
+            margin-top: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cards a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 400;
+
+        }
+
+        .searchTopics {
+            margin-top: 50px;
+            margin-bottom: 57px;
+        }
+
+        .hiddenItems {
+            color: white;
+            border: 1px solid black;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 0vh;
-            background: #000;
-            justify-content: start;
-            overflow: hidden;
-            transition: all 1000ms ease;
-        }
-    
-        .nav-container.active .desktop-nav {
-            height: 100vh;
-        }
-    
-        .nav-container .desktop-nav li {
-            width: 100%;
-            padding: 0 32px;
-        }
-    
-        .nav-container .desktop-nav li:first-child {
-            margin-top: 120px;
-        }
-    
-        .nav-container .desktop-nav .link-logo,
-        .nav-container .desktop-nav .link-search,
-        .nav-container .desktop-nav .link-bag {
+            padding: 30px;
             display: none;
         }
-    
-        .nav-container .desktop-nav li a {
-            padding: 16px 0;
-            display: inline-block;
-            border-bottom: 1px solid #616161;
-            width: 100%;
-            font-size: 17px;
-            transform: translateY(-80px);
-            opacity: 0;
-            transition: all 700ms ease;
+
+        .checkItem:hover .hiddenItems>ul {
+            display: block;
         }
-    
-        .nav-container.active .desktop-nav li a {
-            transform: translateY(0);
-            opacity: 1;
+
+        .searchTopics h1 {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+
         }
-    
-        /* Mobile Nav */
-    
-        nav .mobile-nav {
+
+        .searchsupp {
+            text-align: center;
+        }
+
+        .searchsupp input {
+            width: 930px;
+            height: 50px;
+            border-radius: 12px;
+            margin: auto;
+            margin-bottom: 80px;
+        }
+
+        .bigContainer2 {
+            padding-top: 1px;
+            background-color: rgba(185, 173, 187, 0.123);
+            padding-bottom: 1px;
+        }
+
+        .getthelatest {
+            text-align: center;
+        }
+
+        .getthelatest .written {
+            text-align: center;
+            margin: auto;
+            padding: 55px;
+            line-height: 30px;
+            margin-top: 50px;
+        }
+
+        .bigContainer2 a:hover {
+            text-decoration: underline;
+        }
+
+        .written {
+            text-align: center;
+            width: 75%;
+            background-color: white;
+            border-radius: 20px 20px 0px 0px;
+            margin-top: 80px;
+        }
+
+        .written a p:hover {
+            text-decoration: underline;
+        }
+
+        .imaag img {
+            width: 75%;
+            text-align: center;
+            margin: auto;
+            background-color: white;
+            border-radius: 0px 0px 20px 20px;
+            margin-bottom: 70px;
+        }
+
+        .getSupportcard {
+            height: 537px;
+        }
+
+        .first .second {
             display: flex;
-            width: 100%;
-            justify-content: space-between;
-            list-style: none;
-            z-index: 2;
-            position: relative;
+            flex-wrap: wrap;
         }
-    
-        nav .menu-icon-container {
-            width: 20px;
-            height: 44px;
+
+
+        .first {
+            margin-right: 25px;
+            background-color: white;
+            text-align: center;
+        }
+
+
+        .first img {
+            width: 758px;
+            margin-top: 50px;
+        }
+
+        .getSupportcard {
             display: flex;
-            align-items: center;
-            cursor: pointer;
+            justify-content: center;
         }
-    
-        nav .menu-icon {
-            position: relative;
+
+        .second {
+            background-color: white;
+            text-align: center;
+        }
+
+        .second img {
+            margin-top: 147px;
+        }
+
+        .mySupport .written2 {
+            text-align: center;
+            margin: auto;
+            padding: 40px;
+            line-height: 30px;
+            margin-top: 50px;
+        }
+
+        .written2 {
+            text-align: center;
+            width: 75%;
+            background-color: white;
+            border-radius: 20px 20px 20px 20px;
+            margin-top: 80px;
+        }
+
+        .written2 a p:hover {
+            text-decoration: underline;
+        }
+
+        .written3 {
+            text-align: center;
+            width: 75%;
+            background-color: white;
+            border-radius: 20px 20px 20px 20px;
+            margin-top: 80px;
+        }
+
+        .lines2 a p:hover {
+            text-decoration: underline;
+        }
+
+        .lines1 {
+            /* border: 1px red solid; */
+        }
+
+
+        .beware {
+            margin-bottom: 40px;
+        }
+
+        .beware .written3 {
+            text-align: left;
+            margin: auto;
+            padding: 40px 80px 25px 80px;
+            line-height: 30px;
+            margin-top: 50px;
+        }
+
+        .beware .written3 p {
+            line-height: 24px;
+        }
+
+        .written3 p a:hover {
+            text-decoration: underline;
+        }
+
+        .bigContainer3 {
+            text-align: left;
+        }
+
+        .bigContainer3 .written4 {
+            width: 80%;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .written4 {
+            line-height: 35px;
+        }
+
+        .written4 a p:hover {
+            text-decoration: underline;
+        }
+
+        /* footer styling */
+        footer {
             width: 100%;
+            margin: auto;
+            font-size: 15px;
+            background-color: #F5F5F7;
+            padding: 10px;
         }
-    
-        nav .menu-icon .line-1,
-        nav .menu-icon .line-2 {
-            position: absolute;
-            height: 1px;
-            width: 100%;
-            background: #fff;
-            transition-property: transform, top;
-            transition-delay: 0ms, 160ms;
-            transition-duration: 200ms;
+
+        footer>#foot {
+            margin: 40px 60px 40px 60px;
         }
-    
-        nav .menu-icon .line-1 {
-            top: -4px;
-        }
-    
-        nav .menu-icon .line-2 {
-            top: 4px;
-        }
-    
-        .nav-container.active nav .menu-icon-container .menu-icon .line-1 {
-            top: 0;
-            transform: rotateZ(45deg);
-            transition-property: top, transform;
-            transition-delay: 0ms, 160ms;
-            transition-duration: 200ms;
-        }
-    
-        .nav-container.active nav .menu-icon-container .menu-icon .line-2 {
-            top: 0;
-            transform: rotateZ(-45deg);
-            transition-property: top, transform;
-            transition-delay: 0ms, 160ms;
-            transition-duration: 200ms;
-        }
-    
-        /* Bag Icon Animation */
-    
-        .nav-container.active .mobile-nav .link-bag {
-            transform: translateY(8px);
-            opacity: 0;
-            pointer-events: none;
-        }
-    
-        .nav-container .mobile-nav .link-bag {
-            transition: all 1000ms ease;
-        }
-    
-    
-    
-        /* Search Box */
-    
-        .mobile-search-container input {
-            width: 100%;
-            padding: 12px 36px;
-            font-family: "Inter", sans-serif;
-            font-size: 17px;
-            background: #1b1b1b;
-            border: 0;
-            color: #fff;
-            border-radius: 8px;
-            outline: none;
-        }
-    
-        .mobile-search-container {
-            position: relative;
-            padding: 0 16px;
-            margin-top: -30px;
-            border-bottom: 1px solid #616161;
+
+        footer>.contain {
+            width: auto;
+            height: auto;
+            border: 2px solid transparent;
+            margin: 2px 30px 30px 30px;
             display: flex;
-            padding-bottom: 16px;
-            align-items: center;
-            transform: rotateX(90deg);
-            opacity: 0;
-            transition: all 600ms ease;
+            justify-content: space-around;
         }
-    
-        .nav-container.active .mobile-search-container {
-            transform: rotateX(0deg);
-            margin-top: 10px;
-            opacity: 1;
+
+        ul {
+            list-style-type: none;
+            padding: 5px;
         }
-    
-        .mobile-search-container .link-search {
-            position: absolute;
-            left: 24px;
-            opacity: .5;
-            background-size: 15px;
-        }
-    
-        /* Nav Move Up */
-    
-        .nav-container nav.move-up {
-            margin-top: -40px;
-        }
-    
-        /* Cancel Button */
-    
-        .mobile-search-container .cancel-btn {
-            color: #2997ff;
-            font-size: 17px;
-            font-weight: 400;
-            cursor: pointer;
-            width: 0px;
-            overflow: hidden;
-            transition: all 400ms ease;
-        }
-    
-        .mobile-search-container .search-bar.active + .cancel-btn {
-            padding: 0 16px;
-            width: 74px;
-        }
-    
-        .mobile-search-container .search-bar {
-            flex: 1;
-        }
-    
-        /* Desktop Nav Move Down */
-    
-        nav .desktop-nav.move-down li:first-child {
-            margin-top: 150px;
-        }
-    
-        nav .desktop-nav.move-down li {
-            opacity: 0;
-            pointer-events: none;
-        }
-    
-        
-        /* Quick Links */
-    
-        .mobile-search-container .search-bar.active ~ .quick-links {
-            top: 80px;
-            opacity: 1;
-            pointer-events: auto;
-            transition-delay: 40ms;
-        }
-    
-        .mobile-search-container .quick-links {
-            position: absolute;
-            left: 0;
-            right: 0;
-            padding: 0 32px;
-            opacity: 0;
-            pointer-events: none;
-            top: 10px;
-            transition: all 400ms ease;
-        }
-    
-        .mobile-search-container .quick-links ul {
-            list-style: none;
-        }
-    
-        .mobile-search-container .quick-links h2 {
-            color: #86868b;
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-    
-        .mobile-search-container .quick-links ul li a {
-            padding: 16px 0;
-            display: inline-block;
+
+        a {
+            color: grey;
             text-decoration: none;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 400;
-            border-bottom: 1px solid #616161;
-            width: 100%;
         }
-    
-        .mobile-search-container .quick-links ul li a:hover {
-            color: #2997ff;
+
+        a:hover {
+            text-decoration: underline;
         }
-    
-        /* Nav Animation */
-    
-        .nav-container nav {
-            transition: all 400ms ease;
+
+
+        .completeFooter {
+            width: 80%;
+            margin: auto;
         }
-    }
-    
-    
-    input,
-    div,
-    span,
-    a {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
 
-      /* support page begins */
-
-    .bigContainer{
-    
-      }
-
-    .aps{
-      text-align:center;
-      font-size:32px;
-      margin-top: 60px;
-    }
-
-    .aps h1{
-        font-weight:600;
-    }
-
-    .allIcons{
-      display:flex;
-      text-align:center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap:60px;
-      margin-top:50px;
-      height:120px;
-    }
-
-    .allIcons div img{
-       width:50px;
-    }
-
-    .allIcons div p{
-       font-size: 16px;
-    }
-
-    .allIcons div a{
-        text-decoration: none;
-        color:black;
-        font-weight:400;
-    }
-
-    .allIcons div a:hover{
-        text-decoration: underline;
-    }
-
-    .cards3{
-      display:flex;
-       flex-wrap: wrap;
-       justify-content: center;
-       height:200px;
-       margin-top:70px;
-       gap:24px;
-    }
-
-    .cards{
-        width:33%;
-        height:200px;
-        width:310px;
-        height:181px;
-        border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-        text-align: center;
-        background-color:rgba(229, 227, 230, 0.445);
-        color: #0066cc;
-    }
-
-    .cards:hover{
-        width:3
-    }
-
-    .cards img{
-        width:62px;
-        margin-top: 42px;
-        margin-bottom: 15px;
-    }
-
-    .cards a{
-        color: #0066cc;
-        text-decoration:none;
-        font-weight: 400;
-       
-    }
-
-    .searchTopics{
-        margin-top:50px;
-        margin-bottom:57px;
-    }
-    .hiddenItems{
-        color: white;
-        border: 1px solid black;
-        position: fixed;
-        padding: 30px;
-        display: none;
-    }
-    
-    .checkItem:hover .hiddenItems>ul{
-        display: block;
-    }
-
-    .searchTopics h1{
-        margin-top:50px;
-        text-align:center;
-        font-size: 40px;
-        font-weight:600;
-       
-    }
-
-    .searchsupp{
-        text-align: center; 
-    }
-
-    .searchsupp input{
-        width:930px;
-        height:50px;
-        border-radius:12px;
-        margin:auto;
-        margin-bottom:80px;
-    }
-
-     .bigContainer2{
-        padding-top: 1px;
-        background-color: rgba(185, 173, 187, 0.123);
-        padding-bottom:1px;
-     }
-
-    .getthelatest{
-        text-align:center;
-    }
-
-    .getthelatest .written{
-        text-align:center;
-        margin:auto;
-        padding:55px;
-        line-height: 30px;
-        margin-top:50px;
-    }
-
-    .bigContainer2 a:hover{
-        text-decoration: underline;
-    }
-
-    .written{
-        text-align:center;
-        width:75%;
-        background-color: white;
-        border-radius: 20px 20px 0px 0px;
-        margin-top: 80px;
-    }
-
-    .written a p:hover{
-        text-decoration: underline;
-    }
-
-    .imaag img{
-        width:75%;
-        text-align:center;
-        margin:auto;
-        background-color: white;
-        border-radius: 0px 0px 20px 20px;
-        margin-bottom:70px;
-    }
-
-    .getSupportcard{
-        height:537px;
-    }
-
-    .first .second{
-        display:flex;
-        flex-wrap: wrap;
-    }
-
-
-    .first{
-        margin-right:25px;
-        background-color: white;
-        text-align: center;
-    }
-    
-
-    .first img{
-        width:758px;
-        margin-top:50px;     
-    }
-
-    .getSupportcard {
-        display: flex;
-        justify-content: center;
-    }
-
-    .second{
-        background-color: white;
-        text-align: center;
-    }
-
-    .second img{
-        margin-top:147px;
-    }
-
-    .mySupport .written2{
-        text-align:center;
-        margin:auto;
-        padding:40px;
-        line-height: 30px;
-        margin-top:50px;
-    }
-
-    .written2{
-        text-align:center;
-        width:75%;
-        background-color: white;
-        border-radius: 20px 20px 20px 20px;
-        margin-top: 80px;
-    }
-
-    .written2 a p:hover {
-     text-decoration: underline;
-    }
-
-    .written3{
-        text-align:center;
-        width:75%;
-        background-color: white;
-        border-radius: 20px 20px 20px 20px;
-        margin-top: 80px;
-    }
-
-    .lines2 a p:hover{
-       text-decoration: underline;
-    }
-
-    .lines1{
-        /* border: 1px red solid; */
-    }
-
-
-    .beware{
-        margin-bottom:40px;
-    }
-
-    .beware .written3{
-        text-align:left;
-        margin:auto;
-        padding:40px 80px 25px 80px;
-        line-height: 30px;
-        margin-top:50px;
-    }
-
-    .beware .written3 p{
-        line-height:24px;
-    }
-
-    .written3 p a:hover{
-        text-decoration: underline;
-    }
-
-    .bigContainer3{
-        text-align: left;
-    }
-
-    .bigContainer3 .written4{
-        width:80%;
-        margin:auto;
-        padding: 60px 20px;
-    }
-
-    .written4{
-        line-height:35px;
-    }
-
-    .written4 a p:hover{
-        text-decoration: underline;
-    }
-
-    /* footer styling */
-    footer{
-       width: 100%;
-       margin: auto;
-       font-size: 15px;
-       background-color: #F5F5F7;
-       padding: 10px;
-   }
-
-    footer>#foot{
-       margin: 40px 60px 40px 60px;
-    }
-
-    footer>.contain{
-       width: auto;
-       height: auto;
-       border: 2px solid transparent;
-       margin: 2px 30px 30px 30px;
-       display: flex;
-       justify-content: space-around;
-    }
-
-    ul{
-       list-style-type: none;
-       padding: 5px;
-    }
-
-    a{
-       color: grey;
-       text-decoration:none; 
-    }
-
-    a:hover {
-       text-decoration: underline;
-    }
-
-
-     .completeFooter{
-        width:80%;
-        margin:auto;
-     }
-
-     .completeFooter div{
-        width: auto;
-        height: auto;
-        border: 2px solid transparent;
-        display: flex;
-        justify-content: space-around;
-     }
-
-    
+        .completeFooter div {
+            width: auto;
+            height: auto;
+            border: 2px solid transparent;
+            display: flex;
+            justify-content: space-around;
+        }
     </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <ul class="mobile-nav">
+                <li>
+                    <div class="menu-icon-container">
+                        <div class="menu-icon">
+                            <span class="line-1"></span>
+                            <span class="line-2"></span>
+                        </div>
+                    </div>
+                </li>
 
+                <li>
+                    <a href="" class="link-logo"></a>
+                </li>
 
-    <body>
-    
-       <div class="nav-container">
-          <nav>
-              <ul class="mobile-nav">
-                  <li>
-                      <div class="menu-icon-container">
-                          <div class="menu-icon">
-                              <span class="line-1"></span>
-                              <span class="line-2"></span>
+                <li>
+                    <a href="" class="link-bag"></a>
+                </li>
+            </ul>
+
+            <ul class="desktop-nav">
+                <li>
+                    <a href="./index.html" class="link-logo"><img src="./images/apple_logo.PNG" alt=""></a>
+                </li>
+                <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn">MAC</button>
+                      <div class="dropdown-content">
+                        <a href="#" id="dmackbookair" style="color: black;font-weight: bold;">MackBook Air</a>
+                        <a href="#" style="color: black;font-weight: bold;">MackBook Pro</a>
+                        <a href="#" style="color: black;font-weight: bold;">iMac</a>
+                        <a href="#" style="color: black;font-weight: bold;">Mac mini</a>
+                        <a href="#" style="color: black;font-weight: bold;">Mac Studio</a>
+                        <a href="#" style="color: black;font-weight: bold;">Mac Pro</a>
+                      </div>
+                    </div> 
+                  </div>
+                </li>
+                <li>
+                  <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn">iPAD</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="color: black;font-weight: bold;">iPad Pro</a>
+                        <a href="#" style="color: black;font-weight: bold;">iPad Air</a>
+                        <a href="#" style="color: black;font-weight: bold;" >iPad mini</a>
+                        <a href="#" style="color: black;font-weight: bold;" >Apple Pencil</a>
+                        <a href="#" style="color: black;font-weight: bold;" >Keyboards</a>
+                      </div>
+                    </div> 
+                  </div>
+                </li>
+                <li>
+                  <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn">iPHONE</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="color: black;font-weight: bold;">iPhone 14 Pro</a>
+                        <a href="#" style="color: black;font-weight: bold;">iPhone 14</a>
+                        <a href="#" style="color: black;font-weight: bold;">iPhone 13</a>
+                        <a href="#" style="color: black;font-weight: bold;">iPhone 12</a>
+                        <a href="#" style="color: black;font-weight: bold;">iPhone SE</a>
+                      </div>
+                    </div> 
+                  </div>
+                </li>
+                <li>
+                  <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn">WATCH</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="color: black;font-weight: bold;">Apple Watch Ultra</a>
+                        <a href="#" style="color: black;font-weight: bold;">Apple Watch Series 8</a>
+                        <a href="#" style="color: black;font-weight: bold;">Apple Watch SE</a>
+                        <a href="#" style="color: black;font-weight: bold;">Apple Watch Nike</a>
+                        <a href="#" style="color: black;font-weight: bold;">Apple Watch Hermes</a>
+
+                      </div>
+                    </div> 
+                  </div>
+                </li>
+                <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn">AirPods</button>
+                      <div class="dropdown-content">
+                        <a href="#" style="color: black;font-weight: bold;">AirPods 2nd generation</a>
+                        <a href="#" style="color: black;font-weight: bold;">AirPods 3rd generation</a>
+                        <a href="#" style="color: black;font-weight: bold;">AirPods Pro 2nd generation</a>
+                        <a href="#" style="color: black;font-weight: bold;">AirPods Max</a>
+                      </div>
+                    </div> 
+                  </div>
+                </li>
+                <li>
+                    <div class="navbar">
+                        <div class="dropdown">
+                          <button class="dropbtn">Tv & Home</button>
+                          <div class="dropdown-content">
+                            <a href="#" style="color: black;font-weight: bold;">Apple TV 4K</a>
+                            <a href="#" style="color: black;font-weight: bold;">HomePod</a>
+                            <a href="#" style="color: black;font-weight: bold;">HomePod mini</a>
                           </div>
+                        </div> 
                       </div>
-                  </li>
-    
-                  <li>
-                      <a href="#" class="link-logo"></a>
-                  </li>
-    
-                  <li>
-                      <a href="" class="link-bag"></a>
-                  </li>
-              </ul>
-    
-              <ul class="desktop-nav">
-                  <li>
-                      <a href="#" class="link-logo"></a>
-                  </li>
-                  <li>
-                      <a href="#" class="checkItem">Mac</a>
-                      <div class="hiddenItems">
-                        <ul>
-                            <li>Abhijeet</li>
-                            <li>Abhijeet</li>
-                            <li>Abhijeet</li>
-                            <li>Abhijeet</li>
-                            <li>Abhijeet</li>
-                            <li>Abhijeet</li>
-                        </ul>
+                    </li>
+                <li>
+                  <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn">SUPPORT</button>
+                      <div class="dropdown-content">
+                        <a href="./support_Faqss.html" style="color: black ;font-weight: bold;">All Support</a>
                       </div>
-                  </li>
-                  <li>
-                      <a href="#">iPad</a>
-                  </li>
-                  <li>
-                      <a href="#">iPhone</a>
-                  </li>
-                  <li>
-                      <a href="#">Watch</a>
-                  </li>
-                  <li>
-                      <a href="#">TV</a>
-                  </li>
-                  <li>
-                      <a href="#">Music</a>
-                  </li>
-                  <li>
-                      <a href="#">Support</a>
-                  </li>
-                  <li>
-                      <a href="#" class="link-search"></a>
-                  </li>
-                  <li>
-                      <a href="#" class="link-bag"></a>
-                  </li>
-              </ul>
-          </nav>
-    
-          <!-- End of navigation menu items -->
-    
-          <div class="search-container hide">
-              <div class="link-search"></div>
-              <div class="search-bar">
-                  <form action="">
-                      <input type="text" placeholder="Search apple.com">
-                  </form>
-              </div>
-              <div class="link-close"></div>
-    
-              <div class="quick-links">
-                  <h2>Quick Links</h2>
-                  <ul>
-                      <li>
-                          <a href="#">Visiting an Apple Store FAQ</a>
-                      </li>
-                      <li>
-                          <a href="#">Shop Apple Store Online</a>
-                      </li>
-                      <li>
-                          <a href="#">Accessories</a>
-                      </li>
-                      <li>
-                          <a href="#">AirPods</a>
-                      </li>
-                      <li>
-                          <a href="#">AirTag</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-    
-    
-          <div class="mobile-search-container">
-              <div class="link-search"></div>
-              <div class="search-bar">
-                  <form action="">
-                      <input type="text" placeholder="Search apple.com">
-                  </form>
-              </div>
-              <span class="cancel-btn">Cancel</span>
-    
-              <div class="quick-links">
-                  <h2>Quick Links</h2>
-                  <ul>
-                      <li>
-                          <a href="#">Visiting an Apple Store FAQ</a>
-                      </li>
-                      <li>
-                          <a href="#">Shop Apple Store Online</a>
-                      </li>
-                      <li>
-                          <a href="#">Accessories</a>
-                      </li>
-                      <li>
-                          <a href="#">AirPods</a>
-                      </li>
-                      <li>
-                          <a href="#">AirTag</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-          
-    
-      </div>
-    
-    
-      <div class="overlay"></div>
-    
-    
-      <div class="infotag">
-         <div><p></p></div>
-      </div>
+                    </div> 
+                  </div>
+                </li>
+                <li>
+                    <a href="#" class="link-search"></a>
+                </li>
+                <li>
+                    <a href="#" class="link-bag"></a>
+                </li>
+                <li>
+                    <a href="./signin_signup.html" id="usersignIn" style="font-weight: bold;">login/Signup</a>
+                </li>
+            </ul>
+        </nav>
 
-      <!-- support page -->
+        <!-- End of navigation menu items -->
 
-      
-       <div class="bigContainer">
-            <div>
-                <img src="images/Multiphotos.png" width="100%" style=" display: inline-block;" alt="">
+        <div class="search-container hide">
+            <div class="link-search"></div>
+            <div class="search-bar">
+                <form action="">
+                    <input type="text" id="searchbar" placeholder="Search apple.com">
+                </form>
             </div>
+            <div class="link-close"></div>
 
-            <div class="aps">
-                <h1>Apple Support</h1>
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li>
+                        <a href="#">Visiting an Apple Store FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop Apple Store Online</a>
+                    </li>
+                    <li>
+                        <a href="#">Accessories</a>
+                    </li>
+                    <li>
+                        <a href="#">AirPods</a>
+                    </li>
+                    <li>
+                        <a href="#">AirTag</a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="allIcons">
-                    <div>
-                        <img style="width:40px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-iphone_2x.png" alt="">
-                        <a href="" alt=""><p style="margin-top: 16px;">iPhone</p></a>
-                    </div>
-
-                    <div>
-                        <img style="width:107px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-mac_2x.png" alt="">
-                        <a href="" alt=""><p style="margin-top: 18.5px;">Mac</p></a>
-                    </div>
-
-                    <div>
-                        <img style="width:90px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-ipad_2x.png" alt="">
-                        <a href="" alt=""><p style="margin-top: 18px;">iPad</p></a>
-                    </div>
-
-                    <div>
-                        <img style="width:44px; margin-top: 5px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-watch-_2x.png" alt="">
-                        <a href="" alt=""><p style="margin-top: 19.3px;">Watch</p></a>
-                    </div>
-
-                    <div>
-                        <img style="width:66px; margin-top: 12px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-airpods_2x.png" alt="">
-                        <a href="" alt=""><p style="margin-top: 22.5px;">AirPods</p></a>
-                    </div>
-
-                    <div>
-                        <img style="width:68px;  margin-top: 5px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-music_2x.png" alt="">
-                        <a href="" alt=""><p style="margin-top: 22px;">Music</p></a>
-                    </div>
-
-                    <div>
-                        <img style="width:72px; margin-top: 5px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-tv_2x.png" alt="">
-                        <a href="" alt=""><p style="margin-top: 22px;">TV</p></a>
-                    </div>
-            </div>
-
-            <div class="cards3">
-                    <div class="cards">
-                        <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/tile-topic-password_2x.svg" alt="">
-                        <a href="" alt=""><p>Forgotten Apple ID or password</p></a>
-                    </div>
-
-                    <div class="cards">
-                        <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/tile-topic-repair_2x.svg" alt="">
-                        <a href="" alt=""><p>Apple Repair</p></a>
-                    </div>
-
-                    <div class="cards">
-                        <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/tile-topic-password_2x.svg" alt="">
-                        <a href="" alt=""><p>Biling and Subscriptions</p></a>
-                    </div>
-            </div>
-
-                <div class="searchTopics">
-                    <h1>Search for more topics</h1>
-                </div>
-
-                <div class="searchsupp">
-                    <input type="text" placeholder="Search Support">
-                </div>
         </div>
 
-        <div class="bigContainer2">
 
-            <div class="getthelatest">
-                    <div class="written"> 
-                        <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Get the latest</h1>
-                        <p style="font-weight:400; font-size: 17px;">Update to iOS 16 or iPadOS 16</p>
-                        <a href="#" style="color:#0066cc;font-weight:400; text-decoration: none;"><p >Find out how</p></a>
-                    </div>
-                            <div class="imaag">
-                                <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-feature-ios16.image.large_2x.png" alt="">
-                            </div>
+        <div class="mobile-search-container">
+            <div class="link-search"></div>
+            <div class="search-bar">
+                <form action="" id="searchsubmit">
+                    <input type="text" id="searchbar" placeholder="Search apple.com">
+                </form>
+            </div>
+            <span class="cancel-btn">Cancel</span>
+
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li>
+                        <a href="#">Visiting an Apple Store FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop Apple Store Online</a>
+                    </li>
+                    <li>
+                        <a href="#">Accessories</a>
+                    </li>
+                    <li>
+                        <a href="#">AirPods</a>
+                    </li>
+                    <li>
+                        <a href="#">AirTag</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="overlay"></div>
+    <!-- support page -->
+
+    <div class="bigContainer">
+        <div>
+            <img src="images/Multiphotos.png" width="100%" style=" display: inline-block;" alt="">
+        </div>
+
+        <div class="aps">
+            <h1>Apple Support</h1>
+        </div>
+
+        <div class="allIcons">
+            <div>
+                <img style="width:40px;"
+                    src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-iphone_2x.png"
+                    alt="">
+                <a href="" alt="">
+                    <p style="margin-top: 16px;">iPhone</p>
+                </a>
             </div>
 
+            <div>
+                <img style="width:107px;"
+                    src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-mac_2x.png"
+                    alt="">
+                <a href="" alt="">
+                    <p style="margin-top: 18.5px;">Mac</p>
+                </a>
+            </div>
 
-            <div class="getSupportcard" >
-                <div class="first">
-                    <div style="margin-top: 30px;" class="lines1">
-                        <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Get Support</h1>
-                        <p style="font-weight:400; font-size: 17px;">Give us a few details and we’ll offer the best solution. Connect by<br> phone, chat, email and more.</p>
-                        <button style="padding:6px 10px;font-size: 16px; border-radius: 16px;background-color: black; color:white;margin-top:10px;">Start now</button>
-                    </div>
-                        <div>
-                            <img src="Images/animegirly.png" alt="">
-                        </div>
-                    
+            <div>
+                <img style="width:90px;"
+                    src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-ipad_2x.png"
+                    alt="">
+                <a href="" alt="">
+                    <p style="margin-top: 18px;">iPad</p>
+                </a>
+            </div>
+
+            <div>
+                <img style="width:44px; margin-top: 5px;"
+                    src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-watch-_2x.png"
+                    alt="">
+                <a href="" alt="">
+                    <p style="margin-top: 19.3px;">Watch</p>
+                </a>
+            </div>
+
+            <div>
+                <img style="width:66px; margin-top: 12px;"
+                    src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-airpods_2x.png"
+                    alt="">
+                <a href="" alt="">
+                    <p style="margin-top: 22.5px;">AirPods</p>
+                </a>
+            </div>
+
+            <div>
+                <img style="width:68px;  margin-top: 5px;"
+                    src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-music_2x.png"
+                    alt="">
+                <a href="" alt="">
+                    <p style="margin-top: 22px;">Music</p>
+                </a>
+            </div>
+
+            <div>
+                <img style="width:72px; margin-top: 5px;"
+                    src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/image-grid-tv_2x.png"
+                    alt="">
+                <a href="" alt="">
+                    <p style="margin-top: 22px;">TV</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="cards3">
+            <div class="cards">
+                <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/tile-topic-password_2x.svg"
+                    alt="">
+                <a href="" alt="">
+                    <p>Forgotten Apple ID or password</p>
+                </a>
+            </div>
+
+            <div class="cards">
+                <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/tile-topic-repair_2x.svg"
+                    alt="">
+                <a href="" alt="">
+                    <p>Apple Repair</p>
+                </a>
+            </div>
+
+            <div class="cards">
+                <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_navicons/tile-topic-password_2x.svg"
+                    alt="">
+                <a href="" alt="">
+                    <p>Biling and Subscriptions</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="searchTopics">
+            <h1>Search for more topics</h1>
+        </div>
+
+        <div class="searchsupp">
+            <input type="text" placeholder="Search Support">
+        </div>
+    </div>
+
+    <div class="bigContainer2">
+
+        <div class="getthelatest">
+            <div class="written">
+                <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Get the latest</h1>
+                <p style="font-weight:400; font-size: 17px;">Update to iOS 16 or iPadOS 16</p>
+                <a href="#" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                    <p>Find out how</p>
+                </a>
+            </div>
+            <div class="imaag">
+                <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-feature-ios16.image.large_2x.png"
+                    alt="">
+            </div>
+        </div>
+
+
+        <div class="getSupportcard">
+            <div class="first">
+                <div style="margin-top: 30px;" class="lines1">
+                    <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Get Support</h1>
+                    <p style="font-weight:400; font-size: 17px;">Give us a few details and we’ll offer the best
+                        solution. Connect by<br> phone, chat, email and more.</p>
+                    <button
+                        style="padding:6px 10px;font-size: 16px; border-radius: 16px;background-color: black; color:white;margin-top:10px;">Start
+                        now</button>
+                </div>
+                <div>
+                    <img src="Images/animegirly.png" alt="">
                 </div>
 
-                <div class="second">
-                    <div style="margin-top: 30px;"class="lines2">
-                        <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Apple Support app</h1>
-                        <p style="font-weight:400; font-size: 17px;">Get help for all of your Apple products in one place, or connect with an expert.</p>
-                        <a style="color:#0066cc;font-weight:400; text-decoration: none;margin-top:40px;" href="#"><p>Download</p></a>
-                    </div>
-                    <div >
-                        <img style="width:250px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-split-supportapp.image.large_2x.png" alt="">
-                    </div>
+            </div>
+
+            <div class="second">
+                <div style="margin-top: 30px;" class="lines2">
+                    <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Apple Support app</h1>
+                    <p style="font-weight:400; font-size: 17px;">Get help for all of your Apple products in one place,
+                        or connect with an expert.</p>
+                    <a style="color:#0066cc;font-weight:400; text-decoration: none;margin-top:40px;" href="#">
+                        <p>Download</p>
+                    </a>
                 </div>
-    
+                <div>
+                    <img style="width:250px;"
+                        src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-split-supportapp.image.large_2x.png"
+                        alt="">
+                </div>
             </div>
 
-            <div class="mySupport">
-                    <div class="written2">
-                        <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">My Support</h1>
-                        <p style="font-weight:400; font-size: 17px;">Get up-to-date information about your Apple products including cover, repairs and much more.</p>
-                        <a href="#" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>Sign in to My Support</p></a>
-                     </div>
-                 </div>
+        </div>
 
-
-                 <div class="beware">
-                     <div class="written3">
-                        <h1 style="margin-bottom: 16px; font-size: 25px; font-weight: 600;">Beware of counterfeit parts</h1>
-                        <p style="margin-bottom: 10px;font-weight:400; font-size: 16px;">Some counterfeit and third-party power adapters and batteries may not be designed properly and could result in safety issues. To ensure you receive a genuine Apple battery during a battery replacement, we recommend visiting an <a style="color:#0066cc;font-weight:400; text-decoration: none;" href="#">Apple Authorised Service Provider</a> . If you need a replacement adapter to charge your Apple device, we recommend getting an Apple power adapter.</p>
-                        <p style="font-weight:400; font-size: 16px;">Also non-genuine replacement displays may have compromised visual quality and may fail to work correctly. Apple-certified screen repairs are performed by trusted experts who use genuine Apple parts.</p>
-                     </div>
-                 </div>
-         </div>
-
-         <div class="bigContainer3">
-            <div class="written4" style="margin-left:220px">
-               <h1 style="font-size: 25px; font-weight: 600;">Apple Service Programmes</h1>
-                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>Apple Watch Series 6 Service Programme for Blank Screen Issue</p></a>
-                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>iPhone 12 and iPhone 12 Pro Service Programme for No Sound Issues</p></a>
-                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>iPhone 11 Display Module Replacement Programme for Touch Issues</p></a>
-                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>15-inch MacBook Pro Battery Recall Programme</p></a>
-                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>Apple Three-Prong AC Wall Plug Adapter Recall Programme</p></a>
-                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>See all programmes</p></a>
+        <div class="mySupport">
+            <div class="written2">
+                <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">My Support</h1>
+                <p style="font-weight:400; font-size: 17px;">Get up-to-date information about your Apple products
+                    including cover, repairs and much more.</p>
+                <a href="#" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                    <p>Sign in to My Support</p>
+                </a>
             </div>
-         </div>
+        </div>
 
 
-         <!-- footer -->
-         <footer>
-            <div class="completeFooter">
-               
+        <div class="beware">
+            <div class="written3">
+                <h1 style="margin-bottom: 16px; font-size: 25px; font-weight: 600;">Beware of counterfeit parts</h1>
+                <p style="margin-bottom: 10px;font-weight:400; font-size: 16px;">Some counterfeit and third-party power
+                    adapters and batteries may not be designed properly and could result in safety issues. To ensure you
+                    receive a genuine Apple battery during a battery replacement, we recommend visiting an <a
+                        style="color:#0066cc;font-weight:400; text-decoration: none;" href="#">Apple Authorised Service
+                        Provider</a> . If you need a replacement adapter to charge your Apple device, we recommend
+                    getting an Apple power adapter.</p>
+                <p style="font-weight:400; font-size: 16px;">Also non-genuine replacement displays may have compromised
+                    visual quality and may fail to work correctly. Apple-certified screen repairs are performed by
+                    trusted experts who use genuine Apple parts.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bigContainer3">
+        <div class="written4" style="margin-left:220px">
+            <h1 style="font-size: 25px; font-weight: 600;">Apple Service Programmes</h1>
+            <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                <p>Apple Watch Series 6 Service Programme for Blank Screen Issue</p>
+            </a>
+            <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                <p>iPhone 12 and iPhone 12 Pro Service Programme for No Sound Issues</p>
+            </a>
+            <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                <p>iPhone 11 Display Module Replacement Programme for Touch Issues</p>
+            </a>
+            <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                <p>15-inch MacBook Pro Battery Recall Programme</p>
+            </a>
+            <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                <p>Apple Three-Prong AC Wall Plug Adapter Recall Programme</p>
+            </a>
+            <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;">
+                <p>See all programmes</p>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="completeFooter">
+
             <div class="contain">
                 <div style="margin-bottom:30px;" id="info">
                     <ul style="line-height:26px; font-size: 12px; font-weight: 500;">
                         <div style="margin-top:25px;">
-                            <img style="margin-right:20px; width:35px; margin-bottom:30px" src="Images/ACElogo.png" alt="">
+                            <img style="margin-right:20px; width:35px; margin-bottom:30px" src="Images/ACElogo.png"
+                                alt="">
                             <p style="margin-top:6px; ">Support</p>
                         </div>
                         <li>
@@ -1279,7 +785,7 @@
                         <li><a href="">Hardware Warranties</a></li>
                         <li><a href="">Software License Agreements</a></li>
                         <li><a href="">Complimentary Support</a></li>
-                    </ul>  
+                    </ul>
                 </div>
 
                 <div id="info2">
@@ -1294,7 +800,7 @@
                         <li><a href="">Accessibility</a></li>
                     </ul>
                 </div>
-               
+
                 <div id="info4">
                     <ul style="margin-top:92px; line-height:26px;font-size: 12px;font-weight: 500;">
                         <li>
@@ -1306,75 +812,77 @@
                         <li><a href="">Apple Communities</a></li>
                         <li><a href="">Apple Support Videos</a></li>
                         <li><a href="">@AppleSupport</a></li>
-                    </ul>   
+                    </ul>
                 </div>
             </div>
-               <hr>
-               <p style="margin-top:30px; margin-bottom: 30px; font-size: 12px;font-weight: 500;color:#808080">Copyright © 2023 Apple Inc. All rights reserved.</p>
-                   
-            </div>
+            <hr>
+            <p style="margin-top:30px; margin-bottom: 30px; font-size: 12px;font-weight: 500;color:#808080">Copyright ©
+                2023 Apple Inc. All rights reserved.</p>
 
-        </footer>
+        </div>
+
+    </footer>
 
 
-       
-    
-    
-   
-      <!-- navbar javascript -->
-    
-<script>
-    const searchButton = document.querySelector("nav .desktop-nav .link-search");
-    const closeButton = document.querySelector(".search-container .link-close");
-    const desktopNav = document.querySelector(".desktop-nav");
-    const searchContainer = document.querySelector(".search-container");
-    const overlay = document.querySelector(".overlay");
-    
-    searchButton.addEventListener("click", () => {
-    desktopNav.classList.add("hide");
-    searchContainer.classList.remove("hide");
-    overlay.classList.add("show");
-    })
-    
-    closeButton.addEventListener("click", () => {
-    desktopNav.classList.remove("hide");
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-    })
-    
-    overlay.addEventListener("click", () => {
-    desktopNav.classList.remove("hide");
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-    })
-    
-    
-    // Mobile Version
-    
-    const menuIconContainer = document.querySelector("nav .menu-icon-container");
-    const navContainer = document.querySelector(".nav-container");
-    
-    menuIconContainer.addEventListener("click", () => {
-    navContainer.classList.toggle("active");
-    })
-    
-    
-    const searchBar = document.querySelector(".mobile-search-container .search-bar");
-    const nav = document.querySelector(".nav-container nav");
-    const searchInput = document.querySelector(".mobile-search-container input");
-    const cancelBtn = document.querySelector(".mobile-search-container .cancel-btn");
-    
-    searchInput.addEventListener("click", () => {
-    searchBar.classList.add("active");
-    nav.classList.add("move-up");
-    desktopNav.classList.add("move-down");
-    })
-    
-    cancelBtn.addEventListener("click", () => {
-    searchBar.classList.remove("active");
-    nav.classList.remove("move-up");
-    desktopNav.classList.remove("move-down");
-    })
-</script>
+
+
+
+
+    <!-- navbar javascript -->
+
+    <script>
+        const searchButton = document.querySelector("nav .desktop-nav .link-search");
+        const closeButton = document.querySelector(".search-container .link-close");
+        const desktopNav = document.querySelector(".desktop-nav");
+        const searchContainer = document.querySelector(".search-container");
+        const overlay = document.querySelector(".overlay");
+
+        searchButton.addEventListener("click", () => {
+            desktopNav.classList.add("hide");
+            searchContainer.classList.remove("hide");
+            overlay.classList.add("show");
+        })
+
+        closeButton.addEventListener("click", () => {
+            desktopNav.classList.remove("hide");
+            searchContainer.classList.add("hide");
+            overlay.classList.remove("show");
+        })
+
+        overlay.addEventListener("click", () => {
+            desktopNav.classList.remove("hide");
+            searchContainer.classList.add("hide");
+            overlay.classList.remove("show");
+        })
+
+
+        // Mobile Version
+
+        const menuIconContainer = document.querySelector("nav .menu-icon-container");
+        const navContainer = document.querySelector(".nav-container");
+
+        menuIconContainer.addEventListener("click", () => {
+            navContainer.classList.toggle("active");
+        })
+
+
+        const searchBar = document.querySelector(".mobile-search-container .search-bar");
+        const nav = document.querySelector(".nav-container nav");
+        const searchInput = document.querySelector(".mobile-search-container input");
+        const cancelBtn = document.querySelector(".mobile-search-container .cancel-btn");
+
+        searchInput.addEventListener("click", () => {
+            searchBar.classList.add("active");
+            nav.classList.add("move-up");
+            desktopNav.classList.add("move-down");
+        })
+
+        cancelBtn.addEventListener("click", () => {
+            searchBar.classList.remove("active");
+            nav.classList.remove("move-up");
+            desktopNav.classList.remove("move-down");
+        })
+    </script>
 </body>
+
 </html>
