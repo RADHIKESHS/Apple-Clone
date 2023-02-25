@@ -125,3 +125,52 @@ body {
    height: 30px;
    border-radius: 5px;
  }
+
+ /* remove page */
+ .removePage>span{
+  border: 0px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #555;
+  color: white;
+ }
+ .removePage>input{
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px;
+ }
+
+
+ /* add new product page*/
+ .addNewProduct,.updateNewProduct{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+  text-align: center;
+  background-color: #555;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ .addNewProduct>input,.updateNewProduct>input{
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 0px;
+ }
+ .addNewProduct>button,.updateNewProduct>button{
+  padding: 10px 20px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+ }
+ .addNewProduct>button:hover,  .updateNewProduct>button:hover{
+   background-color: #333;
+   color: white;
+ }

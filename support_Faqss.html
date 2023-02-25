@@ -666,6 +666,10 @@
         font-weight:400;
     }
 
+    .allIcons div a:hover{
+        text-decoration: underline;
+    }
+
     .cards3{
       display:flex;
        flex-wrap: wrap;
@@ -673,14 +677,11 @@
        height:200px;
        margin-top:70px;
        gap:24px;
-      
-      
     }
 
     .cards{
         width:33%;
         height:200px;
-        /* border: 1px red solid; */
         width:310px;
         height:181px;
         border-radius: 20px;
@@ -688,7 +689,10 @@
         text-align: center;
         background-color:rgba(229, 227, 230, 0.445);
         color: #0066cc;
-      
+    }
+
+    .cards:hover{
+        width:3
     }
 
     .cards img{
@@ -742,12 +746,12 @@
 
      .bigContainer2{
         padding-top: 1px;
-       background-color: rgba(185, 173, 187, 0.123);
+        background-color: rgba(185, 173, 187, 0.123);
+        padding-bottom:1px;
      }
 
     .getthelatest{
         text-align:center;
-       
     }
 
     .getthelatest .written{
@@ -758,12 +762,20 @@
         margin-top:50px;
     }
 
+    .bigContainer2 a:hover{
+        text-decoration: underline;
+    }
+
     .written{
         text-align:center;
         width:75%;
         background-color: white;
         border-radius: 20px 20px 0px 0px;
         margin-top: 80px;
+    }
+
+    .written a p:hover{
+        text-decoration: underline;
     }
 
     .imaag img{
@@ -776,32 +788,165 @@
     }
 
     .getSupportcard{
+        height:537px;
+    }
+
+    .first .second{
         display:flex;
         flex-wrap: wrap;
-        border: 1px red solid;
     }
+
 
     .first{
-        border: 1px red solid;
-
+        margin-right:25px;
+        background-color: white;
+        text-align: center;
     }
+    
 
     .first img{
-        width:55%;
-        border: 1px red solid;
+        width:758px;
+        margin-top:50px;     
     }
 
-    .getSupportcard .first div{
-        border: 1px violet solid;
+    .getSupportcard {
+        display: flex;
+        justify-content: center;
     }
-
 
     .second{
-        border: 1px red solid;
+        background-color: white;
+        text-align: center;
+    }
+
+    .second img{
+        margin-top:147px;
+    }
+
+    .mySupport .written2{
+        text-align:center;
+        margin:auto;
+        padding:40px;
+        line-height: 30px;
+        margin-top:50px;
+    }
+
+    .written2{
+        text-align:center;
+        width:75%;
+        background-color: white;
+        border-radius: 20px 20px 20px 20px;
+        margin-top: 80px;
+    }
+
+    .written2 a p:hover {
+     text-decoration: underline;
+    }
+
+    .written3{
+        text-align:center;
+        width:75%;
+        background-color: white;
+        border-radius: 20px 20px 20px 20px;
+        margin-top: 80px;
+    }
+
+    .lines2 a p:hover{
+       text-decoration: underline;
+    }
+
+    .lines1{
+        /* border: 1px red solid; */
     }
 
 
+    .beware{
+        margin-bottom:40px;
+    }
 
+    .beware .written3{
+        text-align:left;
+        margin:auto;
+        padding:40px 80px 25px 80px;
+        line-height: 30px;
+        margin-top:50px;
+    }
+
+    .beware .written3 p{
+        line-height:24px;
+    }
+
+    .written3 p a:hover{
+        text-decoration: underline;
+    }
+
+    .bigContainer3{
+        text-align: left;
+    }
+
+    .bigContainer3 .written4{
+        width:80%;
+        margin:auto;
+        padding: 60px 20px;
+    }
+
+    .written4{
+        line-height:35px;
+    }
+
+    .written4 a p:hover{
+        text-decoration: underline;
+    }
+
+    /* footer styling */
+    footer{
+       width: 100%;
+       margin: auto;
+       font-size: 15px;
+       background-color: #F5F5F7;
+       padding: 10px;
+   }
+
+    footer>#foot{
+       margin: 40px 60px 40px 60px;
+    }
+
+    footer>.contain{
+       width: auto;
+       height: auto;
+       border: 2px solid transparent;
+       margin: 2px 30px 30px 30px;
+       display: flex;
+       justify-content: space-around;
+    }
+
+    ul{
+       list-style-type: none;
+       padding: 5px;
+    }
+
+    a{
+       color: grey;
+       text-decoration:none; 
+    }
+
+    a:hover {
+       text-decoration: underline;
+    }
+
+
+     .completeFooter{
+        width:80%;
+        margin:auto;
+     }
+
+     .completeFooter div{
+        width: auto;
+        height: auto;
+        border: 2px solid transparent;
+        display: flex;
+        justify-content: space-around;
+     }
 
     
     </style>
@@ -1039,39 +1184,143 @@
             </div>
 
 
-            <div class="getSupportcard">
+            <div class="getSupportcard" >
                 <div class="first">
-                    <div class="lines1">
-                        <h1>Get Support</h1>
-                        <p>Give us a few details and we’ll offer the best solution. Connect by phone, chat, email and more.</p>
-                        <button>Start now</button>
-    
+                    <div style="margin-top: 30px;" class="lines1">
+                        <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Get Support</h1>
+                        <p style="font-weight:400; font-size: 17px;">Give us a few details and we’ll offer the best solution. Connect by<br> phone, chat, email and more.</p>
+                        <button style="padding:6px 10px;font-size: 16px; border-radius: 16px;background-color: black; color:white;margin-top:10px;">Start now</button>
+                    </div>
                         <div>
                             <img src="Images/animegirly.png" alt="">
                         </div>
-                    </div>
-    
+                    
                 </div>
-    
-    
+
                 <div class="second">
-                    <div class="lines2">
-                        <h1>Apple Support app</h1>
-                        <p>Get help for all of your Apple products in one place, or connect with an expert.</p>
-                        <a href="#"><p>Download</p></a>
+                    <div style="margin-top: 30px;"class="lines2">
+                        <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">Apple Support app</h1>
+                        <p style="font-weight:400; font-size: 17px;">Get help for all of your Apple products in one place, or connect with an expert.</p>
+                        <a style="color:#0066cc;font-weight:400; text-decoration: none;margin-top:40px;" href="#"><p>Download</p></a>
                     </div>
-                    <div>
-                        <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-split-supportapp.image.large_2x.png" alt="">
+                    <div >
+                        <img style="width:250px;" src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-split-supportapp.image.large_2x.png" alt="">
                     </div>
                 </div>
     
             </div>
-        </div>
+
+            <div class="mySupport">
+                    <div class="written2">
+                        <h1 style="font-size: 40px; font-weight: 600; margin-bottom:20px;">My Support</h1>
+                        <p style="font-weight:400; font-size: 17px;">Get up-to-date information about your Apple products including cover, repairs and much more.</p>
+                        <a href="#" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>Sign in to My Support</p></a>
+                     </div>
+                 </div>
+
+
+                 <div class="beware">
+                     <div class="written3">
+                        <h1 style="margin-bottom: 16px; font-size: 25px; font-weight: 600;">Beware of counterfeit parts</h1>
+                        <p style="margin-bottom: 10px;font-weight:400; font-size: 16px;">Some counterfeit and third-party power adapters and batteries may not be designed properly and could result in safety issues. To ensure you receive a genuine Apple battery during a battery replacement, we recommend visiting an <a style="color:#0066cc;font-weight:400; text-decoration: none;" href="#">Apple Authorised Service Provider</a> . If you need a replacement adapter to charge your Apple device, we recommend getting an Apple power adapter.</p>
+                        <p style="font-weight:400; font-size: 16px;">Also non-genuine replacement displays may have compromised visual quality and may fail to work correctly. Apple-certified screen repairs are performed by trusted experts who use genuine Apple parts.</p>
+                     </div>
+                 </div>
+         </div>
+
+         <div class="bigContainer3">
+            <div class="written4" style="margin-left:220px">
+               <h1 style="font-size: 25px; font-weight: 600;">Apple Service Programmes</h1>
+                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>Apple Watch Series 6 Service Programme for Blank Screen Issue</p></a>
+                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>iPhone 12 and iPhone 12 Pro Service Programme for No Sound Issues</p></a>
+                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>iPhone 11 Display Module Replacement Programme for Touch Issues</p></a>
+                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>15-inch MacBook Pro Battery Recall Programme</p></a>
+                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>Apple Three-Prong AC Wall Plug Adapter Recall Programme</p></a>
+                    <a href="" style="color:#0066cc;font-weight:400; text-decoration: none;"><p>See all programmes</p></a>
+            </div>
+         </div>
+
+
+         <!-- footer -->
+         <footer>
+            <div class="completeFooter">
+               
+            <div class="contain">
+                <div style="margin-bottom:30px;" id="info">
+                    <ul style="line-height:26px; font-size: 12px; font-weight: 500;">
+                        <div style="margin-top:25px;">
+                            <img style="margin-right:20px; width:35px; margin-bottom:30px" src="Images/ACElogo.png" alt="">
+                            <p style="margin-top:6px; ">Support</p>
+                        </div>
+                        <li>
+                            <h4>Product Support</h4>
+                        </li>
+                        <li><a href="">Store</a></li>
+                        <li><a href=""> Mac</a></li>
+                        <li><a href="">iPad</a></li>
+                        <li><a href="">iPhone</a></li>
+                        <li><a href="">Watch</a></li>
+                        <li><a href="">AirPods</a></li>
+                        <li><a href="">TV & Home</a></li>
+                        <li><a href="">AirTag</a></li>
+                        <li><a href="">Accessories</a></li>
+                        <li><a href="">Gift Cards</a></li>
+                    </ul>
+                </div>
+
+                <div id="info1">
+                    <ul style="margin-top:92px; line-height:26px;font-size: 12px;font-weight: 500;">
+                        <li>
+                            <h4>Service and Repair</h4>
+                        </li>
+                        <li><a href="">Apple Repair Options</a></li>
+                        <li><a href="">Service and Repair Information</a></li>
+                        <li><a href="">AppleCare Products</a></li>
+                        <li><a href="">Hardware Warranties</a></li>
+                        <li><a href="">Software License Agreements</a></li>
+                        <li><a href="">Complimentary Support</a></li>
+                    </ul>  
+                </div>
+
+                <div id="info2">
+                    <ul style="margin-top:92px; line-height:26px;font-size: 12px;font-weight: 500;">
+                        <li>
+                            <h4>Resources</h4>
+                        </li>
+                        <li><a href="">My Support</a></li>
+                        <li><a href="">Downloads</a></li>
+                        <li><a href="">Manuals</a></li>
+                        <li><a href="">Tech Specs</a></li>
+                        <li><a href="">Accessibility</a></li>
+                    </ul>
+                </div>
+               
+                <div id="info4">
+                    <ul style="margin-top:92px; line-height:26px;font-size: 12px;font-weight: 500;">
+                        <li>
+                            <h4>Connect</h4>
+                        </li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Phone Numbers</a></li>
+                        <li><a href="">Support app</a></li>
+                        <li><a href="">Apple Communities</a></li>
+                        <li><a href="">Apple Support Videos</a></li>
+                        <li><a href="">@AppleSupport</a></li>
+                    </ul>   
+                </div>
+            </div>
+               <hr>
+               <p style="margin-top:30px; margin-bottom: 30px; font-size: 12px;font-weight: 500;color:#808080">Copyright © 2023 Apple Inc. All rights reserved.</p>
+                   
+            </div>
+
+        </footer>
+
 
        
     
     
-    <!-- color: #0066cc; -->
+   
       <!-- navbar javascript -->
     
 <script>
