@@ -51,7 +51,7 @@ nav .desktop-nav li a:hover {
     opacity: 1;
 }
 
-.link-logo img{
+.link-logo img {
     /* background: url('images/apple_logo.PNG'); */
     display: block;
     background-position: center;
@@ -319,23 +319,23 @@ nav .desktop-nav li a:hover {
 
 .search-container .quick-links ul li:nth-of-type(1) {
     transition-delay: 120ms;
-} 
+}
 
 .search-container .quick-links ul li:nth-of-type(2) {
     transition-delay: 140ms;
-} 
+}
 
 .search-container .quick-links ul li:nth-of-type(3) {
     transition-delay: 160ms;
-} 
+}
 
 .search-container .quick-links ul li:nth-of-type(4) {
     transition-delay: 180ms;
-} 
+}
 
 .search-container .quick-links ul li:nth-of-type(5) {
     transition-delay: 200ms;
-} 
+}
 
 
 /* Hidden Items */
@@ -534,7 +534,7 @@ nav .desktop-nav li a:hover {
         transition: all 400ms ease;
     }
 
-    .mobile-search-container .search-bar.active + .cancel-btn {
+    .mobile-search-container .search-bar.active+.cancel-btn {
         padding: 0 16px;
         width: 74px;
     }
@@ -554,10 +554,10 @@ nav .desktop-nav li a:hover {
         pointer-events: none;
     }
 
-    
+
     /* Quick Links */
 
-    .mobile-search-container .search-bar.active ~ .quick-links {
+    .mobile-search-container .search-bar.active~.quick-links {
         top: 80px;
         opacity: 1;
         pointer-events: auto;
@@ -614,216 +614,6 @@ div,
 span,
 a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-
-
-/* -------------midpart--------------- */
-
-body{
-    margin: 0px;
-    padding: 0px;
-}
-
-.main{
-    margin-top: 44px;
-}
-
-/* Card-1 && Card-2 */
-#card1, #card2{
-    border: 1px solid black;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-#card2{
-    background-color: #fbfbfd;
-    color: black;
-    border: 0px;
-}
-#card1>h2, #card2>h2{
-    font-size: 48px;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-#card1>h3, #card2>h3{
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: .009em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    /* margin-top: -30px; */
-}
-#card1>button, #card2>button{
-    background: transparent;
-    border: 1px solid #6e6e73;
-    font-size: 14px;
-    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    border-radius: 16px;
-    padding: 6px 10px;
-    color: #6e6e73;
-}
-#small1, #small2{
-    width: 13%;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 17px;
-    margin-bottom: 10px;
-}
-#small1>a, #small2>a{
-    color: #2997ff;
-    text-decoration: none;
-    font-size: 19px;
-    line-height: 1.21053;
-    font-weight: 400;
-    letter-spacing: .012em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-#card1>img{
-    width: 40%;
-}
- #card2>img{
-    width: 30%;
-    
- }
-
- /* card-3 */
- #card3{
-    width: 100%;
- }
-#card3>video{
-    width: 100%;
-    position: relative;
-}
-#float{
-    position: absolute;
-    color: aliceblue;
-    z-index: 1;
-    left: 35%;
-    top: 1600px;
-    width: 500px;
-    text-align: center;
-}
-#float>h3{
-    font-size: 24px;
-    line-height: 1.16667;
-    font-weight: 400;
-    letter-spacing: .009em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-#float>h1{
-    margin-top: -30px;
-    margin-bottom: -30px;
-    font-size: 130px;
-}
-#float>button{
-    font-size: 17px;
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    padding: 8px 16px;
-    color: #000;
-    background: #ffffff;
-    border: 0px;
-    border-radius: 20px;
-}
-#float>button:nth-child(4){
-    margin-right: 12px;
-}
-#float>button:nth-child(5){
-    margin-left: 12px;
-}
-#float img{
-   margin-bottom: -2px;
-   margin-left: 2px; 
-}
-
-
- /* Card-4 */
- #card4{
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 10px;
- }
- #card4>img{
-    width: 100%;
-    height: 500px;
- }
-
-/* ------------footer---------------- */
-
- footer{
-    width: 100%;
-    margin: auto;
-    font-size: 15px;
-    background-color: #FAFAFA;
-    padding: 10px;
-    
-}
-footer>#foot{
-    margin: 40px 60px 40px 60px;
-}
-
-footer>.contain{
-   width: auto;
-   height: auto;
-   border: 2px solid transparent;
-   margin: 2px 30px 30px 30px;
-   display: flex;
-   justify-content: space-around;
-   /* padding-top: 6px; */
-   
-}
-ul{
-    list-style-type: none;
-    padding: 5px;
-}
-a{
-    color: grey;
-     text-decoration:none; 
-}
-a:hover {
-        text-decoration: underline;
-      }
-      footer p{
-        margin: 40px 60px 40px 60px;
-      }
-      
-/* --------------------swiper ------------------*/
-html,
-body {
-    position: relative;
-    height: 100%;
-}
-
-body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-}
-
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 550px;
-    object-fit: cover;
 }
 
 /* -------------------navbar-dropdown--------------- */
@@ -892,4 +682,242 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+
+/* -------------midpart--------------- */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    margin-top: 44px;
+}
+
+/* Card-1 && Card-2 */
+#card1,
+#card2 {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#card2 {
+    background-color: #fbfbfd;
+    color: black;
+    border: 0px;
+}
+
+#card1>h2,
+#card2>h2 {
+    font-size: 48px;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+#card1>h3,
+#card2>h3 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    /* margin-top: -30px; */
+}
+
+#card1>button,
+#card2>button {
+    background: transparent;
+    border: 1px solid #6e6e73;
+    font-size: 14px;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    border-radius: 16px;
+    padding: 6px 10px;
+    color: #6e6e73;
+}
+
+#small1,
+#small2 {
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 17px;
+    margin-bottom: 10px;
+}
+
+#small1>a,
+#small2>a {
+    color: #2997ff;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+#card1>img {
+    width: 40%;
+}
+
+#card2>img {
+    width: 30%;
+
+}
+
+/* card-3 */
+#card3 {
+    width: 100%;
+}
+
+#card3>video {
+    width: 100%;
+    position: relative;
+}
+
+#float {
+    position: absolute;
+    color: aliceblue;
+    z-index: 1;
+    left: 35%;
+    top: 1600px;
+    width: 500px;
+    text-align: center;
+}
+
+#float>h3 {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+#float>h1 {
+    margin-top: -30px;
+    margin-bottom: -30px;
+    font-size: 130px;
+}
+
+#float>button {
+    font-size: 17px;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    padding: 8px 16px;
+    color: #000;
+    background: #ffffff;
+    border: 0px;
+    border-radius: 20px;
+}
+
+#float>button:nth-child(4) {
+    margin-right: 12px;
+}
+
+#float>button:nth-child(5) {
+    margin-left: 12px;
+}
+
+#float img {
+    margin-bottom: -2px;
+    margin-left: 2px;
+}
+
+
+/* Card-4 */
+#card4 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+#card4>img {
+    width: 100%;
+    height: 500px;
+}
+
+/* ------------footer---------------- */
+
+footer {
+    width: 100%;
+    margin: auto;
+    font-size: 15px;
+    background-color: #FAFAFA;
+    padding: 10px;
+
+}
+
+footer>#foot {
+    margin: 40px 60px 40px 60px;
+}
+
+footer>.contain {
+    width: auto;
+    height: auto;
+    border: 2px solid transparent;
+    margin: 2px 30px 30px 30px;
+    display: flex;
+    justify-content: space-around;
+    /* padding-top: 6px; */
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 40px 60px 40px 60px;
+}
+
+/* --------------------swiper ------------------*/
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
 }

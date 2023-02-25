@@ -49,3 +49,9 @@ cancelBtn.addEventListener("click", () => {
     nav.classList.remove("move-up");
     desktopNav.classList.remove("move-down");
 })
+
+let searchbtn= document.getElementById("searchsubmit")
+// let serch= document.getElementById("searchbar");
+
+// console.log(serch.value)
+

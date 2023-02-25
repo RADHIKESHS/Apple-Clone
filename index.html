@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                 </li>
 
                 <li>
-                    <a href="#" class="link-logo"></a>
+                    <a href="" class="link-logo"></a>
                 </li>
 
                 <li>
@@ -37,14 +38,14 @@
 
             <ul class="desktop-nav">
                 <li>
-                    <a href="#" class="link-logo"><img src="./images/apple_logo.PNG" alt=""></a>
+                    <a href="./index.html" class="link-logo"><img src="./images/apple_logo.PNG" alt=""></a>
                 </li>
                 <li>
                 <div class="navbar">
                     <div class="dropdown">
                       <button class="dropbtn">MAC</button>
                       <div class="dropdown-content">
-                        <a href="#" style="color: black;font-weight: bold;">MackBook Air</a>
+                        <a href="#" id="dmackbookair" style="color: black;font-weight: bold;">MackBook Air</a>
                         <a href="#" style="color: black;font-weight: bold;">MackBook Pro</a>
                         <a href="#" style="color: black;font-weight: bold;">iMac</a>
                         <a href="#" style="color: black;font-weight: bold;">Mac mini</a>
@@ -145,7 +146,7 @@
                     <a href="#" class="link-bag"></a>
                 </li>
                 <li>
-                    <a href="#" style="font-weight: bold;">login/Signup</a>
+                    <a href="./signin_signup.html" id="usersignIn" style="font-weight: bold;">login/Signup</a>
                 </li>
             </ul>
         </nav>
@@ -156,7 +157,7 @@
             <div class="link-search"></div>
             <div class="search-bar">
                 <form action="">
-                    <input type="text" placeholder="Search apple.com">
+                    <input type="text" id="searchbar" placeholder="Search apple.com">
                 </form>
             </div>
             <div class="link-close"></div>
@@ -187,8 +188,8 @@
         <div class="mobile-search-container">
             <div class="link-search"></div>
             <div class="search-bar">
-                <form action="">
-                    <input type="text" placeholder="Search apple.com">
+                <form action="" id="searchsubmit">
+                    <input type="text" id="searchbar" placeholder="Search apple.com">
                 </form>
             </div>
             <span class="cancel-btn">Cancel</span>
@@ -457,6 +458,11 @@
       prevEl: ".swiper-button-prev",
     },
   });
+</script>
+
+<!-- user login -->
+<script>
+    const usersign= document.getElementById("usersignIn");
 </script>
 
 </html>
