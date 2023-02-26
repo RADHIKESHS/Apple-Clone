@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #head{
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            position: sticky;
+            top: 0;
+            background-color: #f5f3fe;
+        }
+        #head>img{
+            width: 200px;
+        }
+        #head>h1{
+            margin-left: 30%;
+        }
+        #main{
+            display: flex;
+            margin-top: 50px;
+        }
+        #cart{
+            width: 60%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+        }
+        #cart button{
+            height: 28px;
+            margin-left: 10px;
+            border-radius: 13px;
+            border: 0px;
+            background-color: #8863fb;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #cart span{
+            margin-left: 10px;
+        }
+        #cart>div{
+            padding: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 5px;
+        }
+        #cart div:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #cart img{
+            width: 100%;
+        }
+        #total{
+            border: 2px solid;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 15px;
+            padding: 20px;
+            width: 30%;
+            margin: auto;
+            position: sticky;
+            top: 130px;
+            margin-top: 0px;
+
+        }
+        #total h4{
+            display: flex;
+            justify-content: space-between;
+        }
+        #total h2{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #total span{
+            color: #dc58e6;
+        }
+        #total button{
+            width: 100%;
+            margin-top: 20px;
+            border: 0px;
+            color: white;
+            font-size: 20px;
+            padding: 15px 40px;
+            border-radius: 5px;
+            background-image: linear-gradient(to right, #da57e5 0%, #8c63fa 100%);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="head">
+       <img src="https://cdn.discordapp.com/attachments/1064919428598333504/1066950283596415006/logos.png" onclick="location.href='index.html';">
+       <h1>Shoping Cart (<span id="no"></span>)</h1>
+    </div>
+    <div id="main">
+        <div id="cart">
+
+        </div>
+        <div id="total">
+            <h4>Subtotal: <span id="tot1"></span></h4>
+            <h4>You Saved: <span>₹0</span></h4>
+            <h4>Coupon Discount:  <span>Apply Coupon</span> </h4>
+            <h4>delivery Charge(Standard): <span>FREE</span></h4>
+            <h2>TOTAL COST: <span id="tot2"></span></h2>
+            <button onclick="window.location.href='Thanks.html';" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-lock" viewBox="0 0 16 16">
+                <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5v-1a1.9 1.9 0 0 1 .01-.2 4.49 4.49 0 0 1 1.534-3.693C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm7 0a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
+              </svg> Checkout Securely</button>
+        </div>
+        
+    </div>
+
+</body>
+
+<script>
+    let data=JSON.parse(localStorage.getItem("cart"))||[];
+    let div=document.querySelector("#cart");
+
+    Display(data);
+    function Display(data){
+        div.innerHTML="";
+        document.getElementById("no").innerText=data.length;
+        data.forEach((el,i)=>{
+            let card=document.createElement("div");
+
+            let img=document.createElement("img");
+            let head=document.createElement("h2");
+            let price=document.createElement("h3");
+            let dec=document.createElement("button");
+            let span=document.createElement("span");
+            let inc=document.createElement("button");
+            let remove=document.createElement("button");
+
+            img.setAttribute("src", el.image);
+            head.innerText=el.name;
+            price.innerText="₹ "+el.Price;
+            remove.innerText="Remove";
+            dec.innerText="-";
+            span.innerText=el.quantity;
+            inc.innerText="+";
+
+            remove.addEventListener("click", () => {
+              data=data.filter((ele)=>{
+                return ele.name!==el.name
+              })
+               localStorage.setItem("cart",JSON.stringify(data));
+              Display(data);
+            });
+            inc.addEventListener("click", () => {
+               el=el.quantity++;
+               localStorage.setItem("cart",JSON.stringify(data));
+               Display(data);
+            });
+             dec.addEventListener("click", () => {
+               if(el.quantity>1){
+                  el=el.quantity--;
+                  localStorage.setItem("cart",JSON.stringify(data))
+                  Display(data);
+               }
+            });
+
+            card.append(img,head,price,dec,span,inc,remove);
+            div.append(card);
+        });
+        let sum=0;
+        for(let i=0;i<data.length;i++){
+          sum+=data[i].Price*data[i].quantity;
+        }
+        document.querySelector("#tot1").textContent="₹"+sum;
+        document.querySelector("#tot2").textContent="₹"+sum;
+    }
+</script>
+</html>
