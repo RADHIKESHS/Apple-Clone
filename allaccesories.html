@@ -232,7 +232,6 @@
       justify-content: center;
       align-items: center;
       padding: 50px 0;
-      cursor: pointer;
       font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     }
 
@@ -261,7 +260,7 @@
     }
 
     .grid-product {
-      background: #999a9af8;
+      background: #cacdcdf8;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -277,6 +276,7 @@
       border: none;
       color: #f1f1f1;
       border-radius: 3px;
+      cursor: pointer;
     }
 
     .grid-product:hover {
@@ -715,7 +715,7 @@
     <div class="one" class="product">
       <div class="category">
 
-        <a href="#">
+        <a href="#mac">
           <div class="imagediv">
             <img
               src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-mac?wid=150&hei=150&fmt=png-alpha&.v=1544482382615"
@@ -726,7 +726,7 @@
 
       </div>
       <div class="category">
-        <a href="#">
+        <a href="#iPad">
           <div class="imagediv">
             <img
               src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-ipad?wid=150&hei=150&fmt=png-alpha&.v=1544482382704"
@@ -736,7 +736,7 @@
         </a>
       </div>
       <div class="category">
-        <a href="#">
+        <a href="#iphone">
           <div class="imagediv">
             <img
               src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-iphone?wid=150&hei=150&fmt=png-alpha&.v=1544482382650"
@@ -746,7 +746,7 @@
         </a>
       </div>
       <div class="category">
-        <a href="#">
+        <a href="#watch">
           <div class="imagediv">
             <img
               src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-watch?wid=150&hei=150&fmt=png-alpha&.v=1544482383418"
@@ -756,13 +756,13 @@
         </a>
       </div>
       <div class="category">
-        <a href="#">
+        <a href="#sound">
           <div class="imagediv">
             <img
               src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-tv?wid=150&hei=150&fmt=png-alpha&.v=1667595021278"
               alt="">
           </div>
-          <span>TV & Home</span>
+          <span>Speakers and Sounds</span>
         </a>
       </div>
     </div>
@@ -823,7 +823,7 @@
   <!--------- productsection ---------->
 
   <!-- **********************mac section ************************* -->
-  <section class="product-mac">
+  <section class="product-mac" id="mac">
     <div class="container">
       <h2>Featured Mac Accessories</h2>
       <div id="mack-grid">
@@ -832,7 +832,7 @@
     </div>
   </section>
   <!-- -----------------iphone section------------------------ -->
-  <section class="product-iphone">
+  <section class="product-iphone" id="iphone">
     <div class="container">
       <h2>Featured iPhone Accessories</h2>
       <div id="iphone-grid">
@@ -841,7 +841,7 @@
     </div>
   </section>
   <!-- -------------------- watch section  ------------------------ -->
-  <section class="product-watch">
+  <section class="product-watch" id="watch">
     <div class="container">
       <h2>Apple Watch Bands</h2>
       <div id="watch-grid">
@@ -849,7 +849,7 @@
       </div> <!--end container-->
   </section>
   <!-- ------------------------------ ipad section    -------------------------------------- -->
-  <section class="product-ipad">
+  <section class="product-ipad" id="iPad">
     <div class="container">
       <h2>Featured iPad Accessories</h2>
       <div id="ipad-grid">
@@ -858,7 +858,7 @@
     </div> <!--end container-->
   </section>
 
-  <section class="product-sound">
+  <section class="product-sound" id="sound">
     <div class="container">
       <h2>Sound Essentials</h2>
       <div id="sound-grid">
@@ -1062,9 +1062,9 @@
   function getCard(id,image, title, price) {
     let card = `
   <div class="grid-product">
-    <a href="#">
+   
       <img src="${image}">
-    </a>
+
     <div class="grid-detail">
       <p>${title}</p>
       <p>From Rs. ${price}</p>
@@ -1105,5 +1105,29 @@
         }
       } return false;
     }
+// -------------------------cart section code end hear-----------------------------------------
+
+
+document.querySelector('a[href="#mac"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('mac').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#iphone"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('iphone').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#watch"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('watch').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#iPad"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('iPad').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#sound"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('sound').scrollIntoView({ behavior: 'smooth' });
+});
+
 
 </script>
