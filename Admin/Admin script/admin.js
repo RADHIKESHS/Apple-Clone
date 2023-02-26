@@ -1,3 +1,13 @@
+checkLogin();
+function checkLogin() {
+   let lsData = JSON.parse(localStorage.getItem("admin-user")) || [];
+   if (lsData.length == 0) {
+      alert("Need  Authorization");
+      window.location.href = 'admin_signup_login.html';
+   }
+}
+
+
 //----------------------------fetch----------------------------
 let currProduct = "";
 async function fetchData(product = "iphone") {
@@ -87,16 +97,21 @@ function remove(id) {
    })
 }
 // edit
-function edit(id) {
+function edit(id, title, price, image) {
    dashboard.innerHTML = "";
    dashboard.innerHTML = `
    <div class="updateNewProduct">
    <h1>Edit Product</h1>
-   <input type="number" id="update-product-id" placeholder="Id" />
-   <input type="text" id="update-product-type" placeholder="Product Type" />
-   <input type="text" id="update-product-title" placeholder="Title" />
-   <input type="number" id="update-product-price" placeholder="Price" />
-   <input type="tetx" id="update-product-img" placeholder="Image URL" />
+   <label for="update-product-id">Id</label>
+   <input type="number" id="update-product-id" placeholder="Id" value="${id}"/>
+   <label for="update-product-type">Type</label>
+   <input type="text" id="update-product-type" placeholder="Product Type" value="${currProduct}"/>
+   <label for="update-product-title">Title</label>
+   <input type="text" id="update-product-title" placeholder="Title" value="${title}"/>
+   <label for="update-product-price">Price</label>
+   <input type="number" id="update-product-price" placeholder="Price" value="${price}"/>
+   <label for="update-product-img">Image URL</label>
+   <input type="text" id="update-product-img" placeholder="Image URL" value="${image}"/>
    <button id="update-product">
       Submit
    </button>
@@ -108,7 +123,6 @@ function edit(id) {
    let updateTitle = document.querySelector("#update-product-title");
    let updatePrice = document.querySelector("#update-product-price");
    let updateImg = document.querySelector("#update-product-img");
-
    updateProductSubmitBtn.addEventListener("click", (el) => {
       let obj = {
          "id": updateId.value,
@@ -161,7 +175,7 @@ function Display(data) {
       <h1>${el.title}</h1>
       <h2>₹ ${el.price}</h2>
       <button id="removeBtn" onclick="remove(${el.id})">Remove</button>
-      <button id="editBtn" onclick="edit(${el.id})">Edit</button>
+      <button id="editBtn" onclick="edit('${el.id}','${el.title}','${el.price}','${el.image}')" >Edit</button>
    </div>`
    });
    dashboard.append(filterDiv, productDiv);
@@ -261,3 +275,24 @@ addNewProductBtn.addEventListener("click", () => {
 
 
 
+
+// Sign In
+
+let user = JSON.parse(localStorage.getItem("admin-user")) || [];
+
+displayCredentials(user)
+function displayCredentials(user) {
+   let displayName = document.querySelector("#profile>h2");
+   let displayImg = document.querySelector("#profile>img");
+   displayName.innerText = user[0].name;
+   displayImg.src = user[0].image;
+}
+
+
+// Log Out
+let logOutBtn = document.querySelector("#log-out-btn");
+logOutBtn.addEventListener("click", () => {
+   localStorage.setItem("admin-user", "[]")
+   alert("Log Out Successful!");
+   window.location.href = 'admin_signup_login.html';
+})

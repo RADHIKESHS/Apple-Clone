@@ -1,555 +1,525 @@
 {
   "register": [
     {
-      "id":1,
-    "name":"khirod samal",
-    "email":"samalkhirod32@gmail.com",
-    "password":"12345"
-
+      "id": 1,
+      "name": "khirod samal",
+      "email": "samalkhirod32@gmail.com",
+      "password": "12345"
     }
   ],
-  "admin":[
+  "admin": [
+    {
+      "name": "Ashish Kumar",
+      "email": "ashish@gmail.com",
+      "password": "1234",
+      "image": "https://ca.slack-edge.com/T04K6GB334K-U04LFFKSFUZ-a7339f967fca-512",
+      "id": 1
+    }
+  ],
+  "mac": [
     {
       "id": 1,
-      "name": "Ashish Kumar",
-      "email": "admin@gmail.com",
-      "password": "1234"
+      "category": "laptop",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mba__fchj615oz0yi_small_2x.png",
+      "title": "macbook Air",
+      "price": 120000,
+      "displaytype": "13.3 Retina display",
+      "chip": " M1",
+      "cpu": "8-core",
+      "gpu": "7-core",
+      "ram": "16GB",
+      "storage": "2TB",
+      "camera": "720p FaceTime HD",
+      "weight": "2.8 lb.",
+      "batterrylife": "18"
+    },
+    {
+      "id": 2,
+      "title": "macbook Air",
+      "price": "150000",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mbam2__bdesjk99hf4i_small_2x.png"
+    },
+    {
+      "id": 3,
+      "category": "laptop",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mbp13__euj5z15300om_small_2x.png",
+      "title": "macbook Pro 13",
+      "price": 180000,
+      "displaytype": "13.3 Liquid Retina display",
+      "chip": " M2",
+      "cpu": "8-core",
+      "gpu": "10-core",
+      "ram": "24GB",
+      "storage": "2TB",
+      "camera": "720p FaceTime HD",
+      "weight": "3.0 lb.",
+      "batterrylife": "18"
+    },
+    {
+      "id": 4,
+      "category": "laptop",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mbp14_and_16__f2dhysusb5im_small_2x.png",
+      "title": "macbook Pro 14",
+      "price": 220000,
+      "displaytype": "16.2 Liquid Retina XDR display",
+      "chip": " M2 Pro",
+      "cpu": "12-core",
+      "gpu": "38-core",
+      "ram": "96GB",
+      "storage": "8TB",
+      "camera": "1080p FaceTime HD",
+      "weight": "3.5 lb.",
+      "batterrylife": "22"
+    },
+    {
+      "id": 5,
+      "category": "desktop",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_imac24__bdgus6d1xqb6_small_2x.png",
+      "title": "iMac",
+      "price": 103920,
+      "displaytype": "4.5K",
+      "chip": " M1",
+      "cpu": "8-core",
+      "gpu": "8-core",
+      "ram": "16GB",
+      "storage": "2TB",
+      "camera": "1080p FaceTime HD"
+    },
+    {
+      "id": 6,
+      "category": "desktop",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_macmini__b77zzeep1s6a_small_2x.png",
+      "title": "Mac mini",
+      "price": 47920,
+      "chip": " M1 ",
+      "cpu": "12-core",
+      "gpu": "19-core",
+      "ram": "32GB",
+      "storage": "8TB"
+    },
+    {
+      "id": 7,
+      "category": "desktop",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_macstudio__dg371ccau70i_small_2x.png",
+      "title": "Mac Studio",
+      "price": 159920,
+      "chip": "M1 Max",
+      "cpu": "20-core",
+      "gpu": "64-core",
+      "ram": "128GB",
+      "storage": "8TB"
+    },
+    {
+      "id": 8,
+      "category": "desktop",
+      "image": "https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_macpro__cj3i514iwpua_small_2x.png",
+      "title": "Mac Pro",
+      "price": 479920,
+      "chip": "Intel Xeon W processor",
+      "cpu": "28-core",
+      "gpu": "AMD",
+      "ram": "1.5TB",
+      "storage": "8TB"
     }
   ],
-  "mac":[
+  "ipad": [
     {
-      "id":1,
-      "category":"laptop",
-      "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mba__fchj615oz0yi_small_2x.png",
-      "title":"macbook Air",
-      "price":120000,
-      "displaytype":"13.3 Retina display",
-      "chip":" M1",
-      "cpu":"8-core",
-      "gpu":"7-core",
-      "ram":"16GB",
-      "storage":"2TB",
-      "camera":"720p FaceTime HD",
-      "weight":"2.8 lb.",
-      "batterrylife":"18"
+      "id": 1,
+      "category": "iPad",
+      "title": "iPad Pro",
+      "image": "https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_pro__erf9x8mw04sy_small_2x.png",
+      "price": 63920,
+      "displaysize": 12.9,
+      "displaytype": "Liquid Retina XDR display",
+      "chip": " M2",
+      "frontcamera": "12MP",
+      "backcamera": "12MP",
+      "security": "Face ID",
+      "chsrgetype": "C",
+      "networktype": "5G cellular2",
+      "support": "Supports Apple Pencil"
     },
     {
-      "id":2,
-      "category":"laptop",
-      "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mbam2__bdesjk99hf4i_small_2x.png",
-      "title":"macbook Air",
-      "price":150000,
-      "displaytype":" 13.6 Liquid Retina display",
-      "chip":" M2",
-      "cpu":"8-core",
-      "gpu":"10-core",
-      "ram":"24GB",
-      "storage":"2TB",
-      "camera":"1080p FaceTime HD",
-      "weight":"2.7 lb.",
-      "batterrylife":"18"
+      "id": 2,
+      "category": "iPad",
+      "title": "iPad Air",
+      "image": "https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_air__bxjv33pk6nte_small_2x.png",
+      "price": 47920,
+      "displaysize": 10.9,
+      "displaytype": "Liquid Retina XDR display",
+      "chip": "M1",
+      "frontcamera": "12MP",
+      "backcamera": "12MP",
+      "security": "Touch ID in top button",
+      "chsrgetype": "C",
+      "networktype": "5G cellular2",
+      "support": "Supports Apple Pencil"
     },
     {
-      "id":3,
-      "category":"laptop",
-     "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mbp13__euj5z15300om_small_2x.png",
-      "title":"macbook Pro 13",
-      "price":180000,
-      "displaytype":"13.3 Liquid Retina display",
-      "chip":" M2",
-      "cpu":"8-core",
-      "gpu":"10-core",
-      "ram":"24GB",
-      "storage":"2TB",
-      "camera":"720p FaceTime HD",
-      "weight":"3.0 lb.",
-      "batterrylife":"18"
+      "id": 3,
+      "category": "iPad",
+      "generation": "10th",
+      "title": "iPad ",
+      "image": "https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_10_9__f7p2wja0gwuy_small_2x.png",
+      "price": 39920,
+      "displaysize": 10.9,
+      "displaytype": "Liquid Retina display",
+      "chip": "A14 Bionic",
+      "frontcamera": "12MP",
+      "backcamera": "12MP",
+      "security": "Touch ID in top button",
+      "chsrgetype": "C",
+      "networktype": "5G cellular2",
+      "support": "Supports Apple Pencil"
     },
     {
-      "id":4,
-      "category":"laptop",
-      "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_mbp14_and_16__f2dhysusb5im_small_2x.png",
-      "title":"macbook Pro 14",
-      "price":220000,
-      "displaytype":"16.2 Liquid Retina XDR display",
-      "chip":" M2 Pro",
-      "cpu":"12-core",
-      "gpu":"38-core",
-      "ram":"96GB",
-      "storage":"8TB",
-      "camera":"1080p FaceTime HD",
-      "weight":"3.5 lb.",
-      "batterrylife":"22"
+      "id": 4,
+      "category": "iPad",
+      "title": "iPad ",
+      "generation": "9th",
+      "image": "https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_10_2__fwgwy7jydtea_small_2x.png",
+      "price": 25600,
+      "displaysize": 10.2,
+      "displaytype": " Retina display",
+      "chip": "A13 Bionic",
+      "frontcamera": "12MP",
+      "backcamera": "8MP",
+      "security": "Touch ID in Home button",
+      "chsrgetype": "Lightning connector",
+      "networktype": "4G LTE",
+      "support": "Supports Apple Pencil"
     },
     {
-      "id":5,
-      "category":"desktop",
-      "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_imac24__bdgus6d1xqb6_small_2x.png",
-      "title":"iMac",
-      "price":103920,
-      "displaytype":"4.5K",
-      "chip":" M1",
-      "cpu":"8-core",
-      "gpu":"8-core",
-      "ram":"16GB",
-      "storage":"2TB",
-      "camera":"1080p FaceTime HD"
-      
-    },
-    {
-      "id":6,
-      "category":"desktop",
-      "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_macmini__b77zzeep1s6a_small_2x.png",
-      "title":"Mac mini",
-      "price":47920,
-      "chip":" M1 ",
-      "cpu":"12-core",
-      "gpu":"19-core",
-      "ram":"32GB",
-      "storage":"8TB"
-    },
-    {
-      "id":7,
-      "category":"desktop",
-      "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_macstudio__dg371ccau70i_small_2x.png",
-      "title":"Mac Studio",
-      "price":159920,
-      "chip":"M1 Max",
-      "cpu":"20-core",
-      "gpu":"64-core",
-      "ram":"128GB",
-      "storage":"8TB"
-     
-      
-    },
-    {
-      "id":8,
-      "category":"desktop",
-      "image":"https://www.apple.com/v/mac/home/bs/images/overview/compare/compare_macpro__cj3i514iwpua_small_2x.png",
-      "title":"Mac Pro",
-      "price":479920,
-      "chip":"Intel Xeon W processor",
-      "cpu":"28-core",
-      "gpu":"AMD",
-      "ram":"1.5TB",
-      "storage":"8TB"
-     
-      
+      "id": 5,
+      "category": "iPad",
+      "title": "iPad mini",
+      "generation": "",
+      "image": "https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_10_2__fwgwy7jydtea_small_2x.png",
+      "price": 39920,
+      "displaysize": 8.3,
+      "displaytype": "Liquid Retina display",
+      "chip": "A15 Bionic",
+      "frontcamera": "12MP",
+      "backcamera": "12MP",
+      "security": "Touch ID in top button",
+      "chsrgetype": "C",
+      "networktype": "5G cellular",
+      "support": "Supports Apple Pencil"
     }
   ],
-  "ipad":[
+  "iphone": [
     {
-      "id":1,
-      "category":"iPad",
-      "title":"iPad Pro",
-      "image":"https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_pro__erf9x8mw04sy_small_2x.png",
-      "price":63920,
-      "displaysize":12.9,
-      "displaytype":"Liquid Retina XDR display",
-      "chip":" M2",
-      "frontcamera":"12MP",
-      "backcamera":"12MP",
-      "security":"Face ID",
-      "chsrgetype":"C",
-      "networktype":"5G cellular2",
-      "support":"Supports Apple Pencil"
-
+      "id": 1,
+      "category": "iPhone",
+      "title": "iPhone14Pro",
+      "image": "https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_14_pro__cjmfbiggqhpy_small_2x.jpg",
+      "price": "80600",
+      "displaysize": 6.7,
+      "displaytype": "Liquid Retina display",
+      "cameratype": "Pro camera system",
+      "camera": "48MP",
+      "chip": "A16 Bionic",
+      "security": "Face ID"
     },
     {
-      "id":2,
-      "category":"iPad",
-      "title":"iPad Air",
-      "image":"https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_air__bxjv33pk6nte_small_2x.png",
-      "price":47920,
-      "displaysize":10.9,
-      "displaytype":"Liquid Retina XDR display",
-      "chip":"M1",
-      "frontcamera":"12MP",
-      "backcamera":"12MP",
-      "security":"Touch ID in top button",
-      "chsrgetype":"C",
-      "networktype":"5G cellular2",
-      "support":"Supports Apple Pencil"
-
+      "id": 2,
+      "category": "iPhone",
+      "title": "iPhone14",
+      "image": "https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_14__ct4sjk962pea_small_2x.jpg",
+      "displaytype": "Liquid Retina display",
+      "price": "66300",
+      "displaysize": 6.7,
+      "cameratype": "dual camera system",
+      "camera": "12MP",
+      "chip": "A15 Bionic",
+      "security": "Face ID"
     },
     {
-      "id":3,
-      "category":"iPad",
-      "generation":"10th",
-      "title":"iPad ",
-      "image":"https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_10_9__f7p2wja0gwuy_small_2x.png",
-      "price":39920,
-      "displaysize":10.9,
-      "displaytype":"Liquid Retina display",
-      "chip":"A14 Bionic",
-      "frontcamera":"12MP",
-      "backcamera":"12MP",
-      "security":"Touch ID in top button",
-      "chsrgetype":"C",
-      "networktype":"5G cellular2",
-      "support":"Supports Apple Pencil"
-
+      "id": 3,
+      "category": "iPhone",
+      "title": "iPhone13",
+      "image": "https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_13__fqzwhmfmroey_small_2x.jpg",
+      "displaytype": " Retina display",
+      "price": "66300",
+      "displaysize": 6.1,
+      "cameratype": "dual camera system",
+      "camera": "12MP",
+      "chip": "A15 Bionic",
+      "security": "Face ID"
     },
     {
-      "id":4,
-      "category":"iPad",
-      "title":"iPad ",
-      "generation":"9th",
-    "image":"https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_10_2__fwgwy7jydtea_small_2x.png",
-      "price":25600,
-      "displaysize":10.2,
-      "displaytype":" Retina display",
-      "chip":"A13 Bionic",
-      "frontcamera":"12MP",
-      "backcamera":"8MP",
-      "security":"Touch ID in Home button",
-      "chsrgetype":"Lightning connector",
-      "networktype":"4G LTE",
-      "support":"Supports Apple Pencil"
-
-    },
-    {
-      "id":5,
-      "category":"iPad",
-      "title":"iPad mini",
-      "generation":"",
-    "image":"https://www.apple.com/v/ipad/home/cd/images/overview/compare_ipad_10_2__fwgwy7jydtea_small_2x.png",
-      "price":39920,
-      "displaysize":8.3,
-      "displaytype":"Liquid Retina display",
-      "chip":"A15 Bionic",
-      "frontcamera":"12MP",
-      "backcamera":"12MP",
-      "security":"Touch ID in top button",
-      "chsrgetype":"C",
-      "networktype":"5G cellular",
-      "support":"Supports Apple Pencil"
-
+      "id": 4,
+      "category": "iPhone",
+      "title": "iPhone SE",
+      "image": "https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_se__d5blqx1pgymq_small_2x.jpg",
+      "displaytype": " Retina display",
+      "price": "44300",
+      "displaysize": 5.7,
+      "cameratype": "dual camera system",
+      "camera": "12MP",
+      "chip": "A15 Bionic",
+      "security": "Face ID"
     }
   ],
-  "iphone":[
+  "accessories": [
     {
-      "id":1,
-      "category":"iPhone",
-      "title":"iPhone14Pro",
-      "image":"https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_14_pro__cjmfbiggqhpy_small_2x.jpg",
-      "price":"80600",
-      "displaysize":6.7,
-      "displaytype":"Liquid Retina display",
-      "cameratype":"Pro camera system",
-      "camera":"48MP",
-      "chip":"A16 Bionic",
-      "security":"Face ID"
+      "id": 1,
+      "category": "iPhone",
+      "title": "iPhone 14 Pro Clear Case with MagSafe",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPU63?wid=532&hei=582&fmt=png-alpha&.v=1661471392701",
+      "price": "3920"
     },
     {
-      "id":2,
-      "category":"iPhone",
-      "title":"iPhone14",
-      "image":"https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_14__ct4sjk962pea_small_2x.jpg",
-      "displaytype":"Liquid Retina display",
-      "price":"66300",
-      "displaysize":6.7,
-      "cameratype":"dual camera system",
-      "camera":"12MP",
-      "chip":"A15 Bionic",
-      "security":"Face ID"
+      "id": 2,
+      "category": "iPhone",
+      "title": "MagSafe Charger",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=532&hei=582&fmt=png-alpha&.v=1661269793559",
+      "price": "3120"
     },
     {
-      "id":3,
-      "category":"iPhone",
-      "title":"iPhone13",
-      "image":"https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_13__fqzwhmfmroey_small_2x.jpg",
-      "displaytype":" Retina display",
-      "price":"66300",
-      "displaysize":6.1,
-      "cameratype":"dual camera system",
-      "camera":"12MP",
-      "chip":"A15 Bionic",
-      "security":"Face ID"
+      "id": 3,
+      "category": "iPhone",
+      "title": "iPhone 14 Pro Max Leather Case with MagSafe-link",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPPT3?wid=532&hei=582&fmt=png-alpha&.v=1663108575695",
+      "price": "4720"
     },
     {
-      "id":4,
-      "category":"iPhone",
-      "title":"iPhone SE",
-      "image":"https://www.apple.com/v/iphone/home/bl/images/overview/compare/compare_iphone_se__d5blqx1pgymq_small_2x.jpg",
-      "displaytype":" Retina display",
-      "price":"44300",
-      "displaysize":5.7,
-      "cameratype":"dual camera system",
-      "camera":"12MP",
-      "chip":"A15 Bionic",
-      "security":"Face ID"
+      "id": 4,
+      "category": "iPhone",
+      "title": "Silicon Case with MagSafe-Lilac",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPRY3?wid=532&hei=582&fmt=png-alpha&.v=1666123999266",
+      "price": "3920"
+    },
+    {
+      "id": 5,
+      "category": "iPhone",
+      "title": "20W USB-C Power Adapter",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU7T2_GEO_US?wid=532&hei=582&fmt=png-alpha&.v=1542406417329",
+      "price": "1520"
+    },
+    {
+      "id": 6,
+      "category": "iPhone",
+      "title": "iPhone 14 Plus Silicon Case",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPTC3?wid=532&hei=582&fmt=png-alpha&.v=1666125284698",
+      "price": "3920"
+    },
+    {
+      "id": 7,
+      "category": "iPhone",
+      "title": "MagSafe Duo Charger",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXF3?wid=532&hei=582&fmt=png-alpha&.v=1602179308000",
+      "price": "10320"
+    },
+    {
+      "id": 8,
+      "category": "iPhone",
+      "title": "OtterBox Fugure Series Case",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HQ512?wid=532&hei=582&fmt=png-alpha&.v=1662764942928",
+      "price": "3920"
+    },
+    {
+      "id": 9,
+      "category": "iPhone",
+      "title": "OtterBox Lumen Series Case",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HQ4V2?wid=532&hei=582&fmt=png-alpha&.v=1662752139881",
+      "price": "3920"
+    },
+    {
+      "id": 10,
+      "category": "iPad",
+      "title": "Magic Keyboard Folio for iPad",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3_FV401?wid=532&hei=582&fmt=png-alpha&.v=1664481416885",
+      "price": "19920"
+    },
+    {
+      "id": 11,
+      "category": "iPad",
+      "title": "Apple Pencil(1st  generation)",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0C2?wid=532&hei=582&fmt=png-alpha&.v=1564075356758",
+      "price": "7920"
+    },
+    {
+      "id": 12,
+      "category": "iPad",
+      "title": "Magic Keyboard for iPad Pro 12.9-inch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJQK3?wid=532&hei=582&fmt=png-alpha&.v=1665496505001",
+      "price": "27920"
+    },
+    {
+      "id": 13,
+      "category": "iPad",
+      "title": "USB-C to Apple Pencil Adapter",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQLU3?wid=532&hei=582&fmt=png-alpha&.v=1666191613710",
+      "price": "720"
+    },
+    {
+      "id": 14,
+      "category": "iPad",
+      "title": "Smart Folio for iPad(10th generation)",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDT3?wid=532&hei=582&fmt=png-alpha&.v=1664481896795",
+      "price": "6320"
+    },
+    {
+      "id": 15,
+      "category": "iPad",
+      "title": "Apple Pencil(2nd  generation)",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=532&hei=582&fmt=png-alpha&.v=1540596407165",
+      "price": "10320"
+    },
+    {
+      "id": 16,
+      "category": "iPad",
+      "title": "Smart Folio for iPad Pro 11-inch(4th generation)",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDV3?wid=532&hei=582&fmt=png-alpha&.v=1664548062982",
+      "price": "6320"
+    },
+    {
+      "id": 17,
+      "category": "iPad",
+      "title": "Smart Folio for iPad Air(5th generation)",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MNA43?wid=532&hei=582&fmt=png-alpha&.v=1645642300320",
+      "price": "19920"
+    },
+    {
+      "id": 18,
+      "category": "Watch",
+      "title": "Black Unity Sport Loop",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQTH3?wid=532&hei=582&fmt=png-alpha&.v=1673374526099",
+      "price": "3920"
+    },
+    {
+      "id": 19,
+      "category": "Watch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPLQ3ref?wid=532&hei=582&fmt=png-alpha&.v=1660695336711",
+      "title": "Starlight Sport Brand",
+      "price": "3920"
+    },
+    {
+      "id": 20,
+      "category": "Watch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPLD3?wid=532&hei=582&fmt=png-alpha&.v=1660799010979",
+      "title": "Elderberry Sport Loop",
+      "price": "3920"
+    },
+    {
+      "id": 21,
+      "category": "Watch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPF43ref?wid=532&hei=582&fmt=png-alpha&.v=1660711204559",
+      "title": "Succulent Solo Loop",
+      "price": 3920
+    },
+    {
+      "id": 22,
+      "category": "Watch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ML773?wid=532&hei=582&fmt=png-alpha&.v=1630015271000",
+      "title": "Graphite Milianese Loop",
+      "price": 7920
+    },
+    {
+      "id": 23,
+      "category": "Watch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MP853ref?wid=532&hei=582&fmt=png-alpha&.v=1660864496867",
+      "title": "Umber Leather Link",
+      "price": 7920
+    },
+    {
+      "id": 24,
+      "category": "Watch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPH73ref?wid=532&hei=582&fmt=png-alpha&.v=1660613104271",
+      "title": "Olive Gray Nike Sport Band",
+      "price": 3920
+    },
+    {
+      "id": 25,
+      "category": "Watch",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPHV3?wid=532&hei=582&fmt=png-alpha&.v=1660848849258",
+      "title": "Sumit White/Black Nike Sport Loop",
+      "price": 3920
+    },
+    {
+      "id": 26,
+      "category": "Mac",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0U3?wid=532&hei=582&fmt=png-alpha&.v=1646446502337",
+      "title": "Studio Display",
+      "price": 127920
+    },
+    {
+      "id": 27,
+      "category": "Mac",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMR3?wid=532&hei=582&fmt=png-alpha&.v=1645719947833",
+      "title": "Magic Keyboard with Touch ID",
+      "price": 10920
+    },
+    {
+      "id": 28,
+      "category": "Mac",
+      "image": "",
+      "title": "Magic Mouse",
+      "price": 7920
+    },
+    {
+      "id": 29,
+      "category": "Mac",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMQ3?wid=532&hei=582&fmt=png-alpha&.v=1645138486301",
+      "title": "Magic TracPad",
+      "price": 11920
+    },
+    {
+      "id": 30,
+      "category": "Mac",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJ1M2?wid=532&hei=582&fmt=png-alpha&.v=1591650473000",
+      "title": "USB-C to USB Adapter",
+      "price": 1520
+    },
+    {
+      "id": 31,
+      "category": "sound",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=532&hei=582&fmt=png-alpha&.v=1660803972361",
+      "title": "AirPods Pro(2nd generation)",
+      "price": 19920
+    },
+    {
+      "id": 32,
+      "category": "sound",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=532&hei=582&fmt=png-alpha&.v=1632861342000",
+      "title": "AirPods(3nd generation)",
+      "price": 13529
+    },
+    {
+      "id": 33,
+      "category": "sound",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-select-midnight-202210?wid=532&hei=582&fmt=png-alpha&.v=1670557210097",
+      "title": "HomePod - Midnight",
+      "price": 23920
+    },
+    {
+      "id": 34,
+      "category": "sound",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-blue-202110?wid=532&hei=582&fmt=png-alpha&.v=1632925511000",
+      "title": "HomePod mini - Blue",
+      "price": 7920
+    },
+    {
+      "id": 35,
+      "category": "sound",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-green-202011?wid=532&hei=582&fmt=png-alpha&.v=1604022364000",
+      "title": "AirPods Max",
+      "price": 43920
+    },
+    {
+      "id": 36,
+      "category": "sound",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2H3?wid=532&hei=582&fmt=png-alpha&.v=1634663497000",
+      "title": "Beats Fit Pro EarBuds",
+      "price": 15920
+    },
+    {
+      "id": 37,
+      "category": "sound",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMT83?wid=532&hei=582&fmt=png-alpha&.v=1647541360014",
+      "title": "Beats Studio Buds",
+      "price": 11922
     }
-  ],
-  "accessories":[
-    {
-      "id":1,
-      "category":"iPhone",
-      "title":"iPhone 14 Pro Clear Case with MagSafe",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPU63?wid=532&hei=582&fmt=png-alpha&.v=1661471392701",
-      "price":"3920"
-      
-    },
-    {
-      "id":2,
-      "category":"iPhone",
-      "title":"MagSafe Charger",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=532&hei=582&fmt=png-alpha&.v=1661269793559",
-      "price":"3120"
-      
-    },
-    {
-      "id":3,
-      "category":"iPhone",
-      "title":"iPhone 14 Pro Max Leather Case with MagSafe-link",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPPT3?wid=532&hei=582&fmt=png-alpha&.v=1663108575695",
-      "price":"4720"
-      
-    },
-    {
-      "id":4,
-      "category":"iPhone",
-      "title":"Silicon Case with MagSafe-Lilac",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPRY3?wid=532&hei=582&fmt=png-alpha&.v=1666123999266",
-      "price":"3920"
-      
-    },
-    {
-      "id":5,
-      "category":"iPhone",
-      "title":"20W USB-C Power Adapter",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU7T2_GEO_US?wid=532&hei=582&fmt=png-alpha&.v=1542406417329",
-      "price":"1520"
-      
-    },
-    {
-      "id":6,
-      "category":"iPhone",
-      "title":"iPhone 14 Plus Silicon Case",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPTC3?wid=532&hei=582&fmt=png-alpha&.v=1666125284698",
-      "price":"3920"
-      
-    },
-    {
-      "id":7,
-      "category":"iPhone",
-      "title":"MagSafe Duo Charger",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXF3?wid=532&hei=582&fmt=png-alpha&.v=1602179308000",
-      "price":"10320"
-      
-    },
-    {
-      "id":8,
-      "category":"iPhone",
-      "title":"OtterBox Fugure Series Case",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HQ512?wid=532&hei=582&fmt=png-alpha&.v=1662764942928",
-      "price":"3920"
-      
-    },
-    {
-      "id":9,
-      "category":"iPhone",
-      "title":"OtterBox Lumen Series Case",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HQ4V2?wid=532&hei=582&fmt=png-alpha&.v=1662752139881",
-      "price":"3920"
-      
-    },
-    {
-      "id":10,
-      "category":"iPad",
-      "title":"Magic Keyboard Folio for iPad",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3_FV401?wid=532&hei=582&fmt=png-alpha&.v=1664481416885",
-      "price":"19920"
-    },
-    {
-      "id":11,
-      "category":"iPad",
-      "title":"Apple Pencil(1st  generation)",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0C2?wid=532&hei=582&fmt=png-alpha&.v=1564075356758",
-      "price":"7920"
-    },
-    {
-      "id":12,
-      "category":"iPad",
-      "title":"Magic Keyboard for iPad Pro 12.9-inch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJQK3?wid=532&hei=582&fmt=png-alpha&.v=1665496505001",
-      "price":"27920"
-    },
-    {
-      "id":13,
-      "category":"iPad",
-      "title":"USB-C to Apple Pencil Adapter",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQLU3?wid=532&hei=582&fmt=png-alpha&.v=1666191613710",
-      "price":"720"
-    },
-    {
-      "id":14,
-      "category":"iPad",
-      "title":"Smart Folio for iPad(10th generation)",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDT3?wid=532&hei=582&fmt=png-alpha&.v=1664481896795",
-      "price":"6320"
-    },
-    {
-      "id":15,
-      "category":"iPad",
-      "title":"Apple Pencil(2nd  generation)",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=532&hei=582&fmt=png-alpha&.v=1540596407165",
-      "price":"10320"
-    },
-    {
-      "id":16,
-      "category":"iPad",
-      "title":"Smart Folio for iPad Pro 11-inch(4th generation)",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDV3?wid=532&hei=582&fmt=png-alpha&.v=1664548062982",
-      "price":"6320"
-    },
-    {
-      "id":17,
-      "category":"iPad",
-      "title":"Smart Folio for iPad Air(5th generation)",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MNA43?wid=532&hei=582&fmt=png-alpha&.v=1645642300320",
-      "price":"19920"
-    },
-    {
-      "id":18,
-      "category":"Watch",
-      "title":"Black Unity Sport Loop",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQTH3?wid=532&hei=582&fmt=png-alpha&.v=1673374526099",
-      "price":"3920"
-    },
-    {
-      "id":19,
-      "category":"Watch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPLQ3ref?wid=532&hei=582&fmt=png-alpha&.v=1660695336711",
-      "title":"Starlight Sport Brand",
-      "price":"3920"
-    },
-    {
-      "id":20,
-      "category":"Watch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPLD3?wid=532&hei=582&fmt=png-alpha&.v=1660799010979",
-      "title":"Elderberry Sport Loop",
-      "price":"3920"
-    },
-    {
-      "id":21,
-      "category":"Watch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPF43ref?wid=532&hei=582&fmt=png-alpha&.v=1660711204559",
-      "title":"Succulent Solo Loop",
-      "price":3920
-    },
-    {
-      "id":22,
-      "category":"Watch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ML773?wid=532&hei=582&fmt=png-alpha&.v=1630015271000",
-      "title":"Graphite Milianese Loop",
-      "price":7920
-    },
-    {
-      "id":23,
-      "category":"Watch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MP853ref?wid=532&hei=582&fmt=png-alpha&.v=1660864496867",
-      "title":"Umber Leather Link",
-      "price":7920
-    },
-    {
-      "id":24,
-      "category":"Watch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPH73ref?wid=532&hei=582&fmt=png-alpha&.v=1660613104271",
-      "title":"Olive Gray Nike Sport Band",
-      "price":3920
-    },
-    {
-      "id":25,
-      "category":"Watch",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPHV3?wid=532&hei=582&fmt=png-alpha&.v=1660848849258",
-      "title":"Sumit White/Black Nike Sport Loop",
-      "price":3920
-    },
-    {
-      "id":26,
-      "category":"Mac",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0U3?wid=532&hei=582&fmt=png-alpha&.v=1646446502337",
-      "title":"Studio Display",
-      "price":127920
-    },
-    {
-      "id":27,
-      "category":"Mac",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMR3?wid=532&hei=582&fmt=png-alpha&.v=1645719947833",
-      "title":"Magic Keyboard with Touch ID",
-      "price":10920
-    },
-    {
-      "id":28,
-      "category":"Mac",
-      "image":"",
-      "title":"Magic Mouse",
-      "price":7920
-    },
-    {
-      "id":29,
-      "category":"Mac",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMQ3?wid=532&hei=582&fmt=png-alpha&.v=1645138486301",
-      "title":"Magic TracPad",
-      "price":11920
-    },
-    {
-      "id":30,
-      "category":"Mac",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJ1M2?wid=532&hei=582&fmt=png-alpha&.v=1591650473000",
-      "title":"USB-C to USB Adapter",
-      "price":1520
-    },
-    {
-      "id":31,
-      "category":"sound",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=532&hei=582&fmt=png-alpha&.v=1660803972361",
-      "title":"AirPods Pro(2nd generation)",
-      "price":19920
-    },
-    {
-      "id":32,
-      "category":"sound",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=532&hei=582&fmt=png-alpha&.v=1632861342000",
-      "title":"AirPods(3nd generation)",
-      "price":13529
-    },
-    {
-      "id":33,
-      "category":"sound",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-select-midnight-202210?wid=532&hei=582&fmt=png-alpha&.v=1670557210097",
-      "title":"HomePod - Midnight",
-      "price":23920
-    },
-    {
-      "id":34,
-      "category":"sound",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-blue-202110?wid=532&hei=582&fmt=png-alpha&.v=1632925511000",
-      "title":"HomePod mini - Blue",
-      "price":7920
-    },
-    {
-      "id":35,
-      "category":"sound",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-green-202011?wid=532&hei=582&fmt=png-alpha&.v=1604022364000",
-      "title":"AirPods Max",
-      "price":43920
-    },
-    {
-      "id":36,
-      "category":"sound",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2H3?wid=532&hei=582&fmt=png-alpha&.v=1634663497000",
-      "title":"Beats Fit Pro EarBuds",
-      "price":15920
-    },
-    {
-      "id":37,
-      "category":"sound",
-      "image":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMT83?wid=532&hei=582&fmt=png-alpha&.v=1647541360014",
-      "title":"Beats Studio Buds",
-      "price":11922
-    }
-
   ]
 }

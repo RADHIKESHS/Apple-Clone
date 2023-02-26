@@ -11,7 +11,7 @@
         /* support page begins */
 
         .bigContainer {
-            margin-top: 46px;
+            margin-top: 44px;
         }
 
         .aps {
@@ -124,7 +124,14 @@
             height: 50px;
             border-radius: 12px;
             margin: auto;
-            margin-bottom: 80px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius:0px;
+            border:1px black solid;
+        }
+
+        .searchsupp input:hover{
+            border:3px #2b8bec solid;
+            
         }
 
         .bigContainer2 {
@@ -326,6 +333,40 @@
             display: flex;
             justify-content: space-around;
         }
+
+        /* .searchsupp input .placeholder{
+            margin-left:100px;
+        } */
+
+        .dropdowne{
+            background-color:white;
+            width: 930px;
+            margin:auto;
+            height:200px;
+            gap:40px;
+            text-align:left;
+            margin-bottom:40px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            padding-top:15px;
+            padding-left:15px;
+        }
+
+        .dropdowne p{
+           margin-bottom:14px;
+           margin-top:14px;
+           margin-left:28px;
+        }
+
+        .dropdowne h4{
+          /* margin-top:8px; */
+        }
+
+        .show {
+            display: block;
+        }
+
+
     </style>
 </head>
 <body>
@@ -357,7 +398,7 @@
                 <li>
                 <div class="navbar">
                     <div class="dropdown">
-                      <button class="dropbtn">MAC</button>
+                      <button class="dropbtn">Mac</button>
                       <div class="dropdown-content">
                         <a href="#" id="dmackbookair" style="font-weight: bold;">MackBook Air</a>
                         <a href="#" style="font-weight: bold;">MackBook Pro</a>
@@ -372,7 +413,7 @@
                 <li>
                   <div class="navbar">
                     <div class="dropdown">
-                      <button class="dropbtn">iPAD</button>
+                      <button class="dropbtn">iPad</button>
                       <div class="dropdown-content">
                         <a href="#" style="font-weight: bold;">iPad Pro</a>
                         <a href="#" style="font-weight: bold;">iPad Air</a>
@@ -386,7 +427,7 @@
                 <li>
                   <div class="navbar">
                     <div class="dropdown">
-                      <button class="dropbtn">iPHONE</button>
+                      <button class="dropbtn">iPhone</button>
                       <div class="dropdown-content">
                         <a href="#" style="font-weight: bold;">iPhone 14 Pro</a>
                         <a href="#" style="font-weight: bold;">iPhone 14</a>
@@ -400,7 +441,7 @@
                 <li>
                   <div class="navbar">
                     <div class="dropdown">
-                      <button class="dropbtn">WATCH</button>
+                      <button class="dropbtn">Watch</button>
                       <div class="dropdown-content">
                         <a href="#" style="font-weight: bold;">Apple Watch Ultra</a>
                         <a href="#" style="font-weight: bold;">Apple Watch Series 8</a>
@@ -439,7 +480,7 @@
                 <li>
                   <div class="navbar">
                     <div class="dropdown">
-                      <button class="dropbtn">SUPPORT</button>
+                      <button class="dropbtn">Support</button>
                       <div class="dropdown-content">
                         <a href="./support_Faqss.html" style="font-weight: bold;">All Support</a>
                       </div>
@@ -632,8 +673,18 @@
             <h1>Search for more topics</h1>
         </div>
 
-        <div class="searchsupp">
-            <input type="text" placeholder="Search Support">
+        <div class="searchsupp ">
+           
+            <input onclick="myFunction()" class="inpute" type="text" placeholder="Search Support">
+           
+            <div id="myDropdowne" class="dropdowne">
+                <h4 style="font-weight: 500; color: #0066cc;">Quick Links</h4>
+                <a href=""><p style="color:rgba(0, 0, 0, 0.806);">If you forgot your Apple ID password</p></a>
+                <a href="#"><p style="color:rgba(0, 0, 0, 0.806);">If you forgot the passcode for your iPhone,iPad, or iPod touch</p></a>
+                <a href="#"><p style="color:rgba(0, 0, 0, 0.806);">View, Change or cancel your subscriptions</p></a>
+                <a href="#"><p style="color:rgba(0, 0, 0, 0.806);">Updat iOS om your device</p></a>
+                <a href="#"><p style="color:rgba(0, 0, 0, 0.806);">Contact Apple Support</p></a>
+            </div>
         </div>
     </div>
 
@@ -855,6 +906,7 @@
 
         const menuIconContainer = document.querySelector("nav .menu-icon-container");
         const navContainer = document.querySelector(".nav-container");
+         
 
         menuIconContainer.addEventListener("click", () => {
             navContainer.classList.toggle("active");
@@ -877,6 +929,26 @@
             nav.classList.remove("move-up");
             desktopNav.classList.remove("move-down");
         })
+
+        // search dropdown
+
+        function myFunction() {
+        document.getElementById("myDropdowne").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.inpute')) {
+            var dropdowns = document.getElementsByClassName("dropdowne");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
     </script>
 </body>
 
