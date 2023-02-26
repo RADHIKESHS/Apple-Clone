@@ -1,0 +1,309 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Product Page</title>
+</head>
+<body>
+    <div class="product_main_wrapper">
+        <div class="product_section">
+            <div>
+                <!-- search section -->
+                <div class="product_search_heading">
+                    <h1>Find the product you're looking for.</h1>
+                </div>
+                <div class="product_search_wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input onkeyup="searchProducts()" type="text" placeholder="Search apple products" name="" id="search_input_id">
+                </div>
+                <div class="sort_wrapper">
+                    <!-- <label for="cars">Sort Products : </label> -->
+
+                    <select name="sort" id="productSort" onchange="changeSort(event)">
+                        <option disabled selected>Sort Products</option>
+                        <option value="lowTohigh">Price : Low to High</option>
+                        <option value="highTolow">Price : High to Low</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="product_cards">
+                <div class="card-container" id="card-container-id">
+                   <div class="loader_wrapper">
+                        <img src="Images/loader.gif" alt="Loading...">
+                   </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+        <nav class="footer-menu">
+          <div class="footer-col">
+            <div class="item">
+              <input type="checkbox" id="products">
+              <div class="col-section">
+                <label for="products">
+                <h3>Shop and learn</h3>  
+              </label>
+                <ul class="product-list">
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">iPad</a></li>
+                  <li><a href="#">iPhone</a></li>
+                  <li><a href="#">Watch</a></li>
+                  <li><a href="#">TV</a></li>
+                  <li><a href="#">Music</a></li>
+                  <li><a href="#">iTunes</a></li>
+                  <li><a href="#">HomePod</a></li>
+                  <li><a href="#">iPod touch</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Gift Cards</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      
+          <div class="footer-col">
+            <div class="item">
+              <input type="checkbox" id="store">
+              <div class="col-section">
+                <label for="store">
+                <h3>Apple Store</h3>  
+              </label>
+                <ul class="product-list">
+                  <li><a href="#">Find a Store</a></li>
+                  <li><a href="#">Genius Bar</a></li>
+                  <li><a href="#">Today at Apple</a></li>
+                  <li><a href="#">Apple Camp</a></li>
+                  <li><a href="#">Field Trip</a></li>
+                  <li><a href="#">Apple Store App</a></li>
+                  <li><a href="#">Refurbished and Clearance</a></li>
+                  <li><a href="#">Financing</a></li>
+                  <li><a href="#">Reuse and Recycling</a></li>
+                  <li><a href="#">Order Status</a></li>
+                  <li><a href="#">Shopping Help</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col">
+            <div class="item">
+              <input type="checkbox" id="education">
+              <div class="col-section">
+                <label for="education">
+                <h3>For Education</h3>  
+              </label>
+                <ul class="product-list">
+                  <li><a href="#">Apple and Education</a></li>
+                  <li><a href="#">Shop for College</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item item-padding-top">
+              <input type="checkbox" id="business">
+              <div class="col-section">
+                <label for="business">
+                <h3>For Business</h3>  
+              </label>
+                <ul class="product-list">
+                  <li><a href="#">Apple and Business</a></li>
+                  <li><a href="#">Shop for Business</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      
+          <div class="footer-col">
+            <div class="item">
+              <input type="checkbox" id="acccount">
+              <div class="col-section">
+                <label for="acccount">
+                <h3>Account</h3>  
+              </label>
+                <ul class="product-list">
+                  <li><a href="#">Manage Your Apple ID</a></li>
+                  <li><a href="#">Apple Store Account</a></li>
+                  <li><a href="#">iCloud.com</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item item-padding-top">
+              <input type="checkbox" id="values">
+              <div class="col-section">
+                <label for="values">
+                <h3>Apple Values</h3>  
+              </label>
+                <ul class="product-list">
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#">Education</a></li>
+                  <li><a href="#">Environment</a></li>
+                  <li><a href="#">Inclusion and Diversity</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Supplier Responsibility</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      
+          <div class="footer-col">
+            <div class="item">
+              <input type="checkbox" id="about">
+              <div class="col-section">
+                <label for="about">
+                <h3>About Apple</h3>  
+              </label>
+                <ul class="product-list">
+                  <li><a href="#">Newsroom</a></li>
+                  <li><a href="#">Apple Leadership</a></li>
+                  <li><a href="#">Job Opportunities</a></li>
+                  <li><a href="#">Investors</a></li>
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">Contact Apple</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="footer-base">
+          <div class="footer-more-ways" x-ms-format-detection="none">
+              More ways to shop: Visit an <a href="/retail/">Apple Store</a>, <span class="nowrap">call 1-800-MY-APPLE, or <a href="#">find a reseller</a></span>.
+          </div>
+          <div class="footer-legal">
+                <div class="footer-legal-copyright">Copyright © 2018 Apple Inc. All rights reserved.</div>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sales and Refunds</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Site Map</a>
+                </div>
+            </div>
+        </section>
+          </div>
+      </footer>
+
+    <script>
+        let globalData = []
+        let macUrl = 'https://myapple-api-json-server.onrender.com/mac'
+        let ipadUrl = 'https://myapple-api-json-server.onrender.com/ipad'
+        let iphoneUrl = 'https://myapple-api-json-server.onrender.com/iphone'
+        let accUrl = 'https://myapple-api-json-server.onrender.com/accessories'
+
+        const fillcard = (data) => {
+            let wrapper = document.getElementById('card-container-id')
+            let html = data.map(item => {
+                return `
+                    <div class="card_product" id=${item.id}>
+                        <img src=${item.image} alt="Card Image 1">
+                        <h3>${item.title}</h3>
+                        <p>Rs. ${item.price}</p>
+                        <button class='add_to_cart_btn'>Add to cart</button>
+                    </div>
+                `
+            }).join('')
+            wrapper.innerHTML = html
+        }
+
+        const macUrlfetch = fetch(macUrl);
+        const ipadUrlfetch  = fetch(ipadUrl);
+        const iphoneUrlfetch  = fetch(iphoneUrl);
+        const accUrlfetch  = fetch(accUrl);
+
+        Promise.all([macUrlfetch, ipadUrlfetch, iphoneUrlfetch, accUrlfetch])
+        .then((responses) => {
+            return Promise.all(responses.map((response) => {
+            return response.json();
+            }));
+        })
+        .then((data) => {
+            let temp = [...data[0], ...data[1], ...data[2], ...data[3]]
+            globalData = temp
+            fillcard(temp)
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+        function searchProducts() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('search_input_id');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("card-container-id");
+            li = ul.getElementsByClassName('card_product');
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h3")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+
+        function changeSort(e){
+            let sorted = []
+            if(e.target.value === 'lowTohigh'){
+                sorted = globalData.sort((a,b) => a.price - b.price);
+            }
+
+            if(e.target.value === 'highTolow'){
+                sorted = globalData.sort((a,b) => b.price - a.price);
+            }
+            fillcard(sorted)
+        }
+
+        // add to cart functionlaity
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            let div = document.getElementById("product");
+            Display(data);
+            function Display(data) {
+            div.innerHTML = "";
+            data.forEach((el, i) => {
+            let card = document.createElement("div");
+
+            let img = document.createElement("img");
+            let head = document.createElement("h2");
+            let price = document.createElement("h3");
+            let button = document.createElement("button");
+
+            img.setAttribute("src", el.image);
+            head.innerText = el.name;
+            price.innerText = "₹ " + el.Price;
+            button.innerText = "Add To Cart";
+
+            button.addEventListener("click", () => {
+                if (checkDuplicate(el)) {
+                    alert("product is already added to your Shopping Cart");
+                } else {
+                    cart.push({ ...el, quantity: 1 });
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    alert("Product Successfully added to your Shopping Cart");
+                    button.innerText = "Added to Cart";
+                    button.style.backgroundColor = "#dc58e6";
+                }
+            });
+            card.append(img, head, price, button);
+            div.append(card);
+        });
+    }
+
+    function checkDuplicate(product) {
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].name === product.name) {
+                return true;
+            }
+        } return false;
+    }
+
+    </script>
+</body>
+</html>
