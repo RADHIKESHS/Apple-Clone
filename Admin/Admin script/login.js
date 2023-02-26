@@ -1,4 +1,3 @@
-
 // ------------sliding code------------///
 const RsignUpButton = document.getElementById('signUp');
 const RsignInButton = document.getElementById('signIn');
@@ -10,6 +9,7 @@ RsignInButton.addEventListener('click', () => container.classList.remove('right-
 let signupnameInp = document.getElementById("sign-up-name");
 let signupemailInp = document.getElementById("sign-up-email");
 let signuppasswordInp = document.getElementById("sign-up-password");
+let signupKeyInp = document.getElementById("sign-up-key");
 let signupImageUrlInp = document.getElementById("sign-up-image-url");
 let signupbtn = document.getElementById("sign-up-button");
 
@@ -19,7 +19,9 @@ let signinpasswordInp = document.getElementById("sign-in-password");
 let signinbtn = document.getElementById("sign-in-button");
 
 signupbtn.addEventListener("click", () => {
-    if (signinemailInp.value !== "" || signupemailInp.value !== "" || signuppasswordInp.value !== ""){
+   if(signupKeyInp.value!="ace@123"){
+     alert("Enter correct Key for signup");
+   }else if (signinemailInp.value !== "" || signupemailInp.value !== "" || signuppasswordInp.value !== ""){
         let obj = {
             name: signupnameInp.value,
             email: signupemailInp.value,

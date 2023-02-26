@@ -1,3 +1,13 @@
+checkLogin();
+function checkLogin() {
+   let lsData = JSON.parse(localStorage.getItem("admin-user")) || [];
+   if (lsData.length == 0) {
+      alert("Need  Authorization");
+      window.location.href = 'admin_signup_login.html';
+   }
+}
+
+
 //----------------------------fetch----------------------------
 let currProduct = "";
 async function fetchData(product = "iphone") {
@@ -268,21 +278,21 @@ addNewProductBtn.addEventListener("click", () => {
 
 // Sign In
 
-let user= JSON.parse(localStorage.getItem("admin-user"))||[];
+let user = JSON.parse(localStorage.getItem("admin-user")) || [];
 
 displayCredentials(user)
-function displayCredentials(user){
-   let displayName=document.querySelector("#profile>h2");
-   let displayImg=document.querySelector("#profile>img");
-   displayName.innerText= user[0].name;
-   displayImg.src=user[0].image;
+function displayCredentials(user) {
+   let displayName = document.querySelector("#profile>h2");
+   let displayImg = document.querySelector("#profile>img");
+   displayName.innerText = user[0].name;
+   displayImg.src = user[0].image;
 }
 
 
 // Log Out
-let logOutBtn= document.querySelector("#log-out-btn");
-logOutBtn.addEventListener("click",()=>{
+let logOutBtn = document.querySelector("#log-out-btn");
+logOutBtn.addEventListener("click", () => {
    localStorage.setItem("admin-user", "[]")
    alert("Log Out Successful!");
-   window.location.href='admin_signup_login.html';
+   window.location.href = 'admin_signup_login.html';
 })
