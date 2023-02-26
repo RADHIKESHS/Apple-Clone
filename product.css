@@ -4,6 +4,12 @@ body{
     box-sizing: border-box;
     font-family: calibri;
 }
+#foot{
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  
+}
 
 .product_main_wrapper{
     display: flex;

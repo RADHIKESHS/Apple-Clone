@@ -146,9 +146,11 @@
 
 
 
-    document.getElementById("checkout-form").addEventListener("submit",() =>{
+    document.getElementById("checkout-form").addEventListener("submit",(e) =>{
+        e.preventDefault();
         window.alert("Order Successfull! thanks for shopping!");
-        window.location ="index.html";
+        window.location="index.html";
+        console.log("hello")
     })
 
   }
