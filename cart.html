@@ -19,7 +19,8 @@
             background-color: #f5f3fe;
         }
         #head>img{
-            width: 200px;
+            width: 40px;
+            margin-left: 100px;
         }
         #head>h1{
             margin-left: 30%;
@@ -40,9 +41,11 @@
             margin-left: 10px;
             border-radius: 13px;
             border: 0px;
-            background-color: #8863fb;
+            background-color: #1976D2;
             color: white;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px 20px;
+            padding-bottom: 23px;
         }
         #cart span{
             margin-left: 10px;
@@ -80,7 +83,8 @@
         }
         
         #total span{
-            color: #dc58e6;
+            color: #1976D2;
+;
         }
         #total button{
             width: 100%;
@@ -90,7 +94,7 @@
             font-size: 20px;
             padding: 15px 40px;
             border-radius: 5px;
-            background-image: linear-gradient(to right, #da57e5 0%, #8c63fa 100%);
+            background-image: linear-gradient(to right, #1976D2 0%, #4e55a8 100%);
         }
 
 
@@ -98,7 +102,8 @@
 </head>
 <body>
     <div id="head">
-       <img src="https://cdn.discordapp.com/attachments/1064919428598333504/1066950283596415006/logos.png" onclick="location.href='index.html';">
+       <img src="./images/ACElogo.png" onclick="location.href='index.html';">
+
        <h1>Shoping Cart (<span id="no"></span>)</h1>
     </div>
     <div id="main">
@@ -140,8 +145,8 @@
             let remove=document.createElement("button");
 
             img.setAttribute("src", el.image);
-            head.innerText=el.name;
-            price.innerText="₹ "+el.Price;
+            head.innerText=el.title;
+            price.innerText="₹ "+el.price;
             remove.innerText="Remove";
             dec.innerText="-";
             span.innerText=el.quantity;
@@ -149,7 +154,7 @@
 
             remove.addEventListener("click", () => {
               data=data.filter((ele)=>{
-                return ele.name!==el.name
+                return ele.title!==el.title
               })
                localStorage.setItem("cart",JSON.stringify(data));
               Display(data);
@@ -172,8 +177,8 @@
         });
         let sum=0;
         for(let i=0;i<data.length;i++){
-          sum+=data[i].Price*data[i].quantity;
-        }
+          sum+=data[i].price*data[i].quantity;
+        }      
         document.querySelector("#tot1").textContent="₹"+sum;
         document.querySelector("#tot2").textContent="₹"+sum;
     }

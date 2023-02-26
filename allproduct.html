@@ -1,213 +1,501 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<style>
-    /* body */
-    body {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    button {
-        cursor: pointer;
-    }
-
-   
-
-    /* Products */
-    #product {
-        width: 80%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    #product div {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        padding: 20px;
-        border-radius: 5px;
-
-    }
-
-    #product div:hover {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-    #product>div:nth-child(1) {
-        margin-top: 40px;
-    }
-
-    #product>div:nth-child(2) {
-        margin-top: 40px;
-    }
-
-    #product>div:nth-child(3) {
-        margin-top: 40px;
-    }
-
-    #product img {
-        width: 100%;
-    }
-
-    #product button {
-        height: 28px;
-        width: 27%;
-        border-radius: 13px;
-        border: 0px;
-        background-color: #8863fb;
-        color: white;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-
-   
-
-
-
-
-    
-</style>
-
 <body>
-    <!-- Product Page -->
-    <div id="product"></div>
+  <div class="nav-container">
+    <nav>
+        <ul class="mobile-nav">
+            <li>
+                <div class="menu-icon-container">
+                    <div class="menu-icon">
+                        <span class="line-1"></span>
+                        <span class="line-2"></span>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a href="" class="link-logo"></a>
+            </li>
+
+            <li>
+                <a href="" class="link-bag"></a>
+            </li>
+        </ul>
+
+        <ul class="desktop-nav">
+            <li>
+                <a href="./index.html" class="link-logo"><img src="./images/apple_logo.PNG" alt=""></a>
+            </li>
+            <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Mac</button>
+                        <div class="dropdown-content">
+                            <a href="./allproduct.html" id="dmackbookair" style="font-weight: bold;">MackBook
+                                Air</a>
+                            <a href="./allproduct.html" style="font-weight: bold;" id="macmackbookpro">MackBook
+                                Pro</a>
+                            <a href="./allproduct.html" style="font-weight: bold;" id="macimac">iMac</a>
+                            <a href="./allproduct.html" style="font-weight: bold;" id="macmacmini">Mac mini</a>
+                            <a href="./allproduct.html" style="font-weight: bold;" id="macmacpro">Mac Pro</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">iPad</button>
+                        <div class="dropdown-content">
+                            <a href="./allproduct.html" style="font-weight: bold;">iPad Pro</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">iPad Air</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">iPad mini</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">Apple Pencil</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">Keyboards</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">iPhone</button>
+                        <div class="dropdown-content">
+                            <a href="./allproduct.html" style="font-weight: bold;">iPhone 14 Pro</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">iPhone 14</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">iPhone 13</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">iPhone 12</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">iPhone SE</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Watch</button>
+                        <div class="dropdown-content">
+                            <a href="./allproduct.html" style="font-weight: bold;">Apple Watch Ultra</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">Apple Watch Series 8</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">Apple Watch SE</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">Apple Watch Nike</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">Apple Watch Hermes</a>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">AirPods</button>
+                        <div class="dropdown-content">
+                            <a href="./allproduct.html" style="font-weight: bold;">AirPods 2nd generation</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">AirPods 3rd generation</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">AirPods Pro 2nd generation</a>
+                            <a href="./allproduct.html" style="font-weight: bold;">AirPods Max</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Accessories</button>
+                        <div class="dropdown-content">
+                            <a href="./allaccesories.html" style="font-weight: bold;">All Accessories</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Support</button>
+                        <div class="dropdown-content">
+                            <a href="./support_Faqss.html" style="font-weight: bold;">All Support</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="link-search"></a>
+            </li>
+
+            <li>
+                <a href="./signin_signup.html" id="usersignIn" style="font-weight: bold;">login/Signup</a>
+            </li>
+            <img id="profilePic" src="" alt="">
+            <a href="#" id="logout"></a>
+            <li>
+                <a href="./cart.html" class="link-bag"></a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- End of navigation menu items -->
+
+    <div class="search-container hide">
+        <div class="link-search"></div>
+        <div class="search-bar">
+            <form action="">
+                <input type="text" id="searchbar" placeholder="Search apple.com">
+            </form>
+        </div>
+        <div class="link-close"></div>
+
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li>
+                    <a href="#">Visiting an Apple Store FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Shop Apple Store Online</a>
+                </li>
+                <li>
+                    <a href="./allaccesories.html">Accessories</a>
+                </li>
+                <li>
+                    <a href="./allproduct.html">AirPods</a>
+                </li>
+                <li>
+                    <a href="./allproduct.html">AirTag</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="mobile-search-container">
+        <div class="link-search"></div>
+        <div class="search-bar">
+            <form action="" id="searchsubmit">
+                <input type="text" id="searchbar" placeholder="Search apple.com">
+            </form>
+        </div>
+        <span class="cancel-btn">Cancel</span>
+
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li>
+                    <a href="#">Visiting an Apple Store FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Shop Apple Store Online</a>
+                </li>
+                <li>
+                    <a href="./allaccesories.html">Accessories</a>
+                </li>
+                <li>
+                    <a href="./allproduct.html">AirPods</a>
+                </li>
+                <li>
+                    <a href="./allproduct.html">AirTag</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+  <div class="product_main_wrapper">
+    <div class="product_section">
+      <div>
+        <!-- search section -->
+        <div class="product_search_heading">
+          <h1>Find the product you're looking for.</h1>
+        </div>
+        <div class="product_search_wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input onkeyup="searchProducts()" type="text" placeholder="Search apple products" name=""
+            id="search_input_id">
+        </div>
+        <div class="sort_wrapper">
+          <!-- <label for="cars">Sort Products : </label> -->
+
+          <select name="sort" id="productSort" onchange="changeSort(event)">
+            <option disabled selected>Sort Products</option>
+            <option value="lowTohigh">Price : Low to High</option>
+            <option value="highTolow">Price : High to Low</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="product_cards">
+        <div class="card-container" id="card-container-id">
+          <div class="loader_wrapper">
+            <img src="Images/loader.gif" alt="Loading...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-content">
+      <nav class="footer-menu">
+        <div class="footer-col">
+          <div class="item">
+            <input type="checkbox" id="products">
+            <div class="col-section">
+              <label for="products">
+                <h3>Shop and learn</h3>
+              </label>
+              <ul class="product-list">
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">iTunes</a></li>
+                <li><a href="#">HomePod</a></li>
+                <li><a href="#">iPod touch</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="item">
+            <input type="checkbox" id="store">
+            <div class="col-section">
+              <label for="store">
+                <h3>Apple Store</h3>
+              </label>
+              <ul class="product-list">
+                <li><a href="#">Find a Store</a></li>
+                <li><a href="#">Genius Bar</a></li>
+                <li><a href="#">Today at Apple</a></li>
+                <li><a href="#">Apple Camp</a></li>
+                <li><a href="#">Field Trip</a></li>
+                <li><a href="#">Apple Store App</a></li>
+                <li><a href="#">Refurbished and Clearance</a></li>
+                <li><a href="#">Financing</a></li>
+                <li><a href="#">Reuse and Recycling</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Shopping Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="item">
+            <input type="checkbox" id="education">
+            <div class="col-section">
+              <label for="education">
+                <h3>For Education</h3>
+              </label>
+              <ul class="product-list">
+                <li><a href="#">Apple and Education</a></li>
+                <li><a href="#">Shop for College</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item item-padding-top">
+            <input type="checkbox" id="business">
+            <div class="col-section">
+              <label for="business">
+                <h3>For Business</h3>
+              </label>
+              <ul class="product-list">
+                <li><a href="#">Apple and Business</a></li>
+                <li><a href="#">Shop for Business</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="item">
+            <input type="checkbox" id="acccount">
+            <div class="col-section">
+              <label for="acccount">
+                <h3>Account</h3>
+              </label>
+              <ul class="product-list">
+                <li><a href="#">Manage Your Apple ID</a></li>
+                <li><a href="#">Apple Store Account</a></li>
+                <li><a href="#">iCloud.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item item-padding-top">
+            <input type="checkbox" id="values">
+            <div class="col-section">
+              <label for="values">
+                <h3>Apple Values</h3>
+              </label>
+              <ul class="product-list">
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Inclusion and Diversity</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Supplier Responsibility</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="item">
+            <input type="checkbox" id="about">
+            <div class="col-section">
+              <label for="about">
+                <h3>About Apple</h3>
+              </label>
+              <ul class="product-list">
+                <li><a href="#">Newsroom</a></li>
+                <li><a href="#">Apple Leadership</a></li>
+                <li><a href="#">Job Opportunities</a></li>
+                <li><a href="#">Investors</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact Apple</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="footer-base">
+        <div class="footer-more-ways" x-ms-format-detection="none">
+          More ways to shop: Visit an <a href="/retail/">Apple Store</a>, <span class="nowrap">call 1-800-MY-APPLE, or
+            <a href="#">find a reseller</a></span>.
+        </div>
+        <div class="footer-legal">
+          <div class="footer-legal-copyright">Copyright © 2018 Apple Inc. All rights reserved.</div>
+          <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Sales and Refunds</a>
+            <a href="#">Legal</a>
+            <a href="#">Site Map</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <script>
+    let globalData = []
+    let macUrl = 'https://myapple-api-json-server.onrender.com/mac'
+    let ipadUrl = 'https://myapple-api-json-server.onrender.com/ipad'
+    let iphoneUrl = 'https://myapple-api-json-server.onrender.com/iphone'
+    let accUrl = 'https://myapple-api-json-server.onrender.com/accessories'
+
+    const fillcard = (data) => {
+      let wrapper = document.getElementById('card-container-id')
+      let html = data.map(item => {
+        return `
+                    <div class="card_product" id=${item.id}>
+                        <img src=${item.image} alt="Card Image 1">
+                        <h3>${item.title}</h3>
+                        <p>Rs. ${item.price}</p>
+                        <button class='add_to_cart_btn' onclick="addToCart('${item.id}','${item.image}','${item.title}','${item.price}')">Add to cart</button>
+                    </div>
+                `
+      }).join('')
+      wrapper.innerHTML = html
+    }
+
+    const macUrlfetch = fetch(macUrl);
+    const ipadUrlfetch = fetch(ipadUrl);
+    const iphoneUrlfetch = fetch(iphoneUrl);
+    const accUrlfetch = fetch(accUrl);
+
+    Promise.all([macUrlfetch, ipadUrlfetch, iphoneUrlfetch, accUrlfetch])
+      .then((responses) => {
+        return Promise.all(responses.map((response) => {
+          return response.json();
+        }));
+      })
+      .then((data) => {
+        let temp = [...data[0], ...data[1], ...data[2], ...data[3]]
+        globalData = temp
+        fillcard(temp)
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+    function searchProducts() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('search_input_id');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("card-container-id");
+      li = ul.getElementsByClassName('card_product');
+
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("h3")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+
+    function changeSort(e) {
+      let sorted = []
+      if (e.target.value === 'lowTohigh') {
+        sorted = globalData.sort((a, b) => a.price - b.price);
+      }
+
+      if (e.target.value === 'highTolow') {
+        sorted = globalData.sort((a, b) => b.price - a.price);
+      }
+      fillcard(sorted)
+    }
+
+
+
+    // add to cart functionlaity
+    function addToCart(id, image, title, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let obj={
+        id: id,
+        image: image,
+        title: title,
+        price:price
+      }
+      if (checkDuplicate(title,cart)) {
+        alert("product is already added to your Shopping Cart");
+      } else {
+        cart.push({ ...obj, quantity: 1 });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Product Successfully added to your Shopping Cart");
+      }
+    }
+
+
+    function checkDuplicate(title,cart) {
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].title === title) {
+          return true;
+        }
+      } return false;
+    }
+
+  </script>
 </body>
-
-<script>
-
-    let data = [{
-        name: "Euros Diamond Ring for Men",
-        Price: 68085,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066983571375534120/IMG_20230123_123153.jpg"
-    },
-    {
-        name: "Modus Solitaire Ring for Men",
-        Price: 150005,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654380524318750/IMG_20230122_151232.jpg"
-    },
-    {
-        name: "Glimmer Solitaire Ring",
-        Price: 149821,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654382491455548/IMG_20230122_151023.jpg"
-    },
-    {
-        name: "Rhette Platinum Band for Him",
-        Price: 51150,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654380801151017/IMG_20230122_151218.jpg"
-    },
-    {
-        name: "Splendour Quad Diamond Ring",
-        Price: 64019,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654381614837810/IMG_20230122_151149.jpg"
-    },
-    {
-        name: "Napoleon Platinum Band for Men",
-        Price: 32456,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654381388337222/IMG_20230122_151203.jpg"
-    },
-    {
-        name: "Leo Diamond Ring For Men",
-        Price: 50465,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654382491455548/IMG_20230122_151023.jpg"
-    },
-    {
-        name: "Ross Gold Band for Men",
-        Price: 37764,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654380524318750/IMG_20230122_151232.jpg"
-    },
-    {
-        name: "James Diamond Ring for Men",
-        Price: 53025,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066654382273343488/IMG_20230122_151040.jpg"
-    },
-    {
-        name: "Rhette Platinum Band",
-        Price: 31150,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066983570473766962/IMG_20230123_130111.jpg"
-    },
-    {
-        name: "Splendour Quad Diamond",
-        Price: 61019,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066983570645725305/IMG_20230123_130058.jpg"
-    },
-    {
-        name: "Napoleon Platinum Band",
-        Price: 35456,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066983570826072114/IMG_20230123_130047.jpg"
-    },
-    {
-        name: "Leo Diamond Ring",
-        Price: 56465,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066983571190992967/IMG_20230123_130030.jpg"
-    },
-    {
-        name: "Ross Gold Band",
-        Price: 46764,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066983571375534120/IMG_20230123_123153.jpg"
-    },
-    {
-        name: "James Diamond Ring",
-        Price: 50025,
-        image: "https://cdn.discordapp.com/attachments/1064919428598333504/1066983571560075274/IMG_20230123_123138.jpg"
-    }
-    ]
-
-    async function fetchData(){
-        let res= await fetch(`https://myapple-api-json-server.onrender.com/`);
-        let data= await res.json();
-        Display(data);
-    }
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    let div = document.getElementById("product");
-    Display(data);
-    function Display(data) {
-        div.innerHTML = "";
-        data.forEach((el, i) => {
-            let card = document.createElement("div");
-
-            let img = document.createElement("img");
-            let head = document.createElement("h2");
-            let price = document.createElement("h3");
-            let button = document.createElement("button");
-
-            img.setAttribute("src", el.image);
-            head.innerText = el.name;
-            price.innerText = "₹ " + el.Price;
-            button.innerText = "Add To Cart";
-
-            button.addEventListener("click", () => {
-                if (checkDuplicate(el)) {
-                    alert("product is already added to your Shopping Cart");
-                } else {
-                    cart.push({ ...el, quantity: 1 });
-                    localStorage.setItem("cart", JSON.stringify(cart));
-                    alert("Product Successfully added to your Shopping Cart");
-                    button.innerText = "Added to Cart";
-                    button.style.backgroundColor = "#dc58e6";
-                }
-            });
-            card.append(img, head, price, button);
-            div.append(card);
-        });
-    }
-
-    function checkDuplicate(product) {
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].name === product.name) {
-                return true;
-            }
-        } return false;
-    }
-
-</script>
 
 </html>
