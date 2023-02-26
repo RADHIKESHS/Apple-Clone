@@ -1,3 +1,18 @@
+let user = JSON.parse(localStorage.getItem("user")) || [];
+let profilePic = document.querySelector("#profilePic");
+let username = document.querySelector("#usersignIn");
+let logout = document.querySelector("#logout");
+if (user.length != 0) {
+    profilePic.src = user[0].image;
+    username.innerText = user[0].name;
+    logout.innerText = "Log Out";
+}
+logout.addEventListener("click",()=> {
+    localStorage.setItem("user", "[]");
+   alert("Log Out Successful!");
+   window.location.href = 'index.html';
+})
+
 const searchButton = document.querySelector("nav .desktop-nav .link-search");
 const closeButton = document.querySelector(".search-container .link-close");
 const desktopNav = document.querySelector(".desktop-nav");
@@ -53,7 +68,7 @@ cancelBtn.addEventListener("click", () => {
     desktopNav.classList.remove("move-down");
 })
 
-let searchbtn= document.getElementById("searchsubmit")
+let searchbtn = document.getElementById("searchsubmit")
 // let serch= document.getElementById("searchbar");
 
 // console.log(serch.value)

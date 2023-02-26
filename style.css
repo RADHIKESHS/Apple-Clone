@@ -25,10 +25,11 @@ body {
 }
 
 .nav-container nav {
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 8px;
     height: 100%;
+    padding-left: 20%;
 }
 
 nav .desktop-nav {
@@ -655,17 +656,21 @@ body {
 .navbar a:hover,
 .dropdown:hover .dropbtn {
     background-color: rgb(94, 85, 85);
+    border-radius: 5px;
 }
 
 .dropdown-content {
-    width: 100%;
+    width: 200%;
+    height: 100vh;
     display: none;
     position: absolute;
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    margin-left: -60%;
+    padding-left: 60%;
 }
 
 .dropdown-content a {
@@ -683,6 +688,13 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+#profilePic{
+    width: 3%;
+    border-radius: 50%;
+}
+#usersignIn{
+    margin-left: 100px;
 }
 
 
