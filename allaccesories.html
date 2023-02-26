@@ -1,490 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      .navbar{
-        height: 100px;
-        width: 100%;
-        border: 2px solid black;
-      }
-        .title{
-          display: flex; /* Use flexbox to center the text vertically */
-  align-items: center; /* Center vertically */
- height: 50px;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-  justify-content: flex-start;
-  padding-left: 40px;
-  background-color: #6e6e73;
-  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-  color: aliceblue;
-  font-size: 25px;
-  
-  
-        }
-        .baner {
-  position: relative;
-  height: 300px;
-  width: 100%;
-  background-image: url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-accessories-202210?wid=2880&hei=960&fmt=jpeg&qlt=90&.v=1669944040811");
-  background-size: cover;
-  display: flex;
-  transform: scaleX(-1) scale();
-  z-index: -1;
-  
+    .title {
+      display: flex;
+      /* Use flexbox to center the text vertically */
+      align-items: center;
+      /* Center vertically */
+      height: 50px;
 
-}
+      justify-content: flex-start;
+      padding-left: 40px;
+      background-color: #6e6e73;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      color: aliceblue;
+      font-size: 25px;
+      margin-top: 46px;
 
-.baner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  
-  
-}
- *{
-  margin: 0;
-  padding: 0;
- }
-.textdiv {
-   
-  color: white;
-  text-align: left;
-  padding-top: 20px;
-  margin-left: 40px;
-  width: 200px;
-  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-  font-size: 18px;
-  
-}
-.textdiv h1,h3,p{
-  margin-top: 20px;
-}
-.textdiv a{
-    color: rgb(45, 138, 225);
-    text-decoration: none;
-    
-}
-.textdiv a:hover{
-  text-decoration: underline;
-}
-/* ************serch container section ****************/
-.serchcontainer{
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-}
-.serdiv{
-  width: 45%;
-  margin: auto;
-  height: 150px;
-  text-align: center;
-  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-.has-search .form-control {
-  margin-top: 50px;
-padding-left: 8px;
-  height:40px;
-    width:100%;
-    border-radius: 8px;
-    
-}
+    }
 
-.has-search .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #df1717;
-}
+    .baner {
+      position: relative;
+      height: 300px;
+      width: 100%;
+      background-image: url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-accessories-202210?wid=2880&hei=960&fmt=jpeg&qlt=90&.v=1669944040811");
+      background-size: cover;
+      display: flex;
+      transform: scaleX(-1) scale();
+      z-index: -1;
 
-/**************** Browse section start from hear ***************/
 
-.tabs {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-}
-.tabdiv{
-  margin:auto;
+    }
 
-  display:flex;
-}
-.tabs li {
-  padding: 10px;
-  background-color: #f6f4f4;
-  border-right: 1px solid white;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.tabs li.active,
-.tabs li:hover {
-  background-color: #ddd;
-}
-.content {
-  width: 70%;
- padding-top: 20px;
- padding-bottom: 20px;
- border: 1px solid black;
-    height:200px;
-    margin: auto;
-    border-left: none;
-    border-right: none;
-}
+    .baner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-.content > div:not(:first-child) {
-  display: none;
-}
-.one{
-   font-family: Arial, Helvetica, sans-serif;
-   height:100%;
-  display: flex;
-  
-}
-.two{
-   font-family: Arial, Helvetica, sans-serif;
-   height:100%;
-  display: flex;
-  
-}
 
-.category{
+    }
 
-  display: flex;
-  width:25%;
-  height:100%;
-  align-items: center;
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-}
-.category a{
-  width: 80%;
-  height: 90%;
-  display: flex;
-  margin: auto;
-  align-items: center;
-  flex-direction: column;
-  color: black;
-  text-decoration: none;
-}
-.imagediv{
-  border: 1px solid rgba(0, 0, 0, 0.562);
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
+    .textdiv {
 
-  
-  margin-bottom: 20px;
-}
-.category img{
- width:90px;
- height: 90px;
-}
+      color: white;
+      text-align: left;
+      padding-top: 20px;
+      margin-left: 40px;
+      width: 200px;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 18px;
 
-/* **************product section****************** */
-.product-mac,
-.product-iphone,
-.product-watch,
-.product-ipad,
-.product-sound {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  cursor: pointer;
-  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-.product-mac h2,
-.product-iphone h2,
-.product-watch h2,
-.product-ipad h2,
-.product-sound h2 {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-.container {
-  width: 1070px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
- 
-}
-.grid-product {
-  background: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: .5s;
-  border-radius: 10px;
-}
-.grid-product:hover {
-  background: #e1e1e1;
-}
-.grid-product img {
-  width: 300px;
-  border-radius: 4px;
-}
-.grid-detail {
-  margin: 20px 0;
-  text-align: center;
-}
-.grid-detail p:last-child {
-  transition: .5s;
-  margin-top: 10px;
-}
-.grid-product:hover > .grid-detail p:last-child {
-  color: #3498db;
-}
+    }
 
-/*-------*/
-.grid-product-full {
-  background: #f1f1f1;
-  grid-column: span 3;
-  display: flex;
-  position: relative;
-  margin-bottom: 50px;
-}
-.grid-detail-sum {
-  position: absolute;
-  top: 35%;
-  right: 12%;
-  text-align: center;
-}
-.grid-detail-sum h2 {
-  font-size: 3rem;
-  font-weight: 500;
-  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-.grid-detail-sum p {
-  margin: 20px 0;
-  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-.grid-detail-sum a {
-  color: #3498db;
-  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-.grid-detail-sum a:hover {
-  text-decoration: underline;
-}
+    .textdiv h1,
+    h3,
+    p {
+      margin-top: 20px;
+    }
 
-/* *************** footer  ******************* */
-footer {
-  width: 100%;
-  height: 500px;
-  background: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer-main {
-  width: 1070px;
-}
-.footer-detail {
-  font-size: .7rem;
-  color: #95a5a6;
-  padding: 20px 0;
-  border-bottom: 1px solid #bdc3c7;
-}
-.footer-detail a {
-  color: #2c3e50;
-}
-.footer-detail a:hover {
-  text-decoration: underline;
-}
-.footer-welcome {
-  display: flex;
-  margin: 20px 0;
-  font-size: .8rem;
-  color: #34495e;
-}
-.footer-welcome i {
-  margin-right: 10px;
-}
-.footer-ul {
-  display: flex;
-  justify-content: space-between;
-}
-.footer-ul ul {
-  list-style: none;
-}
-.footer-ul ul li {
-  margin: 7px 0;
-}
-.footer-ul ul li h4 {
-  color: #34495e;
-  font-size: .7rem;
-}
-.footer-ul ul li a {
-  color: #7f8c8d;
-  font-size: .7rem;
-}
-.footer-ul ul li a:hover {
-  text-decoration: underline; 
-}
-#mt {
-  padding-top: 30px;
-}
-.footer-contact {
-  border-bottom: 1px solid #bdc3c7;
-  padding: 12px 0;
-  margin: 10px 0;
-  color: #7f8c8d;
-  font-size: .7rem;
-}
-.footer-contact a {
-  color: #3498db;
-}
-.footer-contact a:hover {
-  text-decoration: underline;
-}
-.footer-copyright {
-  color: #7f8c8d;
-  font-size: .7rem;
-  display: flex;
-  justify-content: space-between;
-}
-.footer-copyright ul {
-  display: flex;
-  list-style: none;
-  width: auto;
-}
-.footer-copyright ul li {
-  margin: 0 10px;
-}
-.footer-copyright ul li a {
-  color: #7f8c8d;
-}
-.footer-copyright ul li a:hover {
-  text-decoration: underline; 
-}
-.vr {
-  height: 15px;
-  width: 1px;
-  background: #bdc3c7;
-}
-.footer-lang {
-  display: flex;
-}
-.footer-lang p {
-  margin: 0 10px;
-}
-.circle {
-  width: 15px;
-  height: 15px;
-}
-.circle img {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  border-radius: 50%;
-}
-    </style>
+    .textdiv a {
+      color: rgb(45, 138, 225);
+      text-decoration: none;
+
+    }
+
+    .textdiv a:hover {
+      text-decoration: underline;
+    }
+
+    /* ************serch container section ****************/
+    .serchcontainer {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+    }
+
+    .serdiv {
+      width: 45%;
+      margin: auto;
+      height: 150px;
+      text-align: center;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+
+    .has-search .form-control {
+      margin-top: 50px;
+      padding-left: 8px;
+      height: 40px;
+      width: 100%;
+      border-radius: 8px;
+
+    }
+
+    .has-search .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #df1717;
+    }
+
+    /**************** Browse section start from hear ***************/
+
+    .tabs {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+    }
+
+    .tabdiv {
+      margin: auto;
+
+      display: flex;
+    }
+
+    .tabs li {
+      padding: 10px;
+      background-color: #f6f4f4;
+      border-right: 1px solid white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .tabs li.active,
+    .tabs li:hover {
+      background-color: #ddd;
+    }
+
+    .content {
+      width: 70%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border: 1px solid black;
+      height: 200px;
+      margin: auto;
+      border-left: none;
+      border-right: none;
+    }
+
+    .content>div:not(:first-child) {
+      display: none;
+    }
+
+    .one {
+      font-family: Arial, Helvetica, sans-serif;
+      height: 100%;
+      display: flex;
+
+    }
+
+    .two {
+      font-family: Arial, Helvetica, sans-serif;
+      height: 100%;
+      display: flex;
+
+    }
+
+    .category {
+
+      display: flex;
+      width: 25%;
+      height: 100%;
+      align-items: center;
+
+    }
+
+    .category a {
+      width: 80%;
+      height: 90%;
+      display: flex;
+      margin: auto;
+      align-items: center;
+      flex-direction: column;
+      color: black;
+      text-decoration: none;
+    }
+
+    .imagediv {
+      border: 1px solid rgba(0, 0, 0, 0.562);
+      display: flex;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+
+
+      margin-bottom: 20px;
+    }
+
+    .category img {
+      width: 90px;
+      height: 90px;
+    }
+
+    /* **************product section****************** */
+    .product-mac,
+    .product-iphone,
+    .product-watch,
+    .product-ipad,
+    .product-sound {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+      cursor: pointer;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+
+    .product-mac h2,
+    .product-iphone h2,
+    .product-watch h2,
+    .product-ipad h2,
+    .product-sound h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width: 1070px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+
+    }
+
+    .grid-product {
+      background: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: .5s;
+      border-radius: 10px;
+    }
+
+    .grid-product:hover {
+      background: #e1e1e1;
+    }
+
+    .grid-product img {
+      width: 300px;
+      border-radius: 4px;
+    }
+
+    .grid-detail {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .grid-detail p:last-child {
+      transition: .5s;
+      margin-top: 10px;
+    }
+
+    .grid-product:hover>.grid-detail p:last-child {
+      color: #3498db;
+    }
+
+    /*-------*/
+    .grid-product-full {
+      background: #f1f1f1;
+      grid-column: span 3;
+      display: flex;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .grid-detail-sum {
+      position: absolute;
+      top: 35%;
+      right: 12%;
+      text-align: center;
+    }
+
+    .grid-detail-sum h2 {
+      font-size: 3rem;
+      font-weight: 500;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+
+    .grid-detail-sum p {
+      margin: 20px 0;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+
+    .grid-detail-sum a {
+      color: #3498db;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+
+    .grid-detail-sum a:hover {
+      text-decoration: underline;
+    }
+
+    /* *************** footer  ******************* */
+    footer {
+      width: 100%;
+      height: 500px;
+      background: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-main {
+      width: 1070px;
+    }
+
+    .footer-detail {
+      font-size: .7rem;
+      color: #95a5a6;
+      padding: 20px 0;
+      border-bottom: 1px solid #bdc3c7;
+    }
+
+    .footer-detail a {
+      color: #2c3e50;
+    }
+
+    .footer-detail a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-welcome {
+      display: flex;
+      margin: 20px 0;
+      font-size: .8rem;
+      color: #34495e;
+    }
+
+    .footer-welcome i {
+      margin-right: 10px;
+    }
+
+    .footer-ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-ul ul {
+      list-style: none;
+    }
+
+    .footer-ul ul li {
+      margin: 7px 0;
+    }
+
+    .footer-ul ul li h4 {
+      color: #34495e;
+      font-size: .7rem;
+    }
+
+    .footer-ul ul li a {
+      color: #7f8c8d;
+      font-size: .7rem;
+    }
+
+    .footer-ul ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #mt {
+      padding-top: 30px;
+    }
+
+    .footer-contact {
+      border-bottom: 1px solid #bdc3c7;
+      padding: 12px 0;
+      margin: 10px 0;
+      color: #7f8c8d;
+      font-size: .7rem;
+    }
+
+    .footer-contact a {
+      color: #3498db;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-copyright {
+      color: #7f8c8d;
+      font-size: .7rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-copyright ul {
+      display: flex;
+      list-style: none;
+      width: auto;
+    }
+
+    .footer-copyright ul li {
+      margin: 0 10px;
+    }
+
+    .footer-copyright ul li a {
+      color: #7f8c8d;
+    }
+
+    .footer-copyright ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .vr {
+      height: 15px;
+      width: 1px;
+      background: #bdc3c7;
+    }
+
+    .footer-lang {
+      display: flex;
+    }
+
+    .footer-lang p {
+      margin: 0 10px;
+    }
+
+    .circle {
+      width: 15px;
+      height: 15px;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      border-radius: 50%;
+    }
+  </style>
 </head>
-<body>
-    
-</body>
-<nav class="navbar">
 
-</nav>
+<body>
+
+</body>
+<div class="nav-container">
+  <nav>
+    <ul class="mobile-nav">
+      <li>
+        <div class="menu-icon-container">
+          <div class="menu-icon">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <a href="" class="link-logo"></a>
+      </li>
+
+      <li>
+        <a href="" class="link-bag"></a>
+      </li>
+    </ul>
+
+    <ul class="desktop-nav">
+      <li>
+        <a href="./index.html" class="link-logo"><img src="./images/apple_logo.PNG" alt=""></a>
+      </li>
+      <li>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">MAC</button>
+            <div class="dropdown-content">
+              <a href="#" id="dmackbookair" style="font-weight: bold;">MackBook Air</a>
+              <a href="#" style="font-weight: bold;">MackBook Pro</a>
+              <a href="#" style="font-weight: bold;">iMac</a>
+              <a href="#" style="font-weight: bold;">Mac mini</a>
+              <a href="#" style="font-weight: bold;">Mac Studio</a>
+              <a href="#" style="font-weight: bold;">Mac Pro</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">iPAD</button>
+            <div class="dropdown-content">
+              <a href="#" style="font-weight: bold;">iPad Pro</a>
+              <a href="#" style="font-weight: bold;">iPad Air</a>
+              <a href="#" style="font-weight: bold;">iPad mini</a>
+              <a href="#" style="font-weight: bold;">Apple Pencil</a>
+              <a href="#" style="font-weight: bold;">Keyboards</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">iPHONE</button>
+            <div class="dropdown-content">
+              <a href="#" style="font-weight: bold;">iPhone 14 Pro</a>
+              <a href="#" style="font-weight: bold;">iPhone 14</a>
+              <a href="#" style="font-weight: bold;">iPhone 13</a>
+              <a href="#" style="font-weight: bold;">iPhone 12</a>
+              <a href="#" style="font-weight: bold;">iPhone SE</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">WATCH</button>
+            <div class="dropdown-content">
+              <a href="#" style="font-weight: bold;">Apple Watch Ultra</a>
+              <a href="#" style="font-weight: bold;">Apple Watch Series 8</a>
+              <a href="#" style="font-weight: bold;">Apple Watch SE</a>
+              <a href="#" style="font-weight: bold;">Apple Watch Nike</a>
+              <a href="#" style="font-weight: bold;">Apple Watch Hermes</a>
+
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">AirPods</button>
+            <div class="dropdown-content">
+              <a href="#" style="font-weight: bold;">AirPods 2nd generation</a>
+              <a href="#" style="font-weight: bold;">AirPods 3rd generation</a>
+              <a href="#" style="font-weight: bold;">AirPods Pro 2nd generation</a>
+              <a href="#" style="font-weight: bold;">AirPods Max</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">Accessories</button>
+            <div class="dropdown-content">
+              <a href="./allaccesories.html" style="font-weight: bold;">All Accessories</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">SUPPORT</button>
+            <div class="dropdown-content">
+              <a href="./support_Faqss.html" style="font-weight: bold;">All Support</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="link-search"></a>
+      </li>
+      <li>
+        <a href="#" class="link-bag"></a>
+      </li>
+      <li>
+        <a href="./signin_signup.html" id="usersignIn" style="font-weight: bold;">login/Signup</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- End of navigation menu items -->
+
+  <div class="search-container hide">
+    <div class="link-search"></div>
+    <div class="search-bar">
+      <form action="">
+        <input type="text" id="searchbar" placeholder="Search apple.com">
+      </form>
+    </div>
+    <div class="link-close"></div>
+
+    <div class="quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li>
+          <a href="#">Visiting an Apple Store FAQ</a>
+        </li>
+        <li>
+          <a href="#">Shop Apple Store Online</a>
+        </li>
+        <li>
+          <a href="#">Accessories</a>
+        </li>
+        <li>
+          <a href="#">AirPods</a>
+        </li>
+        <li>
+          <a href="#">AirTag</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="mobile-search-container">
+    <div class="link-search"></div>
+    <div class="search-bar">
+      <form action="" id="searchsubmit">
+        <input type="text" id="searchbar" placeholder="Search apple.com">
+      </form>
+    </div>
+    <span class="cancel-btn">Cancel</span>
+
+    <div class="quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li>
+          <a href="#">Visiting an Apple Store FAQ</a>
+        </li>
+        <li>
+          <a href="#">Shop Apple Store Online</a>
+        </li>
+        <li>
+          <a href="#">Accessories</a>
+        </li>
+        <li>
+          <a href="#">AirPods</a>
+        </li>
+        <li>
+          <a href="#">AirTag</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
+<div class="overlay"></div>
+
+<!-- ---------accessories-page------------ -->
+
 <div class="title">
-<h4>Accessories</h4>
+  <h4>Accessories</h4>
 </div>
 
 <div class="baner">
-    <div class="textdiv">
-        <h1>HomePod</h1>
-        <h3>Profound sound</h3>
-        <a href=""><h3>Shope HomePod </h3></a>
-       </div>
-</div>
-<div class="serchcontainer">
-<div class="serdiv">
-  <h3 style="font-size: 30px;">Find the accessories you’re looking for.</h3>
-  <div class="form-group has-search">
-    <span class="fa fa-search form-control-feedback"></span>
-    <input type="text" class="form-control" placeholder="Search Accessories">
+  <div class="textdiv">
+    <h1>HomePod</h1>
+    <h3>Profound sound</h3>
+    <a href="">
+      <h3>Shope HomePod </h3>
+    </a>
   </div>
 </div>
+<div class="serchcontainer">
+  <div class="serdiv">
+    <h3 style="font-size: 30px;">Find the accessories you’re looking for.</h3>
+    <div class="form-group has-search">
+      <span class="fa fa-search form-control-feedback"></span>
+      <input type="text" class="form-control" placeholder="Search Accessories">
+    </div>
+  </div>
 </div>
 <!--************************* tabsectin code *****************************-->
 <div clss="tabcontainer">
   <ul class="tabs">
-   <div class="tabdiv">
+    <div class="tabdiv">
       <li class="active" data-cont=".one">Browse By Product</li>
-    <li data-cont=".two">Browse By Category</li>
-   
-   </div>
+      <li data-cont=".two">Browse By Category</li>
+
+    </div>
   </ul>
-  <div class="content" >
+  <div class="content">
     <div class="one" class="product">
       <div class="category">
 
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-mac?wid=150&hei=150&fmt=png-alpha&.v=1544482382615" alt="">
-          </div> 
-        <span>Mac</span>
-        </a>
-        
-      </div>
-      <div class="category">
-        <a href="#">
-          <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-ipad?wid=150&hei=150&fmt=png-alpha&.v=1544482382704" alt="">
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-mac?wid=150&hei=150&fmt=png-alpha&.v=1544482382615"
+              alt="">
           </div>
-        <span>iPad</span>
+          <span>Mac</span>
+        </a>
+
+      </div>
+      <div class="category">
+        <a href="#">
+          <div class="imagediv">
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-ipad?wid=150&hei=150&fmt=png-alpha&.v=1544482382704"
+              alt="">
+          </div>
+          <span>iPad</span>
         </a>
       </div>
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-iphone?wid=150&hei=150&fmt=png-alpha&.v=1544482382650" alt="">
-          </div> 
-        <span>iPhone</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-iphone?wid=150&hei=150&fmt=png-alpha&.v=1544482382650"
+              alt="">
+          </div>
+          <span>iPhone</span>
         </a>
       </div>
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-watch?wid=150&hei=150&fmt=png-alpha&.v=1544482383418" alt="">
-          </div> 
-        <span>Watch</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-watch?wid=150&hei=150&fmt=png-alpha&.v=1544482383418"
+              alt="">
+          </div>
+          <span>Watch</span>
         </a>
       </div>
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-tv?wid=150&hei=150&fmt=png-alpha&.v=1667595021278" alt="">
-          </div> 
-        <span>TV & Home</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-tv?wid=150&hei=150&fmt=png-alpha&.v=1667595021278"
+              alt="">
+          </div>
+          <span>TV & Home</span>
         </a>
       </div>
     </div>
@@ -492,120 +761,135 @@ footer {
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/category-icon-made-by-apple?wid=150&hei=150&fmt=png-alpha&.v=1526595684706" alt="">
-          </div> 
-        <span>Made by Apple</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/category-icon-made-by-apple?wid=150&hei=150&fmt=png-alpha&.v=1526595684706"
+              alt="">
+          </div>
+          <span>Made by Apple</span>
         </a>
       </div>
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/category-icon-whats-new?wid=150&hei=150&fmt=png-alpha&.v=1523297510490" alt="">
-          </div> 
-        <span>What's New</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/category-icon-whats-new?wid=150&hei=150&fmt=png-alpha&.v=1523297510490"
+              alt="">
+          </div>
+          <span>What's New</span>
         </a>
       </div>
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-cases-protection?wid=150&hei=150&fmt=png-alpha&.v=1523297977190" alt="">
-          </div> 
-        <span>Case & Protection</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-cases-protection?wid=150&hei=150&fmt=png-alpha&.v=1523297977190"
+              alt="">
+          </div>
+          <span>Case & Protection</span>
         </a>
       </div>
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-power-cables?wid=150&hei=150&fmt=png-alpha&.v=1523297979162" alt="">
-          </div> 
-        <span>Power & Cables</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-power-cables?wid=150&hei=150&fmt=png-alpha&.v=1523297979162"
+              alt="">
+          </div>
+          <span>Power & Cables</span>
         </a>
-        </div>
+      </div>
       <div class="category">
         <a href="#">
           <div class="imagediv">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-watch-bands?wid=150&hei=150&fmt=png-alpha&.v=1523304942327" alt="">
-          </div> 
-        <span>Apple Watch Bands</span>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-watch-bands?wid=150&hei=150&fmt=png-alpha&.v=1523304942327"
+              alt="">
+          </div>
+          <span>Apple Watch Bands</span>
         </a>
       </div>
     </div>
-   </div>
+  </div>
 
-   <!--------- productsection ---------->
+  <!--------- productsection ---------->
 
-   <!-- **********************mac section ************************* -->
-   <section class="product-mac">
+  <!-- **********************mac section ************************* -->
+  <section class="product-mac">
     <div class="container">
-      <h2 >Featured Mac Accessories</h2>
-      <div  id="mack-grid" >
-         <!-- mac product append hear -->
-      </div> 
-    </div> 
+      <h2>Featured Mac Accessories</h2>
+      <div id="mack-grid">
+        <!-- mac product append hear -->
+      </div>
+    </div>
   </section>
   <!-- -----------------iphone section------------------------ -->
   <section class="product-iphone">
     <div class="container">
       <h2>Featured iPhone Accessories</h2>
-      <div  id="iphone-grid" >
+      <div id="iphone-grid">
         <!-- iphone product append -->
-      </div> 
-    </div> 
+      </div>
+    </div>
   </section>
   <!-- -------------------- watch section  ------------------------ -->
   <section class="product-watch">
     <div class="container">
       <h2>Apple Watch Bands</h2>
       <div id="watch-grid">
-      
-    </div> <!--end container-->
+
+      </div> <!--end container-->
   </section>
-<!-- ------------------------------ ipad section    -------------------------------------- -->
+  <!-- ------------------------------ ipad section    -------------------------------------- -->
   <section class="product-ipad">
     <div class="container">
       <h2>Featured iPad Accessories</h2>
       <div id="ipad-grid">
-        
+
       </div> <!--end grid-->
     </div> <!--end container-->
   </section>
 
   <section class="product-sound">
     <div class="container">
-      <h2 >Sound Essentials</h2>
-      <div  id="sound-grid" >
-         <!-- mac product append hear -->
-      </div> 
-    </div> 
+      <h2>Sound Essentials</h2>
+      <div id="sound-grid">
+        <!-- mac product append hear -->
+      </div>
+    </div>
   </section>
-      
+
   <div class="grid-product-full">
-    <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/smb-accessories-201908?wid=1070&hei=480&fmt=png-alpha&.v=1563990869846">
+    <img
+      src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/smb-accessories-201908?wid=1070&hei=480&fmt=png-alpha&.v=1563990869846">
     <div class="grid-detail-sum">
       <h2>Accessories</h2>
       <p>get things done in style.</p>
       <a href="#">shop now <i class="fas fa-chevron-right"></i></a>
     </div>
   </div>
-  
+
 
   <footer>
     <div class="footer-main">
       <div class="footer-detail">
         <p>Prices are inclusive of VAT. Free delivery for all orders.</p>
-        <p>*Total order value must be less than 30,000 THB. Admin fee may be charged by bank/processing entity in addition to order value.</p>
-        <p>**For approved customers only. Subject to approval. For more information, see <a href="#">http://www.apple.com/th-en/help/payments.</a></p>
+        <p>*Total order value must be less than 30,000 THB. Admin fee may be charged by bank/processing entity in
+          addition to order value.</p>
+        <p>**For approved customers only. Subject to approval. For more information, see <a
+            href="#">http://www.apple.com/th-en/help/payments.</a></p>
       </div> <!-- end footer detail -->
-      
+
       <div class="footer-welcome">
         <i class="fab fa-apple"></i>
         <i class="fas fa-chevron-right"></i>
         <p>Welcome to the Apple Store</p>
       </div> <!-- end footer-welcome -->
-      
+
       <div class="footer-ul">
         <ul>
-          <li><h4>Shop and Learn</h4></li>
+          <li>
+            <h4>Shop and Learn</h4>
+          </li>
           <li><a href="#">Mac</a></li>
           <li><a href="#">iPad</a></li>
           <li><a href="#">iPhone</a></li>
@@ -617,51 +901,64 @@ footer {
           <li><a href="#">Accessories</a></li>
           <li><a href="#">Gift Cards</a></li>
         </ul>
-        
+
         <ul>
-          <li><h4>Apple Store</h4></li>
+          <li>
+            <h4>Apple Store</h4>
+          </li>
           <li><a href="#">Apple Store App</a></li>
           <li><a href="#">Financing</a></li>
           <li><a href="#">Order Status</a></li>
           <li><a href="#">Shopping Help</a></li>
         </ul>
-        
+
         <ul>
-          <li><h4>For Education</h4></li>
+          <li>
+            <h4>For Education</h4>
+          </li>
           <li><a href="#">Apple and Education</a></li>
           <li><a href="#">Shop for College</a></li>
-          <li id="mt"><h4>For Business</h4></li>
+          <li id="mt">
+            <h4>For Business</h4>
+          </li>
           <li><a href="#">Apple and Business</a></li>
           <li><a href="#">shop for Business</a></li>
         </ul>
-        
+
         <ul>
-          <li><h4>Account</h4></li>
+          <li>
+            <h4>Account</h4>
+          </li>
           <li><a href="#">Manage Your Apple ID</a></li>
           <li><a href="#">Apple Store Account</a></li>
           <li><a href="#">iClound.com</a></li>
-          <li id="mt"><h4>Apple Values</h4></li>
+          <li id="mt">
+            <h4>Apple Values</h4>
+          </li>
           <li><a href="#">Accessibility</a></li>
           <li><a href="#">Environment</a></li>
           <li><a href="#">Privacy</a></li>
           <li><a href="#">Supplier Responsibility</a></li>
         </ul>
-        
+
         <ul>
-          <li><h4>About Apple</h4></li>
+          <li>
+            <h4>About Apple</h4>
+          </li>
           <li><a href="#">Newsroom</a></li>
           <li><a href="#">Investors</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#">Contact Apple</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-contact">
-        <p>More ways to shop: visit an <a href="#">Apple Store, </a>Call 001‑800‑65‑6957, or <a href="#">find a seller</a></p>
+        <p>More ways to shop: visit an <a href="#">Apple Store, </a>Call 001‑800‑65‑6957, or <a href="#">find a
+            seller</a></p>
       </div>
       <div class="footer-copyright">
         <p>Copyright © 2019 Apple Inc. All rights reserved.</p>
-        
+
         <ul>
           <li><a href="#">Privacy Policy</a></li>
           <div class="vr"></div>
@@ -673,88 +970,88 @@ footer {
           <div class="vr"></div>
           <li><a href="#">Sitemap</a></li>
         </ul>
-        
+
         <div class="footer-lang">
           <div class="circle">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/1200px-Flag_of_Thailand.svg.png">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/1200px-Flag_of_Thailand.svg.png">
           </div>
           <p>ไทย</p>
           <div class="vr"></div>
           <p>ภาษาไทย</p>
         </div>
       </div>
-      
     </div>
   </footer>
-  
+
 </html>
 <script>
-let tabs = document.querySelectorAll(".tabs li");
-let tabsArray = Array.from(tabs);
+  let tabs = document.querySelectorAll(".tabs li");
+  let tabsArray = Array.from(tabs);
 
-let divs = document.querySelectorAll(".content > div");
-let divsArray = Array.from(divs);
+  let divs = document.querySelectorAll(".content > div");
+  let divsArray = Array.from(divs);
 
- // console.log(tabsArray);
+  // console.log(tabsArray);
 
 
-tabsArray.forEach((ele) => {
-  ele.addEventListener("click", function (e) {
-    // console.log(ele);
-    tabsArray.forEach((ele) => {
-      ele.classList.remove("active");
+  tabsArray.forEach((ele) => {
+    ele.addEventListener("click", function (e) {
+      // console.log(ele);
+      tabsArray.forEach((ele) => {
+        ele.classList.remove("active");
+      });
+      e.currentTarget.classList.add("active");
+      divsArray.forEach((div) => {
+        div.style.display = "none";
+      });
+      console.log(e.currentTarget.dataset.cont);
+      document.querySelector(e.currentTarget.dataset.cont).style.display = "flex";
     });
-    e.currentTarget.classList.add("active");
-    divsArray.forEach((div) => {
-      div.style.display = "none";
-    });
-     console.log(e.currentTarget.dataset.cont);
-    document.querySelector(e.currentTarget.dataset.cont).style.display = "flex";
   });
-});
 
-// **************************** product section***************************
+  // **************************** product section***************************
 
-let mackproducts = document.getElementById("mack-grid");
-let iphoneproducts = document.getElementById("iphone-grid");
-let watchproducts = document.getElementById("watch-grid");
-let iPadproducts = document.getElementById("ipad-grid");
-let soundproduct =document.getElementById("sound-grid")
+  let mackproducts = document.getElementById("mack-grid");
+  let iphoneproducts = document.getElementById("iphone-grid");
+  let watchproducts = document.getElementById("watch-grid");
+  let iPadproducts = document.getElementById("ipad-grid");
+  let soundproduct = document.getElementById("sound-grid")
 
 
-// Define a variable to store the fetched data
-let fetchData = [];
+  // Define a variable to store the fetched data
+  let fetchData = [];
 
-// Call the fetchAndRenderProduct function on window load
-window.addEventListener("load", () => {
-  fetchAndRenderProduct();
-});
+  // Call the fetchAndRenderProduct function on window load
+  window.addEventListener("load", () => {
+    fetchAndRenderProduct();
+  });
 
-async function fetchAndRenderProduct() {
-  let resp = await fetch("http://localhost:3000/accessories");
-  let data = await resp.json();
-  fetchData = data;
-  console.log(fetchData);
+  async function fetchAndRenderProduct() {
+    let resp = await fetch("http://localhost:3000/accessories");
+    let data = await resp.json();
+    fetchData = data;
+    console.log(fetchData);
 
-  // Call the renderCardList function with the filtered data
-  renderCardList(fetchData.filter(item => item.category === "Mac"), mackproducts);
-  renderCardList(fetchData.filter(item => item.category === "iPhone"), iphoneproducts);
-  renderCardList(fetchData.filter(item => item.category === "Watch"), watchproducts);
-  renderCardList(fetchData.filter(item => item.category === "iPad"),iPadproducts );
-  renderCardList(fetchData.filter(item => item.category === "sound"),soundproduct );
-}
+    // Call the renderCardList function with the filtered data
+    renderCardList(fetchData.filter(item => item.category === "Mac"), mackproducts);
+    renderCardList(fetchData.filter(item => item.category === "iPhone"), iphoneproducts);
+    renderCardList(fetchData.filter(item => item.category === "Watch"), watchproducts);
+    renderCardList(fetchData.filter(item => item.category === "iPad"), iPadproducts);
+    renderCardList(fetchData.filter(item => item.category === "sound"), soundproduct);
+  }
 
-function renderCardList(cardData, grid) {
-  let CardList = `
+  function renderCardList(cardData, grid) {
+    let CardList = `
   <div class="grid">
     ${cardData.map((item) => getCard(item.image, item.title, item.price)).join("")}
   </div>
   `;
-  grid.innerHTML = CardList;
-}
+    grid.innerHTML = CardList;
+  }
 
-function getCard(image, title, price) {
-  let card = `
+  function getCard(image, title, price) {
+    let card = `
   <div class="grid-product">
     <a href="#">
       <img src="${image}">
@@ -762,9 +1059,10 @@ function getCard(image, title, price) {
     <div class="grid-detail">
       <p>${title}</p>
       <p>From Rs. ${price}</p>
-    </div>
-  </div>
-  `;
-  return card;
-}
+      </div>
+      </div>
+      `;
+      return card;
+      // <button style="margin-top:5px;">Add to cart</button>
+  }
 </script>
