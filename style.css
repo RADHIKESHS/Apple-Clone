@@ -670,8 +670,8 @@ body {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin-left: -60%;
-    padding-left: 60%;
+    margin-left: -100%;
+    padding-left: 100%;
 }
 
 .dropdown-content a {
@@ -681,10 +681,12 @@ body {
     text-decoration: none;
     display: block;
     text-align: left;
+    background-color: black;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: white;
+    color: #000;
 }
 
 .dropdown:hover .dropdown-content {
