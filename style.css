@@ -57,9 +57,9 @@ nav .desktop-nav li a:hover {
     /* background: url('images/apple_logo.PNG'); */
     display: block;
     background-position: center;
-    height: 44px;
-    width: 40px;
     background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 40px;
 }
 
 .link-search {
