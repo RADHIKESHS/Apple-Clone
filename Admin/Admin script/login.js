@@ -19,9 +19,9 @@ let signinpasswordInp = document.getElementById("sign-in-password");
 let signinbtn = document.getElementById("sign-in-button");
 
 signupbtn.addEventListener("click", () => {
-   if(signupKeyInp.value!="ace@123"){
-     alert("Enter correct Key for signup");
-   }else if (signinemailInp.value !== "" || signupemailInp.value !== "" || signuppasswordInp.value !== ""){
+    if (signupKeyInp.value != "ace@123" && signupKeyInp.value != "") {
+        alert("Enter correct Key for signup");
+    } else if (signinemailInp.value !== "" || signupemailInp.value !== "" || signuppasswordInp.value !== "") {
         let obj = {
             name: signupnameInp.value,
             email: signupemailInp.value,
@@ -31,19 +31,20 @@ signupbtn.addEventListener("click", () => {
         if (obj.image == "") {
             obj.image = "https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png";
         }
-        fetch(`http://localhost:3000/admin`, {
+        fetch(`https://myapple-api-json-server.onrender.com/admin`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
             },
             body: JSON.stringify(obj)
         })
+        alert("Account created Successfully!");
     }
 })
 
 signinbtn.addEventListener("click", async () => {
     try {
-        let res = await fetch(`http://localhost:3000/admin`);
+        let res = await fetch(`https://myapple-api-json-server.onrender.com/admin`);
         let data = await res.json();
         let credentials = checkLogIn(data);
         fun(credentials, data);
@@ -78,7 +79,8 @@ function fun(credentials, data) {
         user.push(curr);
         localStorage.setItem("admin-user", JSON.stringify(user));
         window.location.href = "admin.html"
-    } else if (!credentials && signinemailInp.value!="" || signinpasswordInp.value!=""){
+    } else if (!credentials && signinemailInp.value != "" || signinpasswordInp.value != "") {
         alert("Wrong Credentials");
     }
 }
+

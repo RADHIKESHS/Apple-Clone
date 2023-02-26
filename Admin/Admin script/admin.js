@@ -13,7 +13,7 @@ let currProduct = "";
 async function fetchData(product = "iphone") {
    currProduct = product;
    try {
-      let res = await fetch(`http://localhost:3000/${product}`);
+      let res = await fetch(`https://myapple-api-json-server.onrender.com/${product}`);
       let data = await res.json();
       Display(data);
    } catch (error) {
@@ -89,7 +89,7 @@ function remove(id) {
          alert("Wrong OTP");
       } else {
          //delete request
-         fetch(`http://localhost:3000/${currProduct}/${id}`, {
+         fetch(`https://myapple-api-json-server.onrender.com/${currProduct}/${id}`, {
             method: "DELETE"
          });
          fetchData("mac");
@@ -130,7 +130,7 @@ function edit(id, title, price, image) {
          "price": updatePrice.value,
          "image": updateImg.value
       }
-      fetch(`http://localhost:3000/${updateType.value}/${updateId.value}`, {
+      fetch(`https://myapple-api-json-server.onrender.com/${updateType.value}/${updateId.value}`, {
          method: "PUT",
          headers: {
             "Content-type": "application/json"
@@ -236,7 +236,7 @@ addNewProductBtn.addEventListener("click", () => {
    let newImg = document.querySelector("#product-img");
    addNewProductSubmitBtn.addEventListener("click", async () => {
       try {
-         let res = await fetch(`http://localhost:3000/${newType.value}`);
+         let res = await fetch(`https://myapple-api-json-server.onrender.com/${newType.value}`);
          let Alldata = await res.json();
          AddProfun(Alldata);
       } catch (error) {
@@ -261,7 +261,7 @@ addNewProductBtn.addEventListener("click", () => {
             "price": newPrice.value,
             "image": newImg.value
          }
-         fetch(`http://localhost:3000/${newType.value}`, {
+         fetch(`https://myapple-api-json-server.onrender.com/${newType.value}`, {
             method: "POST",
             headers: {
                "Content-type": "application/json"
