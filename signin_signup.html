@@ -532,7 +532,7 @@
 
     signinbtn.addEventListener("click", async () => {
     try {
-        let res = await fetch(`https://myapple-api-json-server.onrender.com/admin`);
+        let res = await fetch(`https://myapple-api-json-server.onrender.com/register`);
         let data = await res.json();
         let credentials = checkLogIn(data);
         fun(credentials, data);
@@ -560,7 +560,7 @@ function fun(credentials, data) {
         for (let i = 0; i < data.length; i++) {
             if (signinemailInp.value == data[i].email) {
                 curr.name = data[i].name;
-                curr.image = data[i].image;
+                curr.image = data[i].image; 
                 break;
             }
         }
