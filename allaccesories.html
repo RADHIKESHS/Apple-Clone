@@ -260,7 +260,7 @@
     }
 
     .grid-product {
-      background: #cacdcdf8;
+      background: #d2d4d4f8;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1117,7 +1117,34 @@
       alert("Product Successfully added to your Shopping Cart");
     }
   }
-
+  function checkDuplicate(title, cart) {
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].title === title) {
+          return true;
+        }
+      } return false;
+    }
+    // ---------------add to cat section start from hear-----------------------
+    document.querySelector('a[href="#mac"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('mac').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#iphone"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('iphone').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#iPad"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('iPad').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#watch"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('watch').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('a[href="#sound"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('sound').scrollIntoView({ behavior: 'smooth' });
+});
 
     
 
