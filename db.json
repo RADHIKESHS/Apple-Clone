@@ -14,6 +14,20 @@
       "password": "1234",
       "image": "https://ca.slack-edge.com/T04K6GB334K-U04LFFKSFUZ-a7339f967fca-512",
       "id": 1
+    },
+    {
+      "name": "Radhikesh",
+      "email": "Kumar",
+      "password": "12345ravi",
+      "image": "https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png",
+      "id": 2
+    },
+    {
+      "name": "Radhikesh",
+      "email": "radhikesh310@gmail.com",
+      "password": "12345ravi",
+      "image": "https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png",
+      "id": 3
     }
   ],
   "mac": [
