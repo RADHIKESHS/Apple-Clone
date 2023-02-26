@@ -7,10 +7,10 @@ if (user.length != 0) {
     username.innerText = user[0].name;
     logout.innerText = "Log Out";
 }
-logout.addEventListener("click",()=> {
+logout.addEventListener("click", () => {
     localStorage.setItem("user", "[]");
-   alert("Log Out Successful!");
-   window.location.href = 'index.html';
+    alert("Log Out Successful!");
+    window.location.href = 'index.html';
 })
 
 const searchButton = document.querySelector("nav .desktop-nav .link-search");
