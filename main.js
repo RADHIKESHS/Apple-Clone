@@ -4,6 +4,9 @@ const desktopNav = document.querySelector(".desktop-nav");
 const searchContainer = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
 
+// ------navbar--------//
+
+//-------------------------//
 searchButton.addEventListener("click", () => {
     desktopNav.classList.add("hide");
     searchContainer.classList.remove("hide");
