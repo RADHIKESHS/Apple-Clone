@@ -207,10 +207,10 @@
       display: flex;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
+      border-radius: 30%;
       align-items: center;
       justify-content: center;
-
+      background-color: #ddd;
 
       margin-bottom: 20px;
     }
@@ -261,13 +261,22 @@
     }
 
     .grid-product {
-      background: #f1f1f1;
+      background: #999a9af8;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       transition: .5s;
       border-radius: 10px;
+    }
+    .grid-product button{
+      margin-top: 8px;
+      padding: 8px;
+      font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      background-color: #727a82;
+      border: none;
+      color: #f1f1f1;
+      border-radius: 3px;
     }
 
     .grid-product:hover {
@@ -1028,7 +1037,7 @@
   });
 
   async function fetchAndRenderProduct() {
-    let resp = await fetch("http://localhost:3000/accessories");
+    let resp = await fetch("https://myapple-api-json-server.onrender.com/accessories");
     let data = await resp.json();
     fetchData = data;
     console.log(fetchData);
@@ -1044,13 +1053,13 @@
   function renderCardList(cardData, grid) {
     let CardList = `
   <div class="grid">
-    ${cardData.map((item) => getCard(item.image, item.title, item.price)).join("")}
+    ${cardData.map((item) => getCard(item.id,item.image, item.title, item.price)).join("")}
   </div>
   `;
     grid.innerHTML = CardList;
   }
 
-  function getCard(image, title, price) {
+  function getCard(id,image, title, price) {
     let card = `
   <div class="grid-product">
     <a href="#">
@@ -1059,10 +1068,42 @@
     <div class="grid-detail">
       <p>${title}</p>
       <p>From Rs. ${price}</p>
+      <button id="addtocart" onclick="addToCart('${id}','${image}','${title}','${price}')"> Add to cart</button>
       </div>
       </div>
       `;
       return card;
       // <button style="margin-top:5px;">Add to cart</button>
   }
+
+  // ------------------------- Add to caer code start from hear  -----------------------------------
+  let button=document.getElementById("addtocart");
+
+  // add to cart functionlaity
+    function addToCart(id, image, title, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let obj={
+        id: id,
+        image: image,
+        title: title,
+        price:price
+      }
+      if (checkDuplicate(title,cart)) {
+        alert("product is already added to your Shopping Cart");
+      } else {
+        cart.push({ ...obj, quantity: 1 });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Product Successfully added to your Shopping Cart");
+      }
+    }
+
+
+    function checkDuplicate(title,cart) {
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].title === title) {
+          return true;
+        }
+      } return false;
+    }
+
 </script>
