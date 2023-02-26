@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Checkout Page</title>
+  <!-- <link rel="stylesheet" href="checkout.css"> -->
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    button[type="submit"] {
+      display: block;
+      margin: 40px auto;
+      padding: 5px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Checkout</h1>
+    <form id="checkout-form">
+      <h2>Shipping Information</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="address">Address:</label>
+      <input type="text" id="address" required>
+      <label for="city">City:</label>
+      <input type="text" id="city" required>
+      <label for="state">State:</label>
+      <input type="text" id="state" required>
+      <label for="zip">Zip Code:</label>
+      <input type="text" id="zip" required>
+      <h2>Billing Information</h2>
+      <label for="cardholder">Cardholder Name:</label>
+      <input type="text" id="cardholder" required>
+      <label for="cardnumber">Card Number:</label>
+      <input type="text" id="cardnumber" required>
+      <label for="expiry">Expiry Date:</label>
+      <input type="text" id="expiry" required>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" required>
+      <h2>Order Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- The table rows will be generated dynamically using JavaScript -->
+         
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total:</td>
+            <td id="total">
+                
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+  <!-- <script src="checkout.js"></script> -->
+</body>
+<script>
+  // Retrieve the "cart" data from local storage
+  const cartData = localStorage.getItem("cart");
+  let total= document.getElementById("total")
+  // Check if the data exists
+  if (cartData) {
+      // Parse the data into a JavaScript object
+      const cart = JSON.parse(cartData);
+    //   console.log( cart)
+
+    // Get the table element from the HTML
+    const table = document.querySelector("tbody");
+
+    // Loop through the cart object and generate the HTML for the table rows
+    let sum =0;
+   cart.forEach((product) => {
+      const row = document.createElement("tr");
+      const nameCell = document.createElement("td");
+      const qtyCell = document.createElement("td");
+      const priceCell = document.createElement("td");
+
+      nameCell.textContent = product.title;
+      qtyCell.textContent = product.quantity;
+      priceCell.textContent = (+product.quantity * (+product.price));
+
+      row.appendChild(nameCell);
+      row.appendChild(qtyCell);
+      row.appendChild(priceCell);
+        sum+= +product.quantity * +product.price;
+      table.appendChild(row);
+    });
+
+    total.append(sum);
+
+
+
+    document.getElementById("checkout-form").addEventListener("submit",() =>{
+        window.alert("Order Successfull! thanks for shopping!");
+        window.location ="index.html";
+    })
+
+  }
+
+</script>
+
+</html>
