@@ -92,6 +92,7 @@ function remove(id) {
          fetch(`https://myapple-api-json-server.onrender.com/${currProduct}/${id}`, {
             method: "DELETE"
          });
+         alert("Product Deleted Successfully!")
          fetchData("mac");
       }
    })
@@ -137,7 +138,8 @@ function edit(id, title, price, image) {
          },
          body: JSON.stringify(obj)
       })
-      alert("Product Updated Successfully!")
+      alert("Product Updated Successfully!");
+      fetchData("mac");
    });
 }
 

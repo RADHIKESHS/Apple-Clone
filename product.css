@@ -24,6 +24,7 @@ body{
 .product_section{
     width: 100%;
     padding: 80px;
+   
 }
 
 .product_search_heading{
@@ -64,6 +65,8 @@ body{
 
 .product_cards{
     margin-top: 40px;
+    
+    
 }
 
 .loader_wrapper{
@@ -95,6 +98,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 280px;
+    background-color: rgb(205, 203, 199);
   }
 
   .add_to_cart_btn{
@@ -103,7 +107,7 @@ body{
     display: inline-block;
     text-align: center;
     white-space: nowrap;
-    background: #0071e3;
+    background: #333c45;
     color: #fff;
     border-radius: 980px;
     font-size: 12px;
